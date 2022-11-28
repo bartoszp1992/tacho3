@@ -1,0 +1,5 @@
+lis3mdl_bd.c:43:6:lis3mdlInit	48	static
+lis3mdl_bd.c:65:6:lis3mdlRead	48	static
+lis3mdl_bd.c:127:6:lis3mdlGetCalibrationSample	16	static
+lis3mdl_bd.c:140:9:findMax	24	static
+lis3mdl_bd.c:151:9:findMin	24	static

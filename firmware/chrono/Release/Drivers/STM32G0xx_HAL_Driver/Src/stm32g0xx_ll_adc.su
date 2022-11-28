@@ -1,0 +1,8 @@
+stm32g0xx_ll_adc.c:240:13:LL_ADC_CommonDeInit	0	static
+stm32g0xx_ll_adc.c:272:13:LL_ADC_CommonInit	8	static
+stm32g0xx_ll_adc.c:309:6:LL_ADC_CommonStructInit	0	static
+stm32g0xx_ll_adc.c:333:13:LL_ADC_DeInit	16	static
+stm32g0xx_ll_adc.c:543:13:LL_ADC_Init	12	static
+stm32g0xx_ll_adc.c:596:6:LL_ADC_StructInit	0	static
+stm32g0xx_ll_adc.c:647:13:LL_ADC_REG_Init	16	static
+stm32g0xx_ll_adc.c:755:6:LL_ADC_REG_StructInit	0	static

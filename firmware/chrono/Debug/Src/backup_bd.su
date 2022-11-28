@@ -1,0 +1,3 @@
+backup_bd.c:28:6:backupInit	8	static
+backup_bd.c:60:6:backupRestore	40	static
+backup_bd.c:103:6:backupWrite	32	static

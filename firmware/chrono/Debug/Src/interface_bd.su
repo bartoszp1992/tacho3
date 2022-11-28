@@ -1,0 +1,8 @@
+interface_bd.c:19:6:interfaceInit	32	static
+interface_bd.c:101:6:interfaceSettingsInit	16	static
+interface_bd.c:148:6:interfaceUpdateModeSwitch	16	static
+interface_bd.c:172:6:interfaceBurn	16	static
+interface_bd.c:191:6:interfaceClear	16	static
+interface_bd.c:195:6:interfaceSettingsClear	16	static
+interface_bd.c:199:6:interfaceDraw	88	static
+interface_bd.c:756:6:interfaceSettingsDraw	56	static

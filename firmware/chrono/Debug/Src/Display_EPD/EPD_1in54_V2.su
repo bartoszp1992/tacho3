@@ -1,0 +1,12 @@
+EPD_1in54_V2.c:37:13:EPD_1IN54_V2_Reset	8	static
+EPD_1in54_V2.c:52:13:EPD_1IN54_V2_SendCommand	16	static
+EPD_1in54_V2.c:65:13:EPD_1IN54_V2_SendData	16	static
+EPD_1in54_V2.c:77:13:EPD_1IN54_V2_ReadBusy	8	static
+EPD_1in54_V2.c:97:13:EPD_1IN54_V2_TurnOnDisplay	8	static
+EPD_1in54_V2.c:109:13:EPD_1IN54_V2_TurnOnDisplayPart	8	static
+EPD_1in54_V2.c:121:6:EPD_1IN54_V2_Init	8	static
+EPD_1in54_V2.c:169:6:EPD_1IN54_V2_Clear	16	static
+EPD_1in54_V2.c:188:6:EPD_1IN54_V2_Display	40	static
+EPD_1in54_V2.c:210:6:EPD_1IN54_V2_DisplayPartBaseImage	40	static
+EPD_1in54_V2.c:238:6:EPD_1IN54_V2_DisplayPart	40	static
+EPD_1in54_V2.c:265:6:EPD_1IN54_V2_Sleep	8	static

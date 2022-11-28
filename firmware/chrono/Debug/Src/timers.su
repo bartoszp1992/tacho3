@@ -1,0 +1,2 @@
+timers.c:13:6:HAL_TIM_PeriodElapsedCallback	16	static
+timers.c:33:6:timersInit	8	static

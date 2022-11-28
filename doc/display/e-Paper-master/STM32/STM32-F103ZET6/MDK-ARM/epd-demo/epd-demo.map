@@ -1,0 +1,2171 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Section Cross References
+
+    startup_stm32f103xe.o(RESET) refers to startup_stm32f103xe.o(STACK) for __initial_sp
+    startup_stm32f103xe.o(RESET) refers to startup_stm32f103xe.o(.text) for Reset_Handler
+    startup_stm32f103xe.o(RESET) refers to stm32f1xx_it.o(.text) for NMI_Handler
+    startup_stm32f103xe.o(.text) refers to system_stm32f1xx.o(.text) for SystemInit
+    startup_stm32f103xe.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    main.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    main.o(.text) refers to stm32f1xx_hal_rcc.o(.text) for HAL_RCC_OscConfig
+    main.o(.text) refers to stm32f1xx_hal_cortex.o(.text) for HAL_SYSTICK_Config
+    main.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Init
+    main.o(.text) refers to gpio.o(.text) for MX_GPIO_Init
+    main.o(.text) refers to usart.o(.text) for MX_USART1_UART_Init
+    main.o(.text) refers to spi.o(.text) for MX_SPI1_Init
+    gpio.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_WritePin
+    spi.o(.text) refers to stm32f1xx_hal_spi_ex.o(.text) for HAL_SPI_Init
+    spi.o(.text) refers to main.o(.text) for _Error_Handler
+    spi.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_Init
+    spi.o(.text) refers to spi.o(.bss) for .bss
+    usart.o(.text) refers to stm32f1xx_hal_uart.o(.text) for HAL_UART_Init
+    usart.o(.text) refers to main.o(.text) for _Error_Handler
+    usart.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_Init
+    usart.o(.text) refers to usart.o(.bss) for .bss
+    stm32f1xx_it.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    stm32f1xx_it.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_IncTick
+    stm32f1xx_it.o(.text) refers to stm32f1xx_hal_cortex.o(.text) for HAL_SYSTICK_IRQHandler
+    stm32f1xx_hal_msp.o(.text) refers to stm32f1xx_hal_cortex.o(.text) for HAL_NVIC_SetPriorityGrouping
+    stm32f1xx_hal_spi.o(.text) refers to spi.o(.text) for HAL_SPI_MspInit
+    stm32f1xx_hal_spi.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_GetTick
+    stm32f1xx_hal_spi.o(.text) refers to system_stm32f1xx.o(.data) for SystemCoreClock
+    stm32f1xx_hal_spi.o(.text) refers to stm32f1xx_hal_dma.o(.text) for HAL_DMA_Start_IT
+    stm32f1xx_hal_spi_ex.o(.text) refers to spi.o(.text) for HAL_SPI_MspInit
+    stm32f1xx_hal_uart.o(.text) refers to stm32f1xx_hal_rcc.o(.text) for HAL_RCC_GetPCLK2Freq
+    stm32f1xx_hal_uart.o(.text) refers to usart.o(.text) for HAL_UART_MspInit
+    stm32f1xx_hal_uart.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_GetTick
+    stm32f1xx_hal_uart.o(.text) refers to stm32f1xx_hal_dma.o(.text) for HAL_DMA_Start_IT
+    stm32f1xx_hal_rcc.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_GetTick
+    stm32f1xx_hal_rcc.o(.text) refers to system_stm32f1xx.o(.data) for SystemCoreClock
+    stm32f1xx_hal_rcc.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_Init
+    stm32f1xx_hal_rcc.o(.text) refers to system_stm32f1xx.o(.constdata) for AHBPrescTable
+    stm32f1xx_hal_rcc.o(.text) refers to system_stm32f1xx.o(.constdata) for APBPrescTable
+    stm32f1xx_hal_rcc_ex.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_GetTick
+    stm32f1xx_hal_rcc_ex.o(.text) refers to stm32f1xx_hal_rcc.o(.text) for HAL_RCC_GetPCLK2Freq
+    stm32f1xx_hal.o(.text) refers to stm32f1xx_hal_cortex.o(.text) for HAL_SYSTICK_Config
+    stm32f1xx_hal.o(.text) refers to stm32f1xx_hal_msp.o(.text) for HAL_MspInit
+    stm32f1xx_hal.o(.text) refers to stm32f1xx_hal.o(.data) for .data
+    stm32f1xx_hal.o(.text) refers to system_stm32f1xx.o(.data) for SystemCoreClock
+    stm32f1xx_hal_dma.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_GetTick
+    stm32f1xx_hal_flash.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_GetTick
+    stm32f1xx_hal_flash.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    stm32f1xx_hal_flash.o(.text) refers to stm32f1xx_hal_flash_ex.o(.text) for FLASH_PageErase
+    stm32f1xx_hal_flash.o(.text) refers to stm32f1xx_hal_cortex.o(.text) for HAL_NVIC_SystemReset
+    stm32f1xx_hal_flash.o(.text) refers to stm32f1xx_hal_flash.o(.bss) for .bss
+    stm32f1xx_hal_flash_ex.o(.text) refers to stm32f1xx_hal_flash.o(.text) for FLASH_WaitForLastOperation
+    stm32f1xx_hal_flash_ex.o(.text) refers to stm32f1xx_hal_flash.o(.bss) for pFlash
+    system_stm32f1xx.o(.text) refers to system_stm32f1xx.o(.data) for .data
+    system_stm32f1xx.o(.text) refers to system_stm32f1xx.o(.constdata) for .constdata
+    epd_1in02_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_1in02_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_1in02_test.o(.text) refers to epd_1in02d.o(.text) for EPD_1IN02_Init
+    epd_1in02_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_1in02_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_1in02_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_1in02_test.o(.text) refers to memcpya.o(.text) for __aeabi_memcpy
+    epd_1in02_test.o(.text) refers to malloc.o(i.free) for free
+    epd_1in02_test.o(.text) refers to font16.o(.data) for Font16
+    epd_1in02_test.o(.text) refers to font12.o(.data) for Font12
+    epd_1in02_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_1in02_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_1in02_test.o(.text) refers to font20.o(.data) for Font20
+    epd_1in54_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_1in54_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_1in54_test.o(.text) refers to epd_1in54.o(.text) for EPD_1IN54_Init
+    epd_1in54_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_1in54_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_1in54_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_1in54_test.o(.text) refers to malloc.o(i.free) for free
+    epd_1in54_test.o(.text) refers to imagedata.o(.constdata) for gImage_1in54
+    epd_1in54_test.o(.text) refers to font20.o(.data) for Font20
+    epd_1in54_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_1in54_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_1in54_v2_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_1in54_v2_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_1in54_v2_test.o(.text) refers to epd_1in54_v2.o(.text) for EPD_1IN54_V2_Init
+    epd_1in54_v2_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_1in54_v2_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_1in54_v2_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_1in54_v2_test.o(.text) refers to malloc.o(i.free) for free
+    epd_1in54_v2_test.o(.text) refers to imagedata.o(.constdata) for gImage_1in54
+    epd_1in54b_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_1in54b_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_1in54b_test.o(.text) refers to epd_1in54b.o(.text) for EPD_1IN54B_Init
+    epd_1in54b_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_1in54b_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_1in54b_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_1in54b_test.o(.text) refers to malloc.o(i.free) for free
+    epd_1in54b_test.o(.text) refers to font16.o(.data) for Font16
+    epd_1in54b_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_1in54b_test.o(.text) refers to font20.o(.data) for Font20
+    epd_1in54b_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_1in54b_test.o(.text) refers to imagedata.o(.constdata) for gImage_1in54b_Black
+    epd_1in54b_test.o(.text) refers to imagedata.o(.constdata) for gImage_1in54b_Red
+    epd_1in54b_v2_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_1in54b_v2_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_1in54b_v2_test.o(.text) refers to epd_1in54b_v2.o(.text) for EPD_1IN54B_V2_Init
+    epd_1in54b_v2_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_1in54b_v2_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_1in54b_v2_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_1in54b_v2_test.o(.text) refers to malloc.o(i.free) for free
+    epd_1in54b_v2_test.o(.text) refers to font16.o(.data) for Font16
+    epd_1in54b_v2_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_1in54b_v2_test.o(.text) refers to font20.o(.data) for Font20
+    epd_1in54b_v2_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_1in54b_v2_test.o(.text) refers to imagedata.o(.constdata) for gImage_1in54b_Black
+    epd_1in54b_v2_test.o(.text) refers to imagedata.o(.constdata) for gImage_1in54b_Red
+    epd_1in54c_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_1in54c_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_1in54c_test.o(.text) refers to epd_1in54c.o(.text) for EPD_1IN54C_Init
+    epd_1in54c_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_1in54c_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_1in54c_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_1in54c_test.o(.text) refers to malloc.o(i.free) for free
+    epd_1in54c_test.o(.text) refers to font20.o(.data) for Font20
+    epd_1in54c_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_1in54c_test.o(.text) refers to imagedata.o(.constdata) for gImage_1in54c_Black
+    epd_1in54c_test.o(.text) refers to imagedata.o(.constdata) for gImage_1in54c_Yellow
+    epd_2in7_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in7_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_2in7_test.o(.text) refers to epd_2in7.o(.text) for EPD_2IN7_Init
+    epd_2in7_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in7_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_2in7_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_2in7_test.o(.text) refers to malloc.o(i.free) for free
+    epd_2in7_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in7
+    epd_2in7_test.o(.text) refers to font16.o(.data) for Font16
+    epd_2in7_test.o(.text) refers to font12.o(.data) for Font12
+    epd_2in7_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_2in7_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_2in7_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in7_4Gray
+    epd_2in7b_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in7b_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_2in7b_test.o(.text) refers to epd_2in7b.o(.text) for EPD_2IN7B_Init
+    epd_2in7b_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in7b_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_2in7b_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_2in7b_test.o(.text) refers to malloc.o(i.free) for free
+    epd_2in7b_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in7b_Black
+    epd_2in7b_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in7b_Red
+    epd_2in7b_test.o(.text) refers to font16.o(.data) for Font16
+    epd_2in7b_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_2in7b_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_2in7b_test.o(.text) refers to font12.o(.data) for Font12
+    epd_2in9_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in9_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_2in9_test.o(.text) refers to epd_2in9.o(.text) for EPD_2IN9_Init
+    epd_2in9_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in9_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_2in9_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_2in9_test.o(.text) refers to malloc.o(i.free) for free
+    epd_2in9_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in9
+    epd_2in9_test.o(.text) refers to font16.o(.data) for Font16
+    epd_2in9_test.o(.text) refers to font12.o(.data) for Font12
+    epd_2in9_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_2in9_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_2in9_test.o(.text) refers to font20.o(.data) for Font20
+    epd_2in9_v2_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in9_v2_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_2in9_v2_test.o(.text) refers to epd_2in9_v2.o(.text) for EPD_2IN9_V2_Init
+    epd_2in9_v2_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_2in9_v2_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_2in9_v2_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in9_v2_test.o(.text) refers to malloc.o(i.free) for free
+    epd_2in9_v2_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in9
+    epd_2in9_v2_test.o(.text) refers to font16.o(.data) for Font16
+    epd_2in9_v2_test.o(.text) refers to font12.o(.data) for Font12
+    epd_2in9_v2_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_2in9_v2_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_2in9_v2_test.o(.text) refers to font20.o(.data) for Font20
+    epd_2in9bc_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in9bc_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_2in9bc_test.o(.text) refers to epd_2in9bc.o(.text) for EPD_2IN9BC_Init
+    epd_2in9bc_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in9bc_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_2in9bc_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_2in9bc_test.o(.text) refers to malloc.o(i.free) for free
+    epd_2in9bc_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in9bc_ry
+    epd_2in9bc_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in9bc_b
+    epd_2in9bc_test.o(.text) refers to font16.o(.data) for Font16
+    epd_2in9bc_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_2in9bc_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_2in9bc_test.o(.text) refers to font12.o(.data) for Font12
+    epd_2in9b_v3_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in9b_v3_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_2in9b_v3_test.o(.text) refers to epd_2in9b_v3.o(.text) for EPD_2IN9B_V3_Init
+    epd_2in9b_v3_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in9b_v3_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_2in9b_v3_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_2in9b_v3_test.o(.text) refers to malloc.o(i.free) for free
+    epd_2in9b_v3_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in9bc_ry
+    epd_2in9b_v3_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in9bc_b
+    epd_2in9b_v3_test.o(.text) refers to font16.o(.data) for Font16
+    epd_2in9b_v3_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_2in9b_v3_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_2in9b_v3_test.o(.text) refers to font12.o(.data) for Font12
+    epd_2in9d_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in9d_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_2in9d_test.o(.text) refers to epd_2in9d.o(.text) for EPD_2IN9D_Init
+    epd_2in9d_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in9d_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_2in9d_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_2in9d_test.o(.text) refers to malloc.o(i.free) for free
+    epd_2in9d_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in9
+    epd_2in9d_test.o(.text) refers to font16.o(.data) for Font16
+    epd_2in9d_test.o(.text) refers to font12.o(.data) for Font12
+    epd_2in9d_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_2in9d_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_2in9d_test.o(.text) refers to font20.o(.data) for Font20
+    epd_2in13_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in13_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_2in13_test.o(.text) refers to epd_2in13.o(.text) for EPD_2IN13_Init
+    epd_2in13_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in13_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_2in13_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_2in13_test.o(.text) refers to malloc.o(i.free) for free
+    epd_2in13_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in13
+    epd_2in13_test.o(.text) refers to font16.o(.data) for Font16
+    epd_2in13_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_2in13_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_2in13_test.o(.text) refers to font20.o(.data) for Font20
+    epd_2in13_v2_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in13_v2_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_2in13_v2_test.o(.text) refers to epd_2in13_v2.o(.text) for EPD_2IN13_V2_Init
+    epd_2in13_v2_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in13_v2_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_2in13_v2_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_2in13_v2_test.o(.text) refers to malloc.o(i.free) for free
+    epd_2in13_v2_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in13
+    epd_2in13_v2_test.o(.text) refers to font16.o(.data) for Font16
+    epd_2in13_v2_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_2in13_v2_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_2in13_v2_test.o(.text) refers to font20.o(.data) for Font20
+    epd_2in13b_v3_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in13b_v3_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_2in13b_v3_test.o(.text) refers to epd_2in13b_v3.o(.text) for EPD_2IN13B_V3_Init
+    epd_2in13b_v3_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in13b_v3_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_2in13b_v3_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_2in13b_v3_test.o(.text) refers to malloc.o(i.free) for free
+    epd_2in13b_v3_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in13c_y
+    epd_2in13b_v3_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in13c_b
+    epd_2in13b_v3_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_2in13b_v3_test.o(.text) refers to font12.o(.data) for Font12
+    epd_2in13b_v3_test.o(.text) refers to font16.o(.data) for Font16
+    epd_2in13bc_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in13bc_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_2in13bc_test.o(.text) refers to epd_2in13bc.o(.text) for EPD_2IN13BC_Init
+    epd_2in13bc_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in13bc_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_2in13bc_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_2in13bc_test.o(.text) refers to malloc.o(i.free) for free
+    epd_2in13bc_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in13c_y
+    epd_2in13bc_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in13c_b
+    epd_2in13bc_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_2in13bc_test.o(.text) refers to font12.o(.data) for Font12
+    epd_2in13bc_test.o(.text) refers to font16.o(.data) for Font16
+    epd_2in13d_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in13d_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_2in13d_test.o(.text) refers to epd_2in13d.o(.text) for EPD_2IN13D_Init
+    epd_2in13d_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in13d_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_2in13d_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_2in13d_test.o(.text) refers to malloc.o(i.free) for free
+    epd_2in13d_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in13d
+    epd_2in13d_test.o(.text) refers to font16.o(.data) for Font16
+    epd_2in13d_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_2in13d_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_2in13d_test.o(.text) refers to font20.o(.data) for Font20
+    epd_2in66_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in66_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_2in66_test.o(.text) refers to epd_2in66.o(.text) for EPD_2IN66_Init
+    epd_2in66_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in66_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_2in66_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_2in66_test.o(.text) refers to malloc.o(i.free) for free
+    epd_2in66_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in66
+    epd_2in66_test.o(.text) refers to font16.o(.data) for Font16
+    epd_2in66_test.o(.text) refers to font12.o(.data) for Font12
+    epd_2in66_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_2in66_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_2in66_test.o(.text) refers to font20.o(.data) for Font20
+    epd_2in66b_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in66b_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_2in66b_test.o(.text) refers to epd_2in66b.o(.text) for EPD_2IN66B_Init
+    epd_2in66b_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in66b_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_2in66b_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_2in66b_test.o(.text) refers to malloc.o(i.free) for free
+    epd_2in66b_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in66bb
+    epd_2in66b_test.o(.text) refers to imagedata.o(.constdata) for gImage_2in66br
+    epd_2in66b_test.o(.text) refers to font16.o(.data) for Font16
+    epd_2in66b_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_2in66b_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_2in66b_test.o(.text) refers to font12.o(.data) for Font12
+    epd_3in7_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_3in7_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_3in7_test.o(.text) refers to epd_3in7.o(.text) for EPD_3IN7_4Gray_Init
+    epd_3in7_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_3in7_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_3in7_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_3in7_test.o(.text) refers to malloc.o(i.free) for free
+    epd_3in7_test.o(.text) refers to imagedata.o(.constdata) for gImage_3in7
+    epd_3in7_test.o(.text) refers to font16.o(.data) for Font16
+    epd_3in7_test.o(.text) refers to font12.o(.data) for Font12
+    epd_3in7_test.o(.text) refers to font24.o(.data) for Font24
+    epd_3in7_test.o(.text) refers to font20.o(.data) for Font20
+    epd_4in01f_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_4in01f_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_4in01f_test.o(.text) refers to epd_4in01f.o(.text) for EPD_4IN01F_Init
+    epd_4in01f_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_4in01f_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_4in01f_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_4in01f_test.o(.text) refers to malloc.o(i.free) for free
+    epd_4in01f_test.o(.text) refers to imagedata.o(.constdata) for gImage_4in01
+    epd_4in01f_test.o(.text) refers to font16.o(.data) for Font16
+    epd_4in01f_test.o(.text) refers to font12.o(.data) for Font12
+    epd_4in01f_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_4in01f_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_4in2_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_4in2_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_4in2_test.o(.text) refers to epd_4in2.o(.text) for EPD_4IN2_Init
+    epd_4in2_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_4in2_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_4in2_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_4in2_test.o(.text) refers to malloc.o(i.free) for free
+    epd_4in2_test.o(.text) refers to imagedata.o(.constdata) for gImage_4in2
+    epd_4in2_test.o(.text) refers to font16.o(.data) for Font16
+    epd_4in2_test.o(.text) refers to font12.o(.data) for Font12
+    epd_4in2_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_4in2_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_4in2_test.o(.text) refers to epd_4in2_test.o(.conststring) for .conststring
+    epd_4in2_test.o(.text) refers to imagedata.o(.constdata) for gImage_4in2_4Gray
+    epd_4in2bc_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_4in2bc_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_4in2bc_test.o(.text) refers to epd_4in2bc.o(.text) for EPD_4IN2BC_Init
+    epd_4in2bc_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_4in2bc_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_4in2bc_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_4in2bc_test.o(.text) refers to malloc.o(i.free) for free
+    epd_4in2bc_test.o(.text) refers to imagedata.o(.constdata) for gImage_4in2bc_ry
+    epd_4in2bc_test.o(.text) refers to imagedata.o(.constdata) for gImage_4in2bc_b
+    epd_4in2bc_test.o(.text) refers to font16.o(.data) for Font16
+    epd_4in2bc_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_4in2bc_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_4in2bc_test.o(.text) refers to font12.o(.data) for Font12
+    epd_4in2b_v2_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_4in2b_v2_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_4in2b_v2_test.o(.text) refers to epd_4in2b_v2.o(.text) for EPD_4IN2B_V2_Init
+    epd_4in2b_v2_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_4in2b_v2_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_4in2b_v2_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_4in2b_v2_test.o(.text) refers to malloc.o(i.free) for free
+    epd_4in2b_v2_test.o(.text) refers to imagedata.o(.constdata) for gImage_4in2bc_ry
+    epd_4in2b_v2_test.o(.text) refers to imagedata.o(.constdata) for gImage_4in2bc_b
+    epd_4in2b_v2_test.o(.text) refers to font16.o(.data) for Font16
+    epd_4in2b_v2_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_4in2b_v2_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_4in2b_v2_test.o(.text) refers to font12.o(.data) for Font12
+    epd_5in65f_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_5in65f_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_5in65f_test.o(.text) refers to epd_5in65f.o(.text) for EPD_5IN65F_Init
+    epd_5in65f_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_5in65f_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_5in65f_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_5in65f_test.o(.text) refers to malloc.o(i.free) for free
+    epd_5in65f_test.o(.text) refers to font16.o(.data) for Font16
+    epd_5in65f_test.o(.text) refers to font12.o(.data) for Font12
+    epd_5in65f_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_5in65f_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_5in83_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_5in83_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_5in83_test.o(.text) refers to epd_5in83.o(.text) for EPD_5IN83_Init
+    epd_5in83_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_5in83_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_5in83_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_5in83_test.o(.text) refers to malloc.o(i.free) for free
+    epd_5in83_test.o(.text) refers to imagedata.o(.constdata) for gImage_5in83
+    epd_5in83_test.o(.text) refers to font16.o(.data) for Font16
+    epd_5in83_test.o(.text) refers to font12.o(.data) for Font12
+    epd_5in83_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_5in83_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_5in83_v2_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_5in83_v2_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_5in83_v2_test.o(.text) refers to epd_5in83_v2.o(.text) for EPD_5in83_V2_Init
+    epd_5in83_v2_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_5in83_v2_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_5in83_v2_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_5in83_v2_test.o(.text) refers to malloc.o(i.free) for free
+    epd_5in83_v2_test.o(.text) refers to imagedata.o(.constdata) for gImage_5in83_V2
+    epd_5in83_v2_test.o(.text) refers to font16.o(.data) for Font16
+    epd_5in83_v2_test.o(.text) refers to font12.o(.data) for Font12
+    epd_5in83_v2_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_5in83_v2_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_5in83bc_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_5in83bc_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_5in83bc_test.o(.text) refers to epd_5in83bc.o(.text) for EPD_5IN83BC_Init
+    epd_5in83bc_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_5in83bc_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_5in83bc_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_5in83bc_test.o(.text) refers to malloc.o(i.free) for free
+    epd_5in83bc_test.o(.text) refers to imagedata.o(.constdata) for gImage_5in83bc_ry
+    epd_5in83bc_test.o(.text) refers to imagedata.o(.constdata) for gImage_5in83bc_b
+    epd_5in83bc_test.o(.text) refers to font16.o(.data) for Font16
+    epd_5in83bc_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_5in83bc_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_5in83bc_test.o(.text) refers to font12.o(.data) for Font12
+    epd_5in83b_v2_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_5in83b_v2_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_5in83b_v2_test.o(.text) refers to epd_5in83b_v2.o(.text) for EPD_5IN83B_V2_Init
+    epd_5in83b_v2_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_5in83b_v2_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_5in83b_v2_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_5in83b_v2_test.o(.text) refers to malloc.o(i.free) for free
+    epd_5in83b_v2_test.o(.text) refers to imagedata.o(.constdata) for gImage_5in83b_V2_r
+    epd_5in83b_v2_test.o(.text) refers to imagedata.o(.constdata) for gImage_5in83b_V2_b
+    epd_5in83b_v2_test.o(.text) refers to font16.o(.data) for Font16
+    epd_5in83b_v2_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_5in83b_v2_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_5in83b_v2_test.o(.text) refers to font12.o(.data) for Font12
+    epd_7in5_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_7in5_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_7in5_test.o(.text) refers to epd_7in5.o(.text) for EPD_7IN5_Init
+    epd_7in5_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_7in5_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_7in5_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_7in5_test.o(.text) refers to malloc.o(i.free) for free
+    epd_7in5_test.o(.text) refers to imagedata.o(.constdata) for gImage_7in5
+    epd_7in5_test.o(.text) refers to font16.o(.data) for Font16
+    epd_7in5_test.o(.text) refers to font12.o(.data) for Font12
+    epd_7in5_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_7in5_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_7in5_v2_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_7in5_v2_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_7in5_v2_test.o(.text) refers to epd_7in5_v2.o(.text) for EPD_7IN5_V2_Init
+    epd_7in5_v2_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_7in5_v2_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_7in5_v2_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_7in5_v2_test.o(.text) refers to malloc.o(i.free) for free
+    epd_7in5_v2_test.o(.text) refers to imagedata.o(.constdata) for gImage_7in5_V2
+    epd_7in5_v2_test.o(.text) refers to font16.o(.data) for Font16
+    epd_7in5_v2_test.o(.text) refers to font12.o(.data) for Font12
+    epd_7in5_v2_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_7in5_v2_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_7in5bc_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_7in5bc_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_7in5bc_test.o(.text) refers to epd_7in5bc.o(.text) for EPD_7IN5BC_Init
+    epd_7in5bc_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_7in5bc_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_7in5bc_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_7in5bc_test.o(.text) refers to malloc.o(i.free) for free
+    epd_7in5bc_test.o(.text) refers to imagedata.o(.constdata) for gImage_7in5bc_ry
+    epd_7in5bc_test.o(.text) refers to imagedata.o(.constdata) for gImage_7in5bc_b
+    epd_7in5bc_test.o(.text) refers to font16.o(.data) for Font16
+    epd_7in5bc_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_7in5bc_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_7in5bc_test.o(.text) refers to font12.o(.data) for Font12
+    epd_7in5b_v2_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_7in5b_v2_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_7in5b_v2_test.o(.text) refers to epd_7in5b_v2.o(.text) for EPD_7IN5B_V2_Init
+    epd_7in5b_v2_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_7in5b_v2_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_7in5b_v2_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_7in5b_v2_test.o(.text) refers to malloc.o(i.free) for free
+    epd_7in5b_v2_test.o(.text) refers to imagedata.o(.constdata) for gImage_7in5_V2_b
+    epd_7in5b_v2_test.o(.text) refers to imagedata.o(.constdata) for gImage_7in5_V2_ry
+    epd_7in5b_v2_test.o(.text) refers to font16.o(.data) for Font16
+    epd_7in5b_v2_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_7in5b_v2_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_7in5b_v2_test.o(.text) refers to font12.o(.data) for Font12
+    epd_7in5b_hd_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_7in5b_hd_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_7in5b_hd_test.o(.text) refers to epd_7in5b_hd.o(.text) for EPD_7IN5B_HD_Init
+    epd_7in5b_hd_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_7in5b_hd_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_7in5b_hd_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_7in5b_hd_test.o(.text) refers to malloc.o(i.free) for free
+    epd_7in5b_hd_test.o(.text) refers to imagedata.o(.constdata) for gImage_7in5_V2_ry
+    epd_7in5b_hd_test.o(.text) refers to imagedata.o(.constdata) for gImage_7in5_V2_b
+    epd_7in5b_hd_test.o(.text) refers to font16.o(.data) for Font16
+    epd_7in5b_hd_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_7in5b_hd_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_7in5b_hd_test.o(.text) refers to font12.o(.data) for Font12
+    epd_7in5_hd_test.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_7in5_hd_test.o(.text) refers to dev_config.o(.text) for DEV_Module_Init
+    epd_7in5_hd_test.o(.text) refers to epd_7in5_hd.o(.text) for EPD_7IN5_HD_Init
+    epd_7in5_hd_test.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_7in5_hd_test.o(.text) refers to malloc.o(i.malloc) for malloc
+    epd_7in5_hd_test.o(.text) refers to gui_paint.o(.text) for Paint_NewImage
+    epd_7in5_hd_test.o(.text) refers to malloc.o(i.free) for free
+    epd_7in5_hd_test.o(.text) refers to imagedata.o(.constdata) for gImage_7in5_V2
+    epd_7in5_hd_test.o(.text) refers to font16.o(.data) for Font16
+    epd_7in5_hd_test.o(.text) refers to font12.o(.data) for Font12
+    epd_7in5_hd_test.o(.text) refers to font12cn.o(.data) for Font12CN
+    epd_7in5_hd_test.o(.text) refers to font24cn.o(.data) for Font24CN
+    epd_1in02d.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_WritePin
+    epd_1in02d.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_1in02d.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_1in02d.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_1in02d.o(.text) refers to epd_1in02d.o(.constdata) for .constdata
+    epd_1in54.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_1in54.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_1in54.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_1in54.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_1in54.o(.text) refers to epd_1in54.o(.constdata) for .constdata
+    epd_1in54_v2.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_1in54_v2.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_1in54_v2.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_1in54_v2.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_1in54b.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_1in54b.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_1in54b.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_1in54b.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_1in54b.o(.text) refers to epd_1in54b.o(.constdata) for .constdata
+    epd_1in54b_v2.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_1in54b_v2.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_1in54b_v2.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_1in54b_v2.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_1in54c.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_WritePin
+    epd_1in54c.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_1in54c.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_2in7.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_WritePin
+    epd_2in7.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in7.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in7.o(.text) refers to epd_2in7.o(.constdata) for .constdata
+    epd_2in7.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_2in7b.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in7b.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in7b.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_2in7b.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_2in7b.o(.text) refers to epd_2in7b.o(.constdata) for .constdata
+    epd_2in9.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in9.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in9.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_2in9.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_2in9.o(.text) refers to epd_2in9.o(.constdata) for .constdata
+    epd_2in9_v2.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in9_v2.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_2in9_v2.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in9_v2.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_2in9_v2.o(.text) refers to epd_2in9_v2.o(.data) for .data
+    epd_2in9bc.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in9bc.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in9bc.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_2in9bc.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_2in9b_v3.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in9b_v3.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_2in9b_v3.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in9b_v3.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_2in9d.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in9d.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_2in9d.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in9d.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_2in9d.o(.text) refers to epd_2in9d.o(.constdata) for .constdata
+    epd_2in13.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in13.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in13.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_2in13.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_2in13.o(.text) refers to epd_2in13.o(.constdata) for .constdata
+    epd_2in13_v2.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in13_v2.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in13_v2.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_2in13_v2.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_2in13_v2.o(.text) refers to epd_2in13_v2.o(.constdata) for .constdata
+    epd_2in13bc.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in13bc.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in13bc.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_2in13bc.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_2in13b_v3.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in13b_v3.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_2in13b_v3.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in13b_v3.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_2in13d.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in13d.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_2in13d.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in13d.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_2in13d.o(.text) refers to epd_2in13d.o(.constdata) for .constdata
+    epd_2in66.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_WritePin
+    epd_2in66.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in66.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in66.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_2in66.o(.text) refers to epd_2in66.o(.constdata) for .constdata
+    epd_2in66b.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_2in66b.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_2in66b.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_2in66b.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_3in7.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_WritePin
+    epd_3in7.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_3in7.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_3in7.o(.text) refers to epd_3in7.o(.constdata) for .constdata
+    epd_3in7.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_4in01f.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_WritePin
+    epd_4in01f.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_4in01f.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_4in2.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_WritePin
+    epd_4in2.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_4in2.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_4in2.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_4in2.o(.text) refers to epd_4in2.o(.constdata) for .constdata
+    epd_4in2bc.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_4in2bc.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_4in2bc.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_4in2bc.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_4in2b_v2.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_4in2b_v2.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_4in2b_v2.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_4in2b_v2.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_5in65f.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_WritePin
+    epd_5in65f.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_5in65f.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_5in83.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_5in83.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_5in83.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_5in83.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_5in83_v2.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_5in83_v2.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_5in83_v2.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_5in83_v2.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_5in83bc.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_5in83bc.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_5in83bc.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_5in83bc.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_5in83b_v2.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_5in83b_v2.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_5in83b_v2.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_5in83b_v2.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_7in5.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_7in5.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_7in5.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_7in5.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_7in5_v2.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_7in5_v2.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_7in5_v2.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_7in5_v2.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_7in5_hd.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_7in5_hd.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_7in5_hd.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_7in5_hd.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_7in5bc.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_7in5bc.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_7in5bc.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_7in5bc.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_7in5b_v2.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_7in5b_v2.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_7in5b_v2.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_7in5b_v2.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    epd_7in5b_hd.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    epd_7in5b_hd.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_ReadPin
+    epd_7in5b_hd.o(.text) refers to stm32f1xx_hal.o(.text) for HAL_Delay
+    epd_7in5b_hd.o(.text) refers to dev_config.o(.text) for DEV_SPI_WriteByte
+    dev_config.o(.text) refers to stm32f1xx_hal_spi.o(.text) for HAL_SPI_Transmit
+    dev_config.o(.text) refers to stm32f1xx_hal_gpio.o(.text) for HAL_GPIO_WritePin
+    dev_config.o(.text) refers to spi.o(.bss) for hspi1
+    gui_paint.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
+    gui_paint.o(.text) refers to gui_paint.o(.bss) for .bss
+    gui_paint.o(.text) refers to gui_paint.o(.conststring) for .conststring
+    gui_paint.o(.text) refers to memseta.o(.text) for __aeabi_memclr4
+    font8.o(.data) refers to font8.o(.constdata) for Font8_Table
+    font12.o(.data) refers to font12.o(.constdata) for Font12_Table
+    font12cn.o(.data) refers to font12cn.o(.constdata) for Font12CN_Table
+    font16.o(.data) refers to font16.o(.constdata) for Font16_Table
+    font20.o(.data) refers to font20.o(.constdata) for Font20_Table
+    font24.o(.data) refers to font24.o(.constdata) for Font24_Table
+    font24cn.o(.data) refers to font24cn.o(.constdata) for Font24CN_Table
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    printfb.o(i.__0fprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0fprintf$bare) refers to usart.o(.text) for fputc
+    printfb.o(i.__0printf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0printf$bare) refers to usart.o(.text) for fputc
+    printfb.o(i.__0printf$bare) refers to stdout.o(.data) for __stdout
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printfb.o(i.__0vfprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vfprintf$bare) refers to usart.o(.text) for fputc
+    printfb.o(i.__0vprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vprintf$bare) refers to usart.o(.text) for fputc
+    printfb.o(i.__0vprintf$bare) refers to stdout.o(.data) for __stdout
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printf0.o(i.__0fprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0fprintf$0) refers to usart.o(.text) for fputc
+    printf0.o(i.__0printf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0printf$0) refers to usart.o(.text) for fputc
+    printf0.o(i.__0printf$0) refers to stdout.o(.data) for __stdout
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf0.o(i.__0vfprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vfprintf$0) refers to usart.o(.text) for fputc
+    printf0.o(i.__0vprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vprintf$0) refers to usart.o(.text) for fputc
+    printf0.o(i.__0vprintf$0) refers to stdout.o(.data) for __stdout
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf1.o(i.__0fprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0fprintf$1) refers to usart.o(.text) for fputc
+    printf1.o(i.__0printf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0printf$1) refers to usart.o(.text) for fputc
+    printf1.o(i.__0printf$1) refers to stdout.o(.data) for __stdout
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i.__0vfprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vfprintf$1) refers to usart.o(.text) for fputc
+    printf1.o(i.__0vprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vprintf$1) refers to usart.o(.text) for fputc
+    printf1.o(i.__0vprintf$1) refers to stdout.o(.data) for __stdout
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf2.o(i.__0fprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0fprintf$2) refers to usart.o(.text) for fputc
+    printf2.o(i.__0printf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0printf$2) refers to usart.o(.text) for fputc
+    printf2.o(i.__0printf$2) refers to stdout.o(.data) for __stdout
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf2.o(i.__0vfprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vfprintf$2) refers to usart.o(.text) for fputc
+    printf2.o(i.__0vprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vprintf$2) refers to usart.o(.text) for fputc
+    printf2.o(i.__0vprintf$2) refers to stdout.o(.data) for __stdout
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf3.o(i.__0fprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0fprintf$3) refers to usart.o(.text) for fputc
+    printf3.o(i.__0printf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0printf$3) refers to usart.o(.text) for fputc
+    printf3.o(i.__0printf$3) refers to stdout.o(.data) for __stdout
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i.__0vfprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vfprintf$3) refers to usart.o(.text) for fputc
+    printf3.o(i.__0vprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vprintf$3) refers to usart.o(.text) for fputc
+    printf3.o(i.__0vprintf$3) refers to stdout.o(.data) for __stdout
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf4.o(i.__0fprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0fprintf$4) refers to usart.o(.text) for fputc
+    printf4.o(i.__0printf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0printf$4) refers to usart.o(.text) for fputc
+    printf4.o(i.__0printf$4) refers to stdout.o(.data) for __stdout
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i.__0vfprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vfprintf$4) refers to usart.o(.text) for fputc
+    printf4.o(i.__0vprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vprintf$4) refers to usart.o(.text) for fputc
+    printf4.o(i.__0vprintf$4) refers to stdout.o(.data) for __stdout
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf5.o(i.__0fprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0fprintf$5) refers to usart.o(.text) for fputc
+    printf5.o(i.__0printf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0printf$5) refers to usart.o(.text) for fputc
+    printf5.o(i.__0printf$5) refers to stdout.o(.data) for __stdout
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i.__0vfprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vfprintf$5) refers to usart.o(.text) for fputc
+    printf5.o(i.__0vprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vprintf$5) refers to usart.o(.text) for fputc
+    printf5.o(i.__0vprintf$5) refers to stdout.o(.data) for __stdout
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf6.o(i.__0fprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0fprintf$6) refers to usart.o(.text) for fputc
+    printf6.o(i.__0printf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0printf$6) refers to usart.o(.text) for fputc
+    printf6.o(i.__0printf$6) refers to stdout.o(.data) for __stdout
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i.__0vfprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vfprintf$6) refers to usart.o(.text) for fputc
+    printf6.o(i.__0vprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vprintf$6) refers to usart.o(.text) for fputc
+    printf6.o(i.__0vprintf$6) refers to stdout.o(.data) for __stdout
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_pre_padding) for _printf_pre_padding
+    printf6.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_post_padding) for _printf_post_padding
+    printf7.o(i.__0fprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0fprintf$7) refers to usart.o(.text) for fputc
+    printf7.o(i.__0printf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0printf$7) refers to usart.o(.text) for fputc
+    printf7.o(i.__0printf$7) refers to stdout.o(.data) for __stdout
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i.__0vfprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vfprintf$7) refers to usart.o(.text) for fputc
+    printf7.o(i.__0vprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vprintf$7) refers to usart.o(.text) for fputc
+    printf7.o(i.__0vprintf$7) refers to stdout.o(.data) for __stdout
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_pre_padding) for _printf_pre_padding
+    printf7.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_post_padding) for _printf_post_padding
+    printf8.o(i.__0fprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0fprintf$8) refers to usart.o(.text) for fputc
+    printf8.o(i.__0printf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0printf$8) refers to usart.o(.text) for fputc
+    printf8.o(i.__0printf$8) refers to stdout.o(.data) for __stdout
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i.__0vfprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vfprintf$8) refers to usart.o(.text) for fputc
+    printf8.o(i.__0vprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vprintf$8) refers to usart.o(.text) for fputc
+    printf8.o(i.__0vprintf$8) refers to stdout.o(.data) for __stdout
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_pre_padding) for _printf_pre_padding
+    printf8.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0fprintf) refers to usart.o(.text) for fputc
+    printfa.o(i.__0printf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0printf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0printf) refers to usart.o(.text) for fputc
+    printfa.o(i.__0printf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0snprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0snprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0snprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0sprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0sprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0sprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i.__0vfprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vfprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vfprintf) refers to usart.o(.text) for fputc
+    printfa.o(i.__0vprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vprintf) refers to usart.o(.text) for fputc
+    printfa.o(i.__0vprintf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0vsnprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0vsprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i._fp_digits) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._fp_digits) refers to dmul.o(.text) for __aeabi_dmul
+    printfa.o(i._fp_digits) refers to ddiv.o(.text) for __aeabi_ddiv
+    printfa.o(i._fp_digits) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    printfa.o(i._fp_digits) refers to dadd.o(.text) for __aeabi_dadd
+    printfa.o(i._fp_digits) refers to dfixul.o(.text) for __aeabi_d2ulz
+    printfa.o(i._fp_digits) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_pre_padding) for _printf_pre_padding
+    printfa.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i._printf_core) refers to printfa.o(i._fp_digits) for _fp_digits
+    printfa.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printfa.o(i._printf_post_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    malloc.o(i.free) refers to mvars.o(.data) for __microlib_freelist
+    malloc.o(i.malloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    malloc.o(i.malloc) refers to mvars.o(.data) for __microlib_freelist
+    malloc.o(i.malloc) refers to startup_stm32f103xe.o(HEAP) for __heap_base
+    mallocr.o(i.__free$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.__malloc$realloc) refers to mallocr.o(i.internal_alloc) for internal_alloc
+    mallocr.o(i.__malloc$realloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    mallocr.o(i.__malloc$realloc) refers to startup_stm32f103xe.o(HEAP) for __heap_base
+    mallocr.o(i.__malloc$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.internal_alloc) refers to memcpya.o(.text) for __aeabi_memcpy
+    mallocr.o(i.internal_alloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.realloc) refers to mallocr.o(i.__free$realloc) for __free$realloc
+    mallocr.o(i.realloc) refers to mallocr.o(i.internal_alloc) for internal_alloc
+    mallocr.o(i.realloc) refers to mallocr.o(i.__malloc$realloc) for __malloc$realloc
+    mallocr.o(i.realloc) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__aligned_malloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    malloca.o(i.__aligned_malloc) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__aligned_malloc) refers to startup_stm32f103xe.o(HEAP) for __heap_base
+    malloca.o(i.__free$memalign) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__malloc$memalign) refers to malloca.o(i.__aligned_malloc) for __aligned_malloc
+    mallocra.o(i.__aligned_malloc$realloc) refers to mallocra.o(i.internal_alloc) for internal_alloc
+    mallocra.o(i.__aligned_malloc$realloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    mallocra.o(i.__aligned_malloc$realloc) refers to startup_stm32f103xe.o(HEAP) for __heap_base
+    mallocra.o(i.__aligned_malloc$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.__free$realloc$memalign) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.__malloc$realloc$memalign) refers to mallocra.o(i.__aligned_malloc$realloc) for __aligned_malloc$realloc
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.__free$realloc$memalign) for __free$realloc$memalign
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.internal_alloc) for internal_alloc
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.__malloc$realloc$memalign) for __malloc$realloc$memalign
+    mallocra.o(i.__realloc$memalign) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.internal_alloc) refers to memcpya.o(.text) for __aeabi_memcpy
+    mallocra.o(i.internal_alloc) refers to mvars.o(.data) for __microlib_freelist
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_stm32f103xe.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_stm32f103xe.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(.text) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(.text) for main
+    uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dfixul.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup_stm32f103xe.o(HEAP), (40960 bytes).
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(.rrx_text), (6 bytes).
+    Removing gpio.o(.rev16_text), (4 bytes).
+    Removing gpio.o(.revsh_text), (4 bytes).
+    Removing gpio.o(.rrx_text), (6 bytes).
+    Removing spi.o(.rev16_text), (4 bytes).
+    Removing spi.o(.revsh_text), (4 bytes).
+    Removing spi.o(.rrx_text), (6 bytes).
+    Removing usart.o(.rev16_text), (4 bytes).
+    Removing usart.o(.revsh_text), (4 bytes).
+    Removing usart.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_it.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_it.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_it.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_msp.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_msp.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_msp.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_gpio_ex.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_gpio_ex.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_gpio_ex.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_gpio_ex.o(.text), (44 bytes).
+    Removing stm32f1xx_hal_spi.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_spi.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_spi.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_spi.o(.text), (4612 bytes).
+    Removing stm32f1xx_hal_spi_ex.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_spi_ex.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_spi_ex.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_tim.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_tim.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_tim.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_tim_ex.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_tim_ex.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_tim_ex.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_uart.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_uart.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_uart.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_rcc.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_rcc.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_rcc.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_rcc_ex.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_rcc_ex.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_rcc_ex.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_rcc_ex.o(.text), (492 bytes).
+    Removing stm32f1xx_hal_gpio.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_gpio.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_gpio.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_dma.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_dma.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_dma.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_cortex.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_cortex.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_cortex.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_pwr.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_pwr.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_pwr.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_pwr.o(.text), (424 bytes).
+    Removing stm32f1xx_hal_flash.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_flash.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_flash.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_flash.o(.text), (760 bytes).
+    Removing stm32f1xx_hal_flash.o(.bss), (32 bytes).
+    Removing stm32f1xx_hal_flash_ex.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_flash_ex.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_flash_ex.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_flash_ex.o(.text), (1050 bytes).
+    Removing system_stm32f1xx.o(.rev16_text), (4 bytes).
+    Removing system_stm32f1xx.o(.revsh_text), (4 bytes).
+    Removing system_stm32f1xx.o(.rrx_text), (6 bytes).
+    Removing imagedata.o(.constdata), (2560 bytes).
+    Removing imagedata.o(.constdata), (5000 bytes).
+    Removing imagedata.o(.constdata), (5000 bytes).
+    Removing imagedata.o(.constdata), (5000 bytes).
+    Removing imagedata.o(.constdata), (2888 bytes).
+    Removing imagedata.o(.constdata), (2888 bytes).
+    Removing imagedata.o(.constdata), (5808 bytes).
+    Removing imagedata.o(.constdata), (5808 bytes).
+    Removing imagedata.o(.constdata), (5808 bytes).
+    Removing imagedata.o(.constdata), (5808 bytes).
+    Removing imagedata.o(.constdata), (5808 bytes).
+    Removing imagedata.o(.constdata), (11616 bytes).
+    Removing imagedata.o(.constdata), (4736 bytes).
+    Removing imagedata.o(.constdata), (4736 bytes).
+    Removing imagedata.o(.constdata), (4736 bytes).
+    Removing imagedata.o(.constdata), (4000 bytes).
+    Removing imagedata.o(.constdata), (2756 bytes).
+    Removing imagedata.o(.constdata), (2756 bytes).
+    Removing imagedata.o(.constdata), (2756 bytes).
+    Removing imagedata.o(.constdata), (2756 bytes).
+    Removing imagedata.o(.constdata), (2756 bytes).
+    Removing imagedata.o(.constdata), (5630 bytes).
+    Removing imagedata.o(.constdata), (5630 bytes).
+    Removing imagedata.o(.constdata), (5630 bytes).
+    Removing imagedata.o(.constdata), (33606 bytes).
+    Removing imagedata.o(.constdata), (128000 bytes).
+    Removing imagedata.o(.constdata), (15000 bytes).
+    Removing imagedata.o(.constdata), (30000 bytes).
+    Removing imagedata.o(.constdata), (15000 bytes).
+    Removing imagedata.o(.constdata), (15000 bytes).
+    Removing imagedata.o(.constdata), (13728 bytes).
+    Removing imagedata.o(.constdata), (33600 bytes).
+    Removing imagedata.o(.constdata), (38886 bytes).
+    Removing imagedata.o(.constdata), (33600 bytes).
+    Removing imagedata.o(.constdata), (33600 bytes).
+    Removing imagedata.o(.constdata), (38886 bytes).
+    Removing imagedata.o(.constdata), (38886 bytes).
+    Removing imagedata.o(.constdata), (30720 bytes).
+    Removing imagedata.o(.constdata), (48000 bytes).
+    Removing imagedata.o(.constdata), (30720 bytes).
+    Removing imagedata.o(.constdata), (30720 bytes).
+    Removing imagedata.o(.constdata), (48000 bytes).
+    Removing imagedata.o(.constdata), (48000 bytes).
+    Removing epd_1in02_test.o(.rev16_text), (4 bytes).
+    Removing epd_1in02_test.o(.revsh_text), (4 bytes).
+    Removing epd_1in02_test.o(.rrx_text), (6 bytes).
+    Removing epd_1in02_test.o(.text), (1124 bytes).
+    Removing epd_1in54_test.o(.rev16_text), (4 bytes).
+    Removing epd_1in54_test.o(.revsh_text), (4 bytes).
+    Removing epd_1in54_test.o(.rrx_text), (6 bytes).
+    Removing epd_1in54_test.o(.text), (956 bytes).
+    Removing epd_1in54_v2_test.o(.rev16_text), (4 bytes).
+    Removing epd_1in54_v2_test.o(.revsh_text), (4 bytes).
+    Removing epd_1in54_v2_test.o(.rrx_text), (6 bytes).
+    Removing epd_1in54_v2_test.o(.text), (388 bytes).
+    Removing epd_1in54b_test.o(.rev16_text), (4 bytes).
+    Removing epd_1in54b_test.o(.revsh_text), (4 bytes).
+    Removing epd_1in54b_test.o(.rrx_text), (6 bytes).
+    Removing epd_1in54b_test.o(.text), (948 bytes).
+    Removing epd_1in54b_v2_test.o(.rev16_text), (4 bytes).
+    Removing epd_1in54b_v2_test.o(.revsh_text), (4 bytes).
+    Removing epd_1in54b_v2_test.o(.rrx_text), (6 bytes).
+    Removing epd_1in54b_v2_test.o(.text), (916 bytes).
+    Removing epd_1in54c_test.o(.rev16_text), (4 bytes).
+    Removing epd_1in54c_test.o(.revsh_text), (4 bytes).
+    Removing epd_1in54c_test.o(.rrx_text), (6 bytes).
+    Removing epd_1in54c_test.o(.text), (888 bytes).
+    Removing epd_2in7_test.o(.rev16_text), (4 bytes).
+    Removing epd_2in7_test.o(.revsh_text), (4 bytes).
+    Removing epd_2in7_test.o(.rrx_text), (6 bytes).
+    Removing epd_2in7_test.o(.text), (1352 bytes).
+    Removing epd_2in7b_test.o(.rev16_text), (4 bytes).
+    Removing epd_2in7b_test.o(.revsh_text), (4 bytes).
+    Removing epd_2in7b_test.o(.rrx_text), (6 bytes).
+    Removing epd_2in7b_test.o(.text), (944 bytes).
+    Removing epd_2in9_test.o(.rev16_text), (4 bytes).
+    Removing epd_2in9_test.o(.revsh_text), (4 bytes).
+    Removing epd_2in9_test.o(.rrx_text), (6 bytes).
+    Removing epd_2in9_test.o(.text), (1028 bytes).
+    Removing epd_2in9_v2_test.o(.rev16_text), (4 bytes).
+    Removing epd_2in9_v2_test.o(.revsh_text), (4 bytes).
+    Removing epd_2in9_v2_test.o(.rrx_text), (6 bytes).
+    Removing epd_2in9_v2_test.o(.text), (1080 bytes).
+    Removing epd_2in9bc_test.o(.rev16_text), (4 bytes).
+    Removing epd_2in9bc_test.o(.revsh_text), (4 bytes).
+    Removing epd_2in9bc_test.o(.rrx_text), (6 bytes).
+    Removing epd_2in9bc_test.o(.text), (928 bytes).
+    Removing epd_2in9b_v3_test.o(.rev16_text), (4 bytes).
+    Removing epd_2in9b_v3_test.o(.revsh_text), (4 bytes).
+    Removing epd_2in9b_v3_test.o(.rrx_text), (6 bytes).
+    Removing epd_2in9b_v3_test.o(.text), (932 bytes).
+    Removing epd_2in9d_test.o(.rev16_text), (4 bytes).
+    Removing epd_2in9d_test.o(.revsh_text), (4 bytes).
+    Removing epd_2in9d_test.o(.rrx_text), (6 bytes).
+    Removing epd_2in9d_test.o(.text), (1048 bytes).
+    Removing epd_2in13_test.o(.rev16_text), (4 bytes).
+    Removing epd_2in13_test.o(.revsh_text), (4 bytes).
+    Removing epd_2in13_test.o(.rrx_text), (6 bytes).
+    Removing epd_2in13_test.o(.text), (960 bytes).
+    Removing epd_2in13_v2_test.o(.rev16_text), (4 bytes).
+    Removing epd_2in13_v2_test.o(.revsh_text), (4 bytes).
+    Removing epd_2in13_v2_test.o(.rrx_text), (6 bytes).
+    Removing epd_2in13_v2_test.o(.text), (1012 bytes).
+    Removing epd_2in13b_v3_test.o(.rev16_text), (4 bytes).
+    Removing epd_2in13b_v3_test.o(.revsh_text), (4 bytes).
+    Removing epd_2in13b_v3_test.o(.rrx_text), (6 bytes).
+    Removing epd_2in13b_v3_test.o(.text), (912 bytes).
+    Removing epd_2in13bc_test.o(.rev16_text), (4 bytes).
+    Removing epd_2in13bc_test.o(.revsh_text), (4 bytes).
+    Removing epd_2in13bc_test.o(.rrx_text), (6 bytes).
+    Removing epd_2in13bc_test.o(.text), (908 bytes).
+    Removing epd_2in13d_test.o(.rev16_text), (4 bytes).
+    Removing epd_2in13d_test.o(.revsh_text), (4 bytes).
+    Removing epd_2in13d_test.o(.rrx_text), (6 bytes).
+    Removing epd_2in13d_test.o(.text), (964 bytes).
+    Removing epd_2in66_test.o(.rev16_text), (4 bytes).
+    Removing epd_2in66_test.o(.revsh_text), (4 bytes).
+    Removing epd_2in66_test.o(.rrx_text), (6 bytes).
+    Removing epd_2in66_test.o(.text), (1032 bytes).
+    Removing epd_2in66b_test.o(.rev16_text), (4 bytes).
+    Removing epd_2in66b_test.o(.revsh_text), (4 bytes).
+    Removing epd_2in66b_test.o(.rrx_text), (6 bytes).
+    Removing epd_2in66b_test.o(.text), (944 bytes).
+    Removing epd_3in7_test.o(.rev16_text), (4 bytes).
+    Removing epd_3in7_test.o(.revsh_text), (4 bytes).
+    Removing epd_3in7_test.o(.rrx_text), (6 bytes).
+    Removing epd_3in7_test.o(.text), (1280 bytes).
+    Removing epd_4in01f_test.o(.rev16_text), (4 bytes).
+    Removing epd_4in01f_test.o(.revsh_text), (4 bytes).
+    Removing epd_4in01f_test.o(.rrx_text), (6 bytes).
+    Removing epd_4in01f_test.o(.text), (968 bytes).
+    Removing epd_4in2_test.o(.rev16_text), (4 bytes).
+    Removing epd_4in2_test.o(.revsh_text), (4 bytes).
+    Removing epd_4in2_test.o(.rrx_text), (6 bytes).
+    Removing epd_4in2_test.o(.text), (1380 bytes).
+    Removing epd_4in2_test.o(.conststring), (93 bytes).
+    Removing epd_4in2bc_test.o(.rev16_text), (4 bytes).
+    Removing epd_4in2bc_test.o(.revsh_text), (4 bytes).
+    Removing epd_4in2bc_test.o(.rrx_text), (6 bytes).
+    Removing epd_4in2bc_test.o(.text), (984 bytes).
+    Removing epd_4in2b_v2_test.o(.rev16_text), (4 bytes).
+    Removing epd_4in2b_v2_test.o(.revsh_text), (4 bytes).
+    Removing epd_4in2b_v2_test.o(.rrx_text), (6 bytes).
+    Removing epd_4in2b_v2_test.o(.text), (992 bytes).
+    Removing epd_5in65f_test.o(.rev16_text), (4 bytes).
+    Removing epd_5in65f_test.o(.revsh_text), (4 bytes).
+    Removing epd_5in65f_test.o(.rrx_text), (6 bytes).
+    Removing epd_5in65f_test.o(.text), (948 bytes).
+    Removing epd_5in83_test.o(.rev16_text), (4 bytes).
+    Removing epd_5in83_test.o(.revsh_text), (4 bytes).
+    Removing epd_5in83_test.o(.rrx_text), (6 bytes).
+    Removing epd_5in83_test.o(.text), (852 bytes).
+    Removing epd_5in83_v2_test.o(.rev16_text), (4 bytes).
+    Removing epd_5in83_v2_test.o(.revsh_text), (4 bytes).
+    Removing epd_5in83_v2_test.o(.rrx_text), (6 bytes).
+    Removing epd_5in83_v2_test.o(.text), (872 bytes).
+    Removing epd_5in83bc_test.o(.rev16_text), (4 bytes).
+    Removing epd_5in83bc_test.o(.revsh_text), (4 bytes).
+    Removing epd_5in83bc_test.o(.rrx_text), (6 bytes).
+    Removing epd_5in83bc_test.o(.text), (924 bytes).
+    Removing epd_5in83b_v2_test.o(.rev16_text), (4 bytes).
+    Removing epd_5in83b_v2_test.o(.revsh_text), (4 bytes).
+    Removing epd_5in83b_v2_test.o(.rrx_text), (6 bytes).
+    Removing epd_5in83b_v2_test.o(.text), (1204 bytes).
+    Removing epd_7in5_test.o(.rev16_text), (4 bytes).
+    Removing epd_7in5_test.o(.revsh_text), (4 bytes).
+    Removing epd_7in5_test.o(.rrx_text), (6 bytes).
+    Removing epd_7in5_test.o(.text), (852 bytes).
+    Removing epd_7in5_v2_test.o(.rev16_text), (4 bytes).
+    Removing epd_7in5_v2_test.o(.revsh_text), (4 bytes).
+    Removing epd_7in5_v2_test.o(.rrx_text), (6 bytes).
+    Removing epd_7in5_v2_test.o(.text), (896 bytes).
+    Removing epd_7in5bc_test.o(.rev16_text), (4 bytes).
+    Removing epd_7in5bc_test.o(.revsh_text), (4 bytes).
+    Removing epd_7in5bc_test.o(.rrx_text), (6 bytes).
+    Removing epd_7in5bc_test.o(.text), (924 bytes).
+    Removing epd_7in5b_v2_test.o(.rev16_text), (4 bytes).
+    Removing epd_7in5b_v2_test.o(.revsh_text), (4 bytes).
+    Removing epd_7in5b_v2_test.o(.rrx_text), (6 bytes).
+    Removing epd_7in5b_v2_test.o(.text), (884 bytes).
+    Removing epd_7in5b_hd_test.o(.rev16_text), (4 bytes).
+    Removing epd_7in5b_hd_test.o(.revsh_text), (4 bytes).
+    Removing epd_7in5b_hd_test.o(.rrx_text), (6 bytes).
+    Removing epd_7in5b_hd_test.o(.text), (872 bytes).
+    Removing epd_7in5_hd_test.o(.rev16_text), (4 bytes).
+    Removing epd_7in5_hd_test.o(.revsh_text), (4 bytes).
+    Removing epd_7in5_hd_test.o(.rrx_text), (6 bytes).
+    Removing epd_7in5_hd_test.o(.text), (888 bytes).
+    Removing epd_1in02d.o(.rev16_text), (4 bytes).
+    Removing epd_1in02d.o(.revsh_text), (4 bytes).
+    Removing epd_1in02d.o(.rrx_text), (6 bytes).
+    Removing epd_1in02d.o(.text), (1036 bytes).
+    Removing epd_1in02d.o(.constdata), (168 bytes).
+    Removing epd_1in54.o(.rev16_text), (4 bytes).
+    Removing epd_1in54.o(.revsh_text), (4 bytes).
+    Removing epd_1in54.o(.rrx_text), (6 bytes).
+    Removing epd_1in54.o(.text), (776 bytes).
+    Removing epd_1in54.o(.constdata), (60 bytes).
+    Removing epd_1in54_v2.o(.rev16_text), (4 bytes).
+    Removing epd_1in54_v2.o(.revsh_text), (4 bytes).
+    Removing epd_1in54_v2.o(.rrx_text), (6 bytes).
+    Removing epd_1in54_v2.o(.text), (796 bytes).
+    Removing epd_1in54b.o(.rev16_text), (4 bytes).
+    Removing epd_1in54b.o(.revsh_text), (4 bytes).
+    Removing epd_1in54b.o(.rrx_text), (6 bytes).
+    Removing epd_1in54b.o(.text), (996 bytes).
+    Removing epd_1in54b.o(.constdata), (120 bytes).
+    Removing epd_1in54b_v2.o(.rev16_text), (4 bytes).
+    Removing epd_1in54b_v2.o(.revsh_text), (4 bytes).
+    Removing epd_1in54b_v2.o(.rrx_text), (6 bytes).
+    Removing epd_1in54b_v2.o(.text), (584 bytes).
+    Removing epd_1in54c.o(.rev16_text), (4 bytes).
+    Removing epd_1in54c.o(.revsh_text), (4 bytes).
+    Removing epd_1in54c.o(.rrx_text), (6 bytes).
+    Removing epd_1in54c.o(.text), (500 bytes).
+    Removing epd_2in7.o(.rev16_text), (4 bytes).
+    Removing epd_2in7.o(.revsh_text), (4 bytes).
+    Removing epd_2in7.o(.rrx_text), (6 bytes).
+    Removing epd_2in7.o(.text), (1540 bytes).
+    Removing epd_2in7.o(.constdata), (424 bytes).
+    Removing epd_2in7b.o(.rev16_text), (4 bytes).
+    Removing epd_2in7b.o(.revsh_text), (4 bytes).
+    Removing epd_2in7b.o(.rrx_text), (6 bytes).
+    Removing epd_2in7b.o(.text), (864 bytes).
+    Removing epd_2in7b.o(.constdata), (212 bytes).
+    Removing epd_2in9.o(.rev16_text), (4 bytes).
+    Removing epd_2in9.o(.revsh_text), (4 bytes).
+    Removing epd_2in9.o(.rrx_text), (6 bytes).
+    Removing epd_2in9.o(.text), (792 bytes).
+    Removing epd_2in9.o(.constdata), (60 bytes).
+    Removing epd_2in9_v2.o(.rev16_text), (4 bytes).
+    Removing epd_2in9_v2.o(.revsh_text), (4 bytes).
+    Removing epd_2in9_v2.o(.rrx_text), (6 bytes).
+    Removing epd_2in9_v2.o(.text), (908 bytes).
+    Removing epd_2in9_v2.o(.data), (159 bytes).
+    Removing epd_2in9bc.o(.rev16_text), (4 bytes).
+    Removing epd_2in9bc.o(.revsh_text), (4 bytes).
+    Removing epd_2in9bc.o(.rrx_text), (6 bytes).
+    Removing epd_2in9bc.o(.text), (576 bytes).
+    Removing epd_2in9b_v3.o(.rev16_text), (4 bytes).
+    Removing epd_2in9b_v3.o(.revsh_text), (4 bytes).
+    Removing epd_2in9b_v3.o(.rrx_text), (6 bytes).
+    Removing epd_2in9b_v3.o(.text), (556 bytes).
+    Removing epd_2in9d.o(.rev16_text), (4 bytes).
+    Removing epd_2in9d.o(.revsh_text), (4 bytes).
+    Removing epd_2in9d.o(.rrx_text), (6 bytes).
+    Removing epd_2in9d.o(.text), (1044 bytes).
+    Removing epd_2in9d.o(.constdata), (424 bytes).
+    Removing epd_2in13.o(.rev16_text), (4 bytes).
+    Removing epd_2in13.o(.revsh_text), (4 bytes).
+    Removing epd_2in13.o(.rrx_text), (6 bytes).
+    Removing epd_2in13.o(.text), (796 bytes).
+    Removing epd_2in13.o(.constdata), (60 bytes).
+    Removing epd_2in13_v2.o(.rev16_text), (4 bytes).
+    Removing epd_2in13_v2.o(.revsh_text), (4 bytes).
+    Removing epd_2in13_v2.o(.rrx_text), (6 bytes).
+    Removing epd_2in13_v2.o(.text), (1072 bytes).
+    Removing epd_2in13_v2.o(.constdata), (152 bytes).
+    Removing epd_2in13bc.o(.rev16_text), (4 bytes).
+    Removing epd_2in13bc.o(.revsh_text), (4 bytes).
+    Removing epd_2in13bc.o(.rrx_text), (6 bytes).
+    Removing epd_2in13bc.o(.text), (588 bytes).
+    Removing epd_2in13b_v3.o(.rev16_text), (4 bytes).
+    Removing epd_2in13b_v3.o(.revsh_text), (4 bytes).
+    Removing epd_2in13b_v3.o(.rrx_text), (6 bytes).
+    Removing epd_2in13b_v3.o(.text), (580 bytes).
+    Removing epd_2in13d.o(.rev16_text), (4 bytes).
+    Removing epd_2in13d.o(.revsh_text), (4 bytes).
+    Removing epd_2in13d.o(.rrx_text), (6 bytes).
+    Removing epd_2in13d.o(.text), (1076 bytes).
+    Removing epd_2in13d.o(.constdata), (424 bytes).
+    Removing epd_2in66.o(.rev16_text), (4 bytes).
+    Removing epd_2in66.o(.revsh_text), (4 bytes).
+    Removing epd_2in66.o(.rrx_text), (6 bytes).
+    Removing epd_2in66.o(.text), (704 bytes).
+    Removing epd_2in66.o(.constdata), (159 bytes).
+    Removing epd_2in66b.o(.rev16_text), (4 bytes).
+    Removing epd_2in66b.o(.revsh_text), (4 bytes).
+    Removing epd_2in66b.o(.rrx_text), (6 bytes).
+    Removing epd_2in66b.o(.text), (608 bytes).
+    Removing epd_3in7.o(.rev16_text), (4 bytes).
+    Removing epd_3in7.o(.revsh_text), (4 bytes).
+    Removing epd_3in7.o(.rrx_text), (6 bytes).
+    Removing epd_3in7.o(.text), (1928 bytes).
+    Removing epd_3in7.o(.constdata), (420 bytes).
+    Removing epd_4in01f.o(.rev16_text), (4 bytes).
+    Removing epd_4in01f.o(.revsh_text), (4 bytes).
+    Removing epd_4in01f.o(.rrx_text), (6 bytes).
+    Removing epd_4in01f.o(.text), (792 bytes).
+    Removing epd_4in2.o(.rev16_text), (4 bytes).
+    Removing epd_4in2.o(.revsh_text), (4 bytes).
+    Removing epd_4in2.o(.rrx_text), (6 bytes).
+    Removing epd_4in2.o(.text), (1732 bytes).
+    Removing epd_4in2.o(.constdata), (634 bytes).
+    Removing epd_4in2bc.o(.rev16_text), (4 bytes).
+    Removing epd_4in2bc.o(.revsh_text), (4 bytes).
+    Removing epd_4in2bc.o(.rrx_text), (6 bytes).
+    Removing epd_4in2bc.o(.text), (528 bytes).
+    Removing epd_4in2b_v2.o(.rev16_text), (4 bytes).
+    Removing epd_4in2b_v2.o(.revsh_text), (4 bytes).
+    Removing epd_4in2b_v2.o(.rrx_text), (6 bytes).
+    Removing epd_4in2b_v2.o(.text), (524 bytes).
+    Removing epd_5in65f.o(.rev16_text), (4 bytes).
+    Removing epd_5in65f.o(.revsh_text), (4 bytes).
+    Removing epd_5in65f.o(.rrx_text), (6 bytes).
+    Removing epd_5in65f.o(.text), (840 bytes).
+    Removing epd_5in83.o(.rev16_text), (4 bytes).
+    Removing epd_5in83.o(.revsh_text), (4 bytes).
+    Removing epd_5in83.o(.rrx_text), (6 bytes).
+    Removing epd_5in83.o(.text), (640 bytes).
+    Removing epd_5in83_v2.o(.rev16_text), (4 bytes).
+    Removing epd_5in83_v2.o(.revsh_text), (4 bytes).
+    Removing epd_5in83_v2.o(.rrx_text), (6 bytes).
+    Removing epd_5in83_v2.o(.text), (600 bytes).
+    Removing epd_5in83bc.o(.rev16_text), (4 bytes).
+    Removing epd_5in83bc.o(.revsh_text), (4 bytes).
+    Removing epd_5in83bc.o(.rrx_text), (6 bytes).
+    Removing epd_5in83bc.o(.text), (844 bytes).
+    Removing epd_5in83b_v2.o(.rev16_text), (4 bytes).
+    Removing epd_5in83b_v2.o(.revsh_text), (4 bytes).
+    Removing epd_5in83b_v2.o(.rrx_text), (6 bytes).
+    Removing epd_5in83b_v2.o(.text), (1180 bytes).
+    Removing epd_7in5.o(.rev16_text), (4 bytes).
+    Removing epd_7in5.o(.revsh_text), (4 bytes).
+    Removing epd_7in5.o(.rrx_text), (6 bytes).
+    Removing epd_7in5.o(.text), (640 bytes).
+    Removing epd_7in5_v2.o(.rev16_text), (4 bytes).
+    Removing epd_7in5_v2.o(.revsh_text), (4 bytes).
+    Removing epd_7in5_v2.o(.rrx_text), (6 bytes).
+    Removing epd_7in5_v2.o(.text), (684 bytes).
+    Removing epd_7in5_hd.o(.rev16_text), (4 bytes).
+    Removing epd_7in5_hd.o(.revsh_text), (4 bytes).
+    Removing epd_7in5_hd.o(.rrx_text), (6 bytes).
+    Removing epd_7in5_hd.o(.text), (1060 bytes).
+    Removing epd_7in5bc.o(.rev16_text), (4 bytes).
+    Removing epd_7in5bc.o(.revsh_text), (4 bytes).
+    Removing epd_7in5bc.o(.rrx_text), (6 bytes).
+    Removing epd_7in5bc.o(.text), (860 bytes).
+    Removing epd_7in5b_v2.o(.rev16_text), (4 bytes).
+    Removing epd_7in5b_v2.o(.revsh_text), (4 bytes).
+    Removing epd_7in5b_v2.o(.rrx_text), (6 bytes).
+    Removing epd_7in5b_v2.o(.text), (880 bytes).
+    Removing epd_7in5b_hd.o(.rev16_text), (4 bytes).
+    Removing epd_7in5b_hd.o(.revsh_text), (4 bytes).
+    Removing epd_7in5b_hd.o(.rrx_text), (6 bytes).
+    Removing epd_7in5b_hd.o(.text), (1352 bytes).
+    Removing dev_config.o(.rev16_text), (4 bytes).
+    Removing dev_config.o(.revsh_text), (4 bytes).
+    Removing dev_config.o(.rrx_text), (6 bytes).
+    Removing dev_config.o(.text), (104 bytes).
+    Removing gui_paint.o(.rev16_text), (4 bytes).
+    Removing gui_paint.o(.revsh_text), (4 bytes).
+    Removing gui_paint.o(.rrx_text), (6 bytes).
+    Removing gui_paint.o(.text), (3588 bytes).
+    Removing gui_paint.o(.bss), (24 bytes).
+    Removing gui_paint.o(.conststring), (236 bytes).
+    Removing font8.o(.constdata), (760 bytes).
+    Removing font8.o(.data), (8 bytes).
+    Removing font12.o(.constdata), (1140 bytes).
+    Removing font12.o(.data), (8 bytes).
+    Removing font12cn.o(.constdata), (1494 bytes).
+    Removing font12cn.o(.data), (12 bytes).
+    Removing font16.o(.constdata), (3040 bytes).
+    Removing font16.o(.data), (8 bytes).
+    Removing font20.o(.constdata), (3800 bytes).
+    Removing font20.o(.data), (8 bytes).
+    Removing font24.o(.constdata), (6840 bytes).
+    Removing font24.o(.data), (8 bytes).
+    Removing font24cn.o(.constdata), (4482 bytes).
+    Removing font24cn.o(.data), (12 bytes).
+    Removing dadd.o(.text), (334 bytes).
+    Removing dmul.o(.text), (228 bytes).
+    Removing ddiv.o(.text), (222 bytes).
+    Removing dfixul.o(.text), (48 bytes).
+    Removing cdrcmple.o(.text), (48 bytes).
+    Removing depilogue.o(.text), (186 bytes).
+
+450 unused section(s) (total 963207 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ..//Src/system_stm32f1xx.c               0x00000000   Number         0  system_stm32f1xx.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c 0x00000000   Number         0  stm32f1xx_hal.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c 0x00000000   Number         0  stm32f1xx_hal_cortex.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c 0x00000000   Number         0  stm32f1xx_hal_dma.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c 0x00000000   Number         0  stm32f1xx_hal_flash.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c 0x00000000   Number         0  stm32f1xx_hal_flash_ex.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c 0x00000000   Number         0  stm32f1xx_hal_gpio.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c 0x00000000   Number         0  stm32f1xx_hal_gpio_ex.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c 0x00000000   Number         0  stm32f1xx_hal_pwr.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c 0x00000000   Number         0  stm32f1xx_hal_rcc.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c 0x00000000   Number         0  stm32f1xx_hal_rcc_ex.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c 0x00000000   Number         0  stm32f1xx_hal_spi.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi_ex.c 0x00000000   Number         0  stm32f1xx_hal_spi_ex.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c 0x00000000   Number         0  stm32f1xx_hal_tim.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c 0x00000000   Number         0  stm32f1xx_hal_tim_ex.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c 0x00000000   Number         0  stm32f1xx_hal_uart.o ABSOLUTE
+    ../Src/gpio.c                            0x00000000   Number         0  gpio.o ABSOLUTE
+    ../Src/main.c                            0x00000000   Number         0  main.o ABSOLUTE
+    ../Src/spi.c                             0x00000000   Number         0  spi.o ABSOLUTE
+    ../Src/stm32f1xx_hal_msp.c               0x00000000   Number         0  stm32f1xx_hal_msp.o ABSOLUTE
+    ../Src/stm32f1xx_it.c                    0x00000000   Number         0  stm32f1xx_it.o ABSOLUTE
+    ../Src/usart.c                           0x00000000   Number         0  usart.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocra.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloca.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloc.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocr.o ABSOLUTE
+    ../clib/microlib/malloc/mvars.c          0x00000000   Number         0  mvars.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
+    ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
+    ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c 0x00000000   Number         0  stm32f1xx_hal.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c 0x00000000   Number         0  stm32f1xx_hal_cortex.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c 0x00000000   Number         0  stm32f1xx_hal_dma.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c 0x00000000   Number         0  stm32f1xx_hal_flash.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c 0x00000000   Number         0  stm32f1xx_hal_flash_ex.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c 0x00000000   Number         0  stm32f1xx_hal_gpio.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c 0x00000000   Number         0  stm32f1xx_hal_gpio_ex.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c 0x00000000   Number         0  stm32f1xx_hal_pwr.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c 0x00000000   Number         0  stm32f1xx_hal_rcc.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c 0x00000000   Number         0  stm32f1xx_hal_rcc_ex.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c 0x00000000   Number         0  stm32f1xx_hal_spi.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi_ex.c 0x00000000   Number         0  stm32f1xx_hal_spi_ex.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c 0x00000000   Number         0  stm32f1xx_hal_tim.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c 0x00000000   Number         0  stm32f1xx_hal_tim_ex.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c 0x00000000   Number         0  stm32f1xx_hal_uart.o ABSOLUTE
+    ..\Src\gpio.c                            0x00000000   Number         0  gpio.o ABSOLUTE
+    ..\Src\main.c                            0x00000000   Number         0  main.o ABSOLUTE
+    ..\Src\spi.c                             0x00000000   Number         0  spi.o ABSOLUTE
+    ..\Src\stm32f1xx_hal_msp.c               0x00000000   Number         0  stm32f1xx_hal_msp.o ABSOLUTE
+    ..\Src\stm32f1xx_it.c                    0x00000000   Number         0  stm32f1xx_it.o ABSOLUTE
+    ..\Src\usart.c                           0x00000000   Number         0  usart.o ABSOLUTE
+    ..\User\Config\DEV_Config.c              0x00000000   Number         0  dev_config.o ABSOLUTE
+    ..\User\Examples\EPD_1in02_test.c        0x00000000   Number         0  epd_1in02_test.o ABSOLUTE
+    ..\User\Examples\EPD_1in54_V2_test.c     0x00000000   Number         0  epd_1in54_v2_test.o ABSOLUTE
+    ..\User\Examples\EPD_1in54_test.c        0x00000000   Number         0  epd_1in54_test.o ABSOLUTE
+    ..\User\Examples\EPD_1in54b_V2_test.c    0x00000000   Number         0  epd_1in54b_v2_test.o ABSOLUTE
+    ..\User\Examples\EPD_1in54b_test.c       0x00000000   Number         0  epd_1in54b_test.o ABSOLUTE
+    ..\User\Examples\EPD_1in54c_test.c       0x00000000   Number         0  epd_1in54c_test.o ABSOLUTE
+    ..\User\Examples\EPD_2in13_V2_test.c     0x00000000   Number         0  epd_2in13_v2_test.o ABSOLUTE
+    ..\User\Examples\EPD_2in13_test.c        0x00000000   Number         0  epd_2in13_test.o ABSOLUTE
+    ..\User\Examples\EPD_2in13b_V3_test.c    0x00000000   Number         0  epd_2in13b_v3_test.o ABSOLUTE
+    ..\User\Examples\EPD_2in13bc_test.c      0x00000000   Number         0  epd_2in13bc_test.o ABSOLUTE
+    ..\User\Examples\EPD_2in13d_test.c       0x00000000   Number         0  epd_2in13d_test.o ABSOLUTE
+    ..\User\Examples\EPD_2in66_test.c        0x00000000   Number         0  epd_2in66_test.o ABSOLUTE
+    ..\User\Examples\EPD_2in66b_test.c       0x00000000   Number         0  epd_2in66b_test.o ABSOLUTE
+    ..\User\Examples\EPD_2in7_test.c         0x00000000   Number         0  epd_2in7_test.o ABSOLUTE
+    ..\User\Examples\EPD_2in7b_test.c        0x00000000   Number         0  epd_2in7b_test.o ABSOLUTE
+    ..\User\Examples\EPD_2in9_V2_test.c      0x00000000   Number         0  epd_2in9_v2_test.o ABSOLUTE
+    ..\User\Examples\EPD_2in9_test.c         0x00000000   Number         0  epd_2in9_test.o ABSOLUTE
+    ..\User\Examples\EPD_2in9b_V3_test.c     0x00000000   Number         0  epd_2in9b_v3_test.o ABSOLUTE
+    ..\User\Examples\EPD_2in9bc_test.c       0x00000000   Number         0  epd_2in9bc_test.o ABSOLUTE
+    ..\User\Examples\EPD_2in9d_test.c        0x00000000   Number         0  epd_2in9d_test.o ABSOLUTE
+    ..\User\Examples\EPD_3in7_test.c         0x00000000   Number         0  epd_3in7_test.o ABSOLUTE
+    ..\User\Examples\EPD_4in01f_test.c       0x00000000   Number         0  epd_4in01f_test.o ABSOLUTE
+    ..\User\Examples\EPD_4in2_test.c         0x00000000   Number         0  epd_4in2_test.o ABSOLUTE
+    ..\User\Examples\EPD_4in2b_V2_test.c     0x00000000   Number         0  epd_4in2b_v2_test.o ABSOLUTE
+    ..\User\Examples\EPD_4in2bc_test.c       0x00000000   Number         0  epd_4in2bc_test.o ABSOLUTE
+    ..\User\Examples\EPD_5in65f_test.c       0x00000000   Number         0  epd_5in65f_test.o ABSOLUTE
+    ..\User\Examples\EPD_5in83_V2_test.c     0x00000000   Number         0  epd_5in83_v2_test.o ABSOLUTE
+    ..\User\Examples\EPD_5in83_test.c        0x00000000   Number         0  epd_5in83_test.o ABSOLUTE
+    ..\User\Examples\EPD_5in83b_V2_test.c    0x00000000   Number         0  epd_5in83b_v2_test.o ABSOLUTE
+    ..\User\Examples\EPD_5in83bc_test.c      0x00000000   Number         0  epd_5in83bc_test.o ABSOLUTE
+    ..\User\Examples\EPD_7in5_HD_test.c      0x00000000   Number         0  epd_7in5_hd_test.o ABSOLUTE
+    ..\User\Examples\EPD_7in5_V2_test.c      0x00000000   Number         0  epd_7in5_v2_test.o ABSOLUTE
+    ..\User\Examples\EPD_7in5_test.c         0x00000000   Number         0  epd_7in5_test.o ABSOLUTE
+    ..\User\Examples\EPD_7in5b_HD_test.c     0x00000000   Number         0  epd_7in5b_hd_test.o ABSOLUTE
+    ..\User\Examples\EPD_7in5b_V2_test.c     0x00000000   Number         0  epd_7in5b_v2_test.o ABSOLUTE
+    ..\User\Examples\EPD_7in5bc_test.c       0x00000000   Number         0  epd_7in5bc_test.o ABSOLUTE
+    ..\User\Examples\ImageData.c             0x00000000   Number         0  imagedata.o ABSOLUTE
+    ..\User\Fonts\font12.c                   0x00000000   Number         0  font12.o ABSOLUTE
+    ..\User\Fonts\font12CN.c                 0x00000000   Number         0  font12cn.o ABSOLUTE
+    ..\User\Fonts\font16.c                   0x00000000   Number         0  font16.o ABSOLUTE
+    ..\User\Fonts\font20.c                   0x00000000   Number         0  font20.o ABSOLUTE
+    ..\User\Fonts\font24.c                   0x00000000   Number         0  font24.o ABSOLUTE
+    ..\User\Fonts\font24CN.c                 0x00000000   Number         0  font24cn.o ABSOLUTE
+    ..\User\Fonts\font8.c                    0x00000000   Number         0  font8.o ABSOLUTE
+    ..\User\GUI\GUI_Paint.c                  0x00000000   Number         0  gui_paint.o ABSOLUTE
+    ..\User\e-Paper\EPD_1in02d.c             0x00000000   Number         0  epd_1in02d.o ABSOLUTE
+    ..\User\e-Paper\EPD_1in54.c              0x00000000   Number         0  epd_1in54.o ABSOLUTE
+    ..\User\e-Paper\EPD_1in54_V2.c           0x00000000   Number         0  epd_1in54_v2.o ABSOLUTE
+    ..\User\e-Paper\EPD_1in54b.c             0x00000000   Number         0  epd_1in54b.o ABSOLUTE
+    ..\User\e-Paper\EPD_1in54b_V2.c          0x00000000   Number         0  epd_1in54b_v2.o ABSOLUTE
+    ..\User\e-Paper\EPD_1in54c.c             0x00000000   Number         0  epd_1in54c.o ABSOLUTE
+    ..\User\e-Paper\EPD_2in13.c              0x00000000   Number         0  epd_2in13.o ABSOLUTE
+    ..\User\e-Paper\EPD_2in13_V2.c           0x00000000   Number         0  epd_2in13_v2.o ABSOLUTE
+    ..\User\e-Paper\EPD_2in13b_V3.c          0x00000000   Number         0  epd_2in13b_v3.o ABSOLUTE
+    ..\User\e-Paper\EPD_2in13bc.c            0x00000000   Number         0  epd_2in13bc.o ABSOLUTE
+    ..\User\e-Paper\EPD_2in13d.c             0x00000000   Number         0  epd_2in13d.o ABSOLUTE
+    ..\User\e-Paper\EPD_2in66.c              0x00000000   Number         0  epd_2in66.o ABSOLUTE
+    ..\User\e-Paper\EPD_2in66b.c             0x00000000   Number         0  epd_2in66b.o ABSOLUTE
+    ..\User\e-Paper\EPD_2in7.c               0x00000000   Number         0  epd_2in7.o ABSOLUTE
+    ..\User\e-Paper\EPD_2in7b.c              0x00000000   Number         0  epd_2in7b.o ABSOLUTE
+    ..\User\e-Paper\EPD_2in9.c               0x00000000   Number         0  epd_2in9.o ABSOLUTE
+    ..\User\e-Paper\EPD_2in9_V2.c            0x00000000   Number         0  epd_2in9_v2.o ABSOLUTE
+    ..\User\e-Paper\EPD_2in9b_V3.c           0x00000000   Number         0  epd_2in9b_v3.o ABSOLUTE
+    ..\User\e-Paper\EPD_2in9bc.c             0x00000000   Number         0  epd_2in9bc.o ABSOLUTE
+    ..\User\e-Paper\EPD_2in9d.c              0x00000000   Number         0  epd_2in9d.o ABSOLUTE
+    ..\User\e-Paper\EPD_3in7.c               0x00000000   Number         0  epd_3in7.o ABSOLUTE
+    ..\User\e-Paper\EPD_4in01f.c             0x00000000   Number         0  epd_4in01f.o ABSOLUTE
+    ..\User\e-Paper\EPD_4in2.c               0x00000000   Number         0  epd_4in2.o ABSOLUTE
+    ..\User\e-Paper\EPD_4in2b_V2.c           0x00000000   Number         0  epd_4in2b_v2.o ABSOLUTE
+    ..\User\e-Paper\EPD_4in2bc.c             0x00000000   Number         0  epd_4in2bc.o ABSOLUTE
+    ..\User\e-Paper\EPD_5in65f.c             0x00000000   Number         0  epd_5in65f.o ABSOLUTE
+    ..\User\e-Paper\EPD_5in83.c              0x00000000   Number         0  epd_5in83.o ABSOLUTE
+    ..\User\e-Paper\EPD_5in83_V2.c           0x00000000   Number         0  epd_5in83_v2.o ABSOLUTE
+    ..\User\e-Paper\EPD_5in83b_V2.c          0x00000000   Number         0  epd_5in83b_v2.o ABSOLUTE
+    ..\User\e-Paper\EPD_5in83bc.c            0x00000000   Number         0  epd_5in83bc.o ABSOLUTE
+    ..\User\e-Paper\EPD_7in5.c               0x00000000   Number         0  epd_7in5.o ABSOLUTE
+    ..\User\e-Paper\EPD_7in5_HD.c            0x00000000   Number         0  epd_7in5_hd.o ABSOLUTE
+    ..\User\e-Paper\EPD_7in5_V2.c            0x00000000   Number         0  epd_7in5_v2.o ABSOLUTE
+    ..\User\e-Paper\EPD_7in5b_HD.c           0x00000000   Number         0  epd_7in5b_hd.o ABSOLUTE
+    ..\User\e-Paper\EPD_7in5b_V2.c           0x00000000   Number         0  epd_7in5b_v2.o ABSOLUTE
+    ..\User\e-Paper\EPD_7in5bc.c             0x00000000   Number         0  epd_7in5bc.o ABSOLUTE
+    ..\\Src\system_stm32f1xx.c               0x00000000   Number         0  system_stm32f1xx.o ABSOLUTE
+    ..\\User\\Config\\DEV_Config.c           0x00000000   Number         0  dev_config.o ABSOLUTE
+    ..\\User\\Examples\\EPD_1in02_test.c     0x00000000   Number         0  epd_1in02_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_1in54_V2_test.c  0x00000000   Number         0  epd_1in54_v2_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_1in54_test.c     0x00000000   Number         0  epd_1in54_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_1in54b_V2_test.c 0x00000000   Number         0  epd_1in54b_v2_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_1in54b_test.c    0x00000000   Number         0  epd_1in54b_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_1in54c_test.c    0x00000000   Number         0  epd_1in54c_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_2in13_V2_test.c  0x00000000   Number         0  epd_2in13_v2_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_2in13_test.c     0x00000000   Number         0  epd_2in13_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_2in13b_V3_test.c 0x00000000   Number         0  epd_2in13b_v3_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_2in13bc_test.c   0x00000000   Number         0  epd_2in13bc_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_2in13d_test.c    0x00000000   Number         0  epd_2in13d_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_2in66_test.c     0x00000000   Number         0  epd_2in66_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_2in66b_test.c    0x00000000   Number         0  epd_2in66b_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_2in7_test.c      0x00000000   Number         0  epd_2in7_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_2in7b_test.c     0x00000000   Number         0  epd_2in7b_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_2in9_V2_test.c   0x00000000   Number         0  epd_2in9_v2_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_2in9_test.c      0x00000000   Number         0  epd_2in9_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_2in9b_V3_test.c  0x00000000   Number         0  epd_2in9b_v3_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_2in9bc_test.c    0x00000000   Number         0  epd_2in9bc_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_2in9d_test.c     0x00000000   Number         0  epd_2in9d_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_3in7_test.c      0x00000000   Number         0  epd_3in7_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_4in01f_test.c    0x00000000   Number         0  epd_4in01f_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_4in2_test.c      0x00000000   Number         0  epd_4in2_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_4in2b_V2_test.c  0x00000000   Number         0  epd_4in2b_v2_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_4in2bc_test.c    0x00000000   Number         0  epd_4in2bc_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_5in65f_test.c    0x00000000   Number         0  epd_5in65f_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_5in83_V2_test.c  0x00000000   Number         0  epd_5in83_v2_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_5in83_test.c     0x00000000   Number         0  epd_5in83_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_5in83b_V2_test.c 0x00000000   Number         0  epd_5in83b_v2_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_5in83bc_test.c   0x00000000   Number         0  epd_5in83bc_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_7in5_HD_test.c   0x00000000   Number         0  epd_7in5_hd_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_7in5_V2_test.c   0x00000000   Number         0  epd_7in5_v2_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_7in5_test.c      0x00000000   Number         0  epd_7in5_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_7in5b_HD_test.c  0x00000000   Number         0  epd_7in5b_hd_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_7in5b_V2_test.c  0x00000000   Number         0  epd_7in5b_v2_test.o ABSOLUTE
+    ..\\User\\Examples\\EPD_7in5bc_test.c    0x00000000   Number         0  epd_7in5bc_test.o ABSOLUTE
+    ..\\User\\GUI\\GUI_Paint.c               0x00000000   Number         0  gui_paint.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_1in02d.c          0x00000000   Number         0  epd_1in02d.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_1in54.c           0x00000000   Number         0  epd_1in54.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_1in54_V2.c        0x00000000   Number         0  epd_1in54_v2.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_1in54b.c          0x00000000   Number         0  epd_1in54b.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_1in54b_V2.c       0x00000000   Number         0  epd_1in54b_v2.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_1in54c.c          0x00000000   Number         0  epd_1in54c.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_2in13.c           0x00000000   Number         0  epd_2in13.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_2in13_V2.c        0x00000000   Number         0  epd_2in13_v2.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_2in13b_V3.c       0x00000000   Number         0  epd_2in13b_v3.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_2in13bc.c         0x00000000   Number         0  epd_2in13bc.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_2in13d.c          0x00000000   Number         0  epd_2in13d.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_2in66.c           0x00000000   Number         0  epd_2in66.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_2in66b.c          0x00000000   Number         0  epd_2in66b.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_2in7.c            0x00000000   Number         0  epd_2in7.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_2in7b.c           0x00000000   Number         0  epd_2in7b.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_2in9.c            0x00000000   Number         0  epd_2in9.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_2in9_V2.c         0x00000000   Number         0  epd_2in9_v2.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_2in9b_V3.c        0x00000000   Number         0  epd_2in9b_v3.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_2in9bc.c          0x00000000   Number         0  epd_2in9bc.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_2in9d.c           0x00000000   Number         0  epd_2in9d.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_3in7.c            0x00000000   Number         0  epd_3in7.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_4in01f.c          0x00000000   Number         0  epd_4in01f.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_4in2.c            0x00000000   Number         0  epd_4in2.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_4in2b_V2.c        0x00000000   Number         0  epd_4in2b_v2.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_4in2bc.c          0x00000000   Number         0  epd_4in2bc.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_5in65f.c          0x00000000   Number         0  epd_5in65f.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_5in83.c           0x00000000   Number         0  epd_5in83.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_5in83_V2.c        0x00000000   Number         0  epd_5in83_v2.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_5in83b_V2.c       0x00000000   Number         0  epd_5in83b_v2.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_5in83bc.c         0x00000000   Number         0  epd_5in83bc.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_7in5.c            0x00000000   Number         0  epd_7in5.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_7in5_HD.c         0x00000000   Number         0  epd_7in5_hd.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_7in5_V2.c         0x00000000   Number         0  epd_7in5_v2.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_7in5b_HD.c        0x00000000   Number         0  epd_7in5b_hd.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_7in5b_V2.c        0x00000000   Number         0  epd_7in5b_v2.o ABSOLUTE
+    ..\\User\\e-Paper\\EPD_7in5bc.c          0x00000000   Number         0  epd_7in5bc.o ABSOLUTE
+    cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    startup_stm32f103xe.s                    0x00000000   Number         0  startup_stm32f103xe.o ABSOLUTE
+    RESET                                    0x08000000   Section      304  startup_stm32f103xe.o(RESET)
+    .ARM.Collect$$$$00000000                 0x08000130   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x08000130   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x08000134   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x08000138   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x08000138   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x08000138   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x08000140   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x08000140   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x08000140   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x08000140   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x08000144   Section       36  startup_stm32f103xe.o(.text)
+    .text                                    0x08000168   Section        0  main.o(.text)
+    .text                                    0x08000224   Section        0  gpio.o(.text)
+    .text                                    0x08000278   Section        0  spi.o(.text)
+    .text                                    0x0800032c   Section        0  usart.o(.text)
+    .text                                    0x08000400   Section        0  stm32f1xx_it.o(.text)
+    .text                                    0x08000438   Section        0  stm32f1xx_hal_msp.o(.text)
+    .text                                    0x080004b8   Section        0  stm32f1xx_hal_spi_ex.o(.text)
+    .text                                    0x0800053c   Section        0  stm32f1xx_hal_uart.o(.text)
+    UART_SetConfig                           0x0800053d   Thumb Code   364  stm32f1xx_hal_uart.o(.text)
+    UART_WaitOnFlagUntilTimeout              0x0800089d   Thumb Code    98  stm32f1xx_hal_uart.o(.text)
+    UART_DMAError                            0x08000b05   Thumb Code    74  stm32f1xx_hal_uart.o(.text)
+    UART_DMATxHalfCplt                       0x08000b51   Thumb Code    10  stm32f1xx_hal_uart.o(.text)
+    UART_DMATransmitCplt                     0x08000b5d   Thumb Code    46  stm32f1xx_hal_uart.o(.text)
+    UART_DMARxHalfCplt                       0x08000bff   Thumb Code    10  stm32f1xx_hal_uart.o(.text)
+    UART_DMAReceiveCplt                      0x08000c0b   Thumb Code    60  stm32f1xx_hal_uart.o(.text)
+    UART_DMARxAbortCallback                  0x08000ed5   Thumb Code    42  stm32f1xx_hal_uart.o(.text)
+    UART_DMATxAbortCallback                  0x08000eff   Thumb Code    42  stm32f1xx_hal_uart.o(.text)
+    UART_DMATxOnlyAbortCallback              0x08000feb   Thumb Code    20  stm32f1xx_hal_uart.o(.text)
+    UART_DMARxOnlyAbortCallback              0x0800104f   Thumb Code    20  stm32f1xx_hal_uart.o(.text)
+    UART_DMAAbortOnError                     0x080010bb   Thumb Code    16  stm32f1xx_hal_uart.o(.text)
+    UART_Receive_IT                          0x080010cb   Thumb Code   150  stm32f1xx_hal_uart.o(.text)
+    UART_EndRxTransfer                       0x08001365   Thumb Code    28  stm32f1xx_hal_uart.o(.text)
+    UART_EndTxTransfer                       0x08001381   Thumb Code    18  stm32f1xx_hal_uart.o(.text)
+    UART_Transmit_IT                         0x08001393   Thumb Code    98  stm32f1xx_hal_uart.o(.text)
+    .text                                    0x08001400   Section        0  stm32f1xx_hal_rcc.o(.text)
+    .text                                    0x08001ae8   Section        0  stm32f1xx_hal_gpio.o(.text)
+    .text                                    0x08001e04   Section        0  stm32f1xx_hal.o(.text)
+    .text                                    0x08001f7c   Section        0  stm32f1xx_hal_dma.o(.text)
+    DMA_SetConfig                            0x08002061   Thumb Code    42  stm32f1xx_hal_dma.o(.text)
+    .text                                    0x08002974   Section        0  stm32f1xx_hal_cortex.o(.text)
+    NVIC_SetPriority                         0x08002b25   Thumb Code    32  stm32f1xx_hal_cortex.o(.text)
+    .text                                    0x08002b4c   Section        0  system_stm32f1xx.o(.text)
+    .text                                    0x08002bf8   Section        0  uidiv.o(.text)
+    .text                                    0x08002c24   Section       36  init.o(.text)
+    i.__0printf$3                            0x08002c48   Section        0  printf3.o(i.__0printf$3)
+    i.__scatterload_copy                     0x08002c68   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08002c76   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08002c78   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i._printf_core                           0x08002c88   Section        0  printf3.o(i._printf_core)
+    _printf_core                             0x08002c89   Thumb Code   436  printf3.o(i._printf_core)
+    .constdata                               0x08002e40   Section       16  system_stm32f1xx.o(.constdata)
+    .constdata                               0x08002e50   Section        8  system_stm32f1xx.o(.constdata)
+    .data                                    0x20000000   Section       12  stm32f1xx_hal.o(.data)
+    .data                                    0x2000000c   Section        4  system_stm32f1xx.o(.data)
+    .data                                    0x20000010   Section        4  stdout.o(.data)
+    .bss                                     0x20000014   Section       88  spi.o(.bss)
+    .bss                                     0x2000006c   Section       64  usart.o(.bss)
+    STACK                                    0x200000b0   Section     4096  startup_stm32f103xe.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    _printf_a                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_c                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_charcount                        0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_d                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_e                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_f                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_flags                            0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_fp_dec                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_fp_hex                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_g                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_i                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_int_dec                          0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_l                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_lc                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_ll                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_lld                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_lli                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_llo                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_llu                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_llx                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_longlong_dec                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_longlong_hex                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_longlong_oct                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_ls                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_mbtowc                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_n                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_o                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_p                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_percent                          0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_pre_padding                      0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_return_value                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_s                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_sizespec                         0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_str                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_truncate_signed                  0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_truncate_unsigned                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_u                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_wc                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_wctomb                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_widthprec                        0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_x                                0x00000000   Number         0  stubs.o ABSOLUTE
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_Size                           0x00000130   Number         0  startup_stm32f103xe.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_stm32f103xe.o(RESET)
+    __Vectors_End                            0x08000130   Data           0  startup_stm32f103xe.o(RESET)
+    __main                                   0x08000131   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x08000131   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x08000135   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x08000139   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x08000139   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x08000139   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x08000139   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x08000141   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x08000141   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x08000145   Thumb Code     8  startup_stm32f103xe.o(.text)
+    ADC1_2_IRQHandler                        0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    ADC3_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    CAN1_RX1_IRQHandler                      0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    CAN1_SCE_IRQHandler                      0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA1_Channel1_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA1_Channel2_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA1_Channel3_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA1_Channel4_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA1_Channel5_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA1_Channel6_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA1_Channel7_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA2_Channel1_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA2_Channel2_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA2_Channel3_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA2_Channel4_5_IRQHandler               0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    EXTI0_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    EXTI15_10_IRQHandler                     0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    EXTI1_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    EXTI2_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    EXTI3_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    EXTI4_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    EXTI9_5_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    FLASH_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    FSMC_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    I2C1_ER_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    I2C1_EV_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    I2C2_ER_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    I2C2_EV_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    PVD_IRQHandler                           0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    RCC_IRQHandler                           0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    RTC_Alarm_IRQHandler                     0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    RTC_IRQHandler                           0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    SDIO_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    SPI1_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    SPI2_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    SPI3_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TAMPER_IRQHandler                        0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM1_BRK_IRQHandler                      0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM1_CC_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM1_TRG_COM_IRQHandler                  0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM1_UP_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM2_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM3_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM4_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM5_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM6_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM7_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM8_BRK_IRQHandler                      0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM8_CC_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM8_TRG_COM_IRQHandler                  0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM8_UP_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    UART4_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    UART5_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    USART1_IRQHandler                        0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    USART2_IRQHandler                        0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    USART3_IRQHandler                        0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    USBWakeUp_IRQHandler                     0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    USB_HP_CAN1_TX_IRQHandler                0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    USB_LP_CAN1_RX0_IRQHandler               0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    WWDG_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    _Error_Handler                           0x08000169   Thumb Code     8  main.o(.text)
+    SystemClock_Config                       0x08000171   Thumb Code   112  main.o(.text)
+    main                                     0x080001e1   Thumb Code    32  main.o(.text)
+    MX_GPIO_Init                             0x08000225   Thumb Code    76  gpio.o(.text)
+    MX_SPI1_Init                             0x08000279   Thumb Code    66  spi.o(.text)
+    HAL_SPI_MspInit                          0x080002bb   Thumb Code    54  spi.o(.text)
+    HAL_SPI_MspDeInit                        0x080002f1   Thumb Code    28  spi.o(.text)
+    MX_USART1_UART_Init                      0x0800032d   Thumb Code    52  usart.o(.text)
+    HAL_UART_MspInit                         0x08000361   Thumb Code    76  usart.o(.text)
+    HAL_UART_MspDeInit                       0x080003ad   Thumb Code    30  usart.o(.text)
+    fputc                                    0x080003cb   Thumb Code    20  usart.o(.text)
+    NMI_Handler                              0x08000401   Thumb Code     2  stm32f1xx_it.o(.text)
+    HardFault_Handler                        0x08000403   Thumb Code     8  stm32f1xx_it.o(.text)
+    MemManage_Handler                        0x0800040b   Thumb Code     2  stm32f1xx_it.o(.text)
+    BusFault_Handler                         0x0800040d   Thumb Code     2  stm32f1xx_it.o(.text)
+    UsageFault_Handler                       0x0800040f   Thumb Code     2  stm32f1xx_it.o(.text)
+    SVC_Handler                              0x08000411   Thumb Code     2  stm32f1xx_it.o(.text)
+    DebugMon_Handler                         0x08000413   Thumb Code     2  stm32f1xx_it.o(.text)
+    PendSV_Handler                           0x08000415   Thumb Code     2  stm32f1xx_it.o(.text)
+    SysTick_Handler                          0x08000417   Thumb Code    14  stm32f1xx_it.o(.text)
+    HAL_MspInit                              0x08000439   Thumb Code   118  stm32f1xx_hal_msp.o(.text)
+    HAL_SPI_Init                             0x080004b9   Thumb Code   130  stm32f1xx_hal_spi_ex.o(.text)
+    HAL_UART_Init                            0x080006ab   Thumb Code    98  stm32f1xx_hal_uart.o(.text)
+    HAL_HalfDuplex_Init                      0x0800070d   Thumb Code   108  stm32f1xx_hal_uart.o(.text)
+    HAL_LIN_Init                             0x08000779   Thumb Code   122  stm32f1xx_hal_uart.o(.text)
+    HAL_MultiProcessor_Init                  0x080007f3   Thumb Code   128  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_DeInit                          0x08000875   Thumb Code    40  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_Transmit                        0x080008ff   Thumb Code   190  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_Receive                         0x080009bd   Thumb Code   182  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_Transmit_IT                     0x08000a73   Thumb Code    62  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_Receive_IT                      0x08000ab1   Thumb Code    82  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_ErrorCallback                   0x08000b03   Thumb Code     2  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_TxHalfCpltCallback              0x08000b4f   Thumb Code     2  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_TxCpltCallback                  0x08000b5b   Thumb Code     2  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_Transmit_DMA                    0x08000b8b   Thumb Code   114  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_RxHalfCpltCallback              0x08000bfd   Thumb Code     2  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_RxCpltCallback                  0x08000c09   Thumb Code     2  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_Receive_DMA                     0x08000c47   Thumb Code   138  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_DMAPause                        0x08000cd1   Thumb Code   102  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_DMAResume                       0x08000d37   Thumb Code    94  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_DMAStop                         0x08000d95   Thumb Code    88  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_Abort                           0x08000ded   Thumb Code   104  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_AbortTransmit                   0x08000e55   Thumb Code    58  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_AbortReceive                    0x08000e8f   Thumb Code    68  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_AbortCpltCallback               0x08000ed3   Thumb Code     2  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_Abort_IT                        0x08000f29   Thumb Code   192  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_AbortTransmitCpltCallback       0x08000fe9   Thumb Code     2  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_AbortTransmit_IT                0x08000fff   Thumb Code    78  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_AbortReceiveCpltCallback        0x0800104d   Thumb Code     2  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_AbortReceive_IT                 0x08001063   Thumb Code    88  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_IRQHandler                      0x08001161   Thumb Code   264  stm32f1xx_hal_uart.o(.text)
+    HAL_LIN_SendBreak                        0x08001269   Thumb Code    46  stm32f1xx_hal_uart.o(.text)
+    HAL_MultiProcessor_EnterMuteMode         0x08001297   Thumb Code    46  stm32f1xx_hal_uart.o(.text)
+    HAL_MultiProcessor_ExitMuteMode          0x080012c5   Thumb Code    46  stm32f1xx_hal_uart.o(.text)
+    HAL_HalfDuplex_EnableTransmitter         0x080012f3   Thumb Code    50  stm32f1xx_hal_uart.o(.text)
+    HAL_HalfDuplex_EnableReceiver            0x08001325   Thumb Code    50  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_GetState                        0x08001357   Thumb Code    10  stm32f1xx_hal_uart.o(.text)
+    HAL_UART_GetError                        0x08001361   Thumb Code     4  stm32f1xx_hal_uart.o(.text)
+    HAL_RCC_DeInit                           0x08001401   Thumb Code   202  stm32f1xx_hal_rcc.o(.text)
+    HAL_RCC_OscConfig                        0x080014cb   Thumb Code   752  stm32f1xx_hal_rcc.o(.text)
+    HAL_RCC_GetSysClockFreq                  0x080017bb   Thumb Code   120  stm32f1xx_hal_rcc.o(.text)
+    HAL_RCC_ClockConfig                      0x08001833   Thumb Code   320  stm32f1xx_hal_rcc.o(.text)
+    HAL_RCC_MCOConfig                        0x08001973   Thumb Code    64  stm32f1xx_hal_rcc.o(.text)
+    HAL_RCC_EnableCSS                        0x080019b3   Thumb Code     8  stm32f1xx_hal_rcc.o(.text)
+    HAL_RCC_DisableCSS                       0x080019bb   Thumb Code     8  stm32f1xx_hal_rcc.o(.text)
+    HAL_RCC_GetHCLKFreq                      0x080019c3   Thumb Code     6  stm32f1xx_hal_rcc.o(.text)
+    HAL_RCC_GetPCLK1Freq                     0x080019c9   Thumb Code    20  stm32f1xx_hal_rcc.o(.text)
+    HAL_RCC_GetPCLK2Freq                     0x080019dd   Thumb Code    20  stm32f1xx_hal_rcc.o(.text)
+    HAL_RCC_GetOscConfig                     0x080019f1   Thumb Code   140  stm32f1xx_hal_rcc.o(.text)
+    HAL_RCC_GetClockConfig                   0x08001a7d   Thumb Code    54  stm32f1xx_hal_rcc.o(.text)
+    HAL_RCC_CSSCallback                      0x08001ab3   Thumb Code     2  stm32f1xx_hal_rcc.o(.text)
+    HAL_RCC_NMI_IRQHandler                   0x08001ab5   Thumb Code    20  stm32f1xx_hal_rcc.o(.text)
+    HAL_GPIO_Init                            0x08001ae9   Thumb Code   446  stm32f1xx_hal_gpio.o(.text)
+    HAL_GPIO_DeInit                          0x08001ca7   Thumb Code   224  stm32f1xx_hal_gpio.o(.text)
+    HAL_GPIO_ReadPin                         0x08001d87   Thumb Code    10  stm32f1xx_hal_gpio.o(.text)
+    HAL_GPIO_WritePin                        0x08001d91   Thumb Code    10  stm32f1xx_hal_gpio.o(.text)
+    HAL_GPIO_TogglePin                       0x08001d9b   Thumb Code     8  stm32f1xx_hal_gpio.o(.text)
+    HAL_GPIO_LockPin                         0x08001da3   Thumb Code    34  stm32f1xx_hal_gpio.o(.text)
+    HAL_GPIO_EXTI_Callback                   0x08001dc5   Thumb Code     2  stm32f1xx_hal_gpio.o(.text)
+    HAL_GPIO_EXTI_IRQHandler                 0x08001dc7   Thumb Code    20  stm32f1xx_hal_gpio.o(.text)
+    HAL_InitTick                             0x08001e07   Thumb Code    54  stm32f1xx_hal.o(.text)
+    HAL_Init                                 0x08001e3d   Thumb Code    32  stm32f1xx_hal.o(.text)
+    HAL_MspDeInit                            0x08001e5d   Thumb Code     2  stm32f1xx_hal.o(.text)
+    HAL_DeInit                               0x08001e5f   Thumb Code    26  stm32f1xx_hal.o(.text)
+    HAL_IncTick                              0x08001e79   Thumb Code    12  stm32f1xx_hal.o(.text)
+    HAL_GetTick                              0x08001e85   Thumb Code     6  stm32f1xx_hal.o(.text)
+    HAL_GetTickPrio                          0x08001e8b   Thumb Code     6  stm32f1xx_hal.o(.text)
+    HAL_SetTickFreq                          0x08001e91   Thumb Code    24  stm32f1xx_hal.o(.text)
+    HAL_GetTickFreq                          0x08001ea9   Thumb Code     6  stm32f1xx_hal.o(.text)
+    HAL_Delay                                0x08001eaf   Thumb Code    32  stm32f1xx_hal.o(.text)
+    HAL_SuspendTick                          0x08001ecf   Thumb Code    14  stm32f1xx_hal.o(.text)
+    HAL_ResumeTick                           0x08001edd   Thumb Code    14  stm32f1xx_hal.o(.text)
+    HAL_GetHalVersion                        0x08001eeb   Thumb Code     4  stm32f1xx_hal.o(.text)
+    HAL_GetREVID                             0x08001eef   Thumb Code     8  stm32f1xx_hal.o(.text)
+    HAL_GetDEVID                             0x08001ef7   Thumb Code    10  stm32f1xx_hal.o(.text)
+    HAL_DBGMCU_EnableDBGSleepMode            0x08001f01   Thumb Code    12  stm32f1xx_hal.o(.text)
+    HAL_DBGMCU_DisableDBGSleepMode           0x08001f0d   Thumb Code    12  stm32f1xx_hal.o(.text)
+    HAL_DBGMCU_EnableDBGStopMode             0x08001f19   Thumb Code    12  stm32f1xx_hal.o(.text)
+    HAL_DBGMCU_DisableDBGStopMode            0x08001f25   Thumb Code    12  stm32f1xx_hal.o(.text)
+    HAL_DBGMCU_EnableDBGStandbyMode          0x08001f31   Thumb Code    12  stm32f1xx_hal.o(.text)
+    HAL_DBGMCU_DisableDBGStandbyMode         0x08001f3d   Thumb Code    12  stm32f1xx_hal.o(.text)
+    HAL_GetUID                               0x08001f49   Thumb Code    24  stm32f1xx_hal.o(.text)
+    HAL_DMA_Init                             0x08001f7d   Thumb Code   120  stm32f1xx_hal_dma.o(.text)
+    HAL_DMA_DeInit                           0x08001ff5   Thumb Code   108  stm32f1xx_hal_dma.o(.text)
+    HAL_DMA_Start                            0x0800208b   Thumb Code    80  stm32f1xx_hal_dma.o(.text)
+    HAL_DMA_Start_IT                         0x080020db   Thumb Code   112  stm32f1xx_hal_dma.o(.text)
+    HAL_DMA_Abort                            0x0800214b   Thumb Code    48  stm32f1xx_hal_dma.o(.text)
+    HAL_DMA_Abort_IT                         0x0800217b   Thumb Code   296  stm32f1xx_hal_dma.o(.text)
+    HAL_DMA_PollForTransfer                  0x080022a3   Thumb Code   998  stm32f1xx_hal_dma.o(.text)
+    HAL_DMA_IRQHandler                       0x08002689   Thumb Code   574  stm32f1xx_hal_dma.o(.text)
+    HAL_DMA_RegisterCallback                 0x080028c7   Thumb Code    74  stm32f1xx_hal_dma.o(.text)
+    HAL_DMA_UnRegisterCallback               0x08002911   Thumb Code    82  stm32f1xx_hal_dma.o(.text)
+    HAL_DMA_GetState                         0x08002963   Thumb Code     6  stm32f1xx_hal_dma.o(.text)
+    HAL_DMA_GetError                         0x08002969   Thumb Code     4  stm32f1xx_hal_dma.o(.text)
+    HAL_NVIC_SetPriorityGrouping             0x08002975   Thumb Code    26  stm32f1xx_hal_cortex.o(.text)
+    HAL_NVIC_SetPriority                     0x0800298f   Thumb Code    60  stm32f1xx_hal_cortex.o(.text)
+    HAL_NVIC_EnableIRQ                       0x080029cb   Thumb Code    22  stm32f1xx_hal_cortex.o(.text)
+    HAL_NVIC_DisableIRQ                      0x080029e1   Thumb Code    22  stm32f1xx_hal_cortex.o(.text)
+    HAL_NVIC_SystemReset                     0x080029f7   Thumb Code    28  stm32f1xx_hal_cortex.o(.text)
+    HAL_SYSTICK_Config                       0x08002a13   Thumb Code    40  stm32f1xx_hal_cortex.o(.text)
+    HAL_NVIC_GetPriorityGrouping             0x08002a3b   Thumb Code    10  stm32f1xx_hal_cortex.o(.text)
+    HAL_NVIC_GetPriority                     0x08002a45   Thumb Code    82  stm32f1xx_hal_cortex.o(.text)
+    HAL_NVIC_SetPendingIRQ                   0x08002a97   Thumb Code    22  stm32f1xx_hal_cortex.o(.text)
+    HAL_NVIC_GetPendingIRQ                   0x08002aad   Thumb Code    32  stm32f1xx_hal_cortex.o(.text)
+    HAL_NVIC_ClearPendingIRQ                 0x08002acd   Thumb Code    22  stm32f1xx_hal_cortex.o(.text)
+    HAL_NVIC_GetActive                       0x08002ae3   Thumb Code    32  stm32f1xx_hal_cortex.o(.text)
+    HAL_SYSTICK_CLKSourceConfig              0x08002b03   Thumb Code    24  stm32f1xx_hal_cortex.o(.text)
+    HAL_SYSTICK_Callback                     0x08002b1b   Thumb Code     2  stm32f1xx_hal_cortex.o(.text)
+    HAL_SYSTICK_IRQHandler                   0x08002b1d   Thumb Code     8  stm32f1xx_hal_cortex.o(.text)
+    SystemInit                               0x08002b4d   Thumb Code    56  system_stm32f1xx.o(.text)
+    SystemCoreClockUpdate                    0x08002b85   Thumb Code    82  system_stm32f1xx.o(.text)
+    __aeabi_uidiv                            0x08002bf9   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x08002bf9   Thumb Code    44  uidiv.o(.text)
+    __scatterload                            0x08002c25   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x08002c25   Thumb Code     0  init.o(.text)
+    __0printf$3                              0x08002c49   Thumb Code    22  printf3.o(i.__0printf$3)
+    __1printf$3                              0x08002c49   Thumb Code     0  printf3.o(i.__0printf$3)
+    __2printf                                0x08002c49   Thumb Code     0  printf3.o(i.__0printf$3)
+    __scatterload_copy                       0x08002c69   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08002c77   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08002c79   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    AHBPrescTable                            0x08002e40   Data          16  system_stm32f1xx.o(.constdata)
+    APBPrescTable                            0x08002e50   Data           8  system_stm32f1xx.o(.constdata)
+    Region$$Table$$Base                      0x08002e58   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08002e78   Number         0  anon$$obj.o(Region$$Table)
+    uwTickFreq                               0x20000000   Data           1  stm32f1xx_hal.o(.data)
+    uwTickPrio                               0x20000004   Data           4  stm32f1xx_hal.o(.data)
+    uwTick                                   0x20000008   Data           4  stm32f1xx_hal.o(.data)
+    SystemCoreClock                          0x2000000c   Data           4  system_stm32f1xx.o(.data)
+    __stdout                                 0x20000010   Data           4  stdout.o(.data)
+    hspi1                                    0x20000014   Data          88  spi.o(.bss)
+    huart1                                   0x2000006c   Data          64  usart.o(.bss)
+    __initial_sp                             0x200010b0   Data           0  startup_stm32f103xe.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x08000131
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00002e8c, Max: 0x00080000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00002e78, Max: 0x00080000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x00000130   Data   RO            3    RESET               startup_stm32f103xe.o
+    0x08000130   0x08000130   0x00000000   Code   RO         2791  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000130   0x08000130   0x00000004   Code   RO         3091    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x08000134   0x08000134   0x00000004   Code   RO         3094    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000138   0x08000138   0x00000000   Code   RO         3096    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000138   0x08000138   0x00000000   Code   RO         3098    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000138   0x08000138   0x00000008   Code   RO         3099    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000140   0x08000140   0x00000000   Code   RO         3101    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000140   0x08000140   0x00000000   Code   RO         3103    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000140   0x08000140   0x00000004   Code   RO         3092    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000144   0x08000144   0x00000024   Code   RO            4    .text               startup_stm32f103xe.o
+    0x08000168   0x08000168   0x000000bc   Code   RO           13    .text               main.o
+    0x08000224   0x08000224   0x00000054   Code   RO          152    .text               gpio.o
+    0x08000278   0x08000278   0x000000b4   Code   RO          176    .text               spi.o
+    0x0800032c   0x0800032c   0x000000d4   Code   RO          206    .text               usart.o
+    0x08000400   0x08000400   0x00000038   Code   RO          236    .text               stm32f1xx_it.o
+    0x08000438   0x08000438   0x00000080   Code   RO          263    .text               stm32f1xx_hal_msp.o
+    0x080004b8   0x080004b8   0x00000082   Code   RO          335    .text               stm32f1xx_hal_spi_ex.o
+    0x0800053a   0x0800053a   0x00000002   PAD
+    0x0800053c   0x0800053c   0x00000ec4   Code   RO          395    .text               stm32f1xx_hal_uart.o
+    0x08001400   0x08001400   0x000006e8   Code   RO          419    .text               stm32f1xx_hal_rcc.o
+    0x08001ae8   0x08001ae8   0x0000031c   Code   RO          468    .text               stm32f1xx_hal_gpio.o
+    0x08001e04   0x08001e04   0x00000178   Code   RO          492    .text               stm32f1xx_hal.o
+    0x08001f7c   0x08001f7c   0x000009f8   Code   RO          519    .text               stm32f1xx_hal_dma.o
+    0x08002974   0x08002974   0x000001d8   Code   RO          543    .text               stm32f1xx_hal_cortex.o
+    0x08002b4c   0x08002b4c   0x000000ac   Code   RO          647    .text               system_stm32f1xx.o
+    0x08002bf8   0x08002bf8   0x0000002c   Code   RO         3106    .text               mc_w.l(uidiv.o)
+    0x08002c24   0x08002c24   0x00000024   Code   RO         3123    .text               mc_w.l(init.o)
+    0x08002c48   0x08002c48   0x00000020   Code   RO         2891    i.__0printf$3       mc_w.l(printf3.o)
+    0x08002c68   0x08002c68   0x0000000e   Code   RO         3133    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08002c76   0x08002c76   0x00000002   Code   RO         3134    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08002c78   0x08002c78   0x0000000e   Code   RO         3135    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08002c86   0x08002c86   0x00000002   PAD
+    0x08002c88   0x08002c88   0x000001b8   Code   RO         2898    i._printf_core      mc_w.l(printf3.o)
+    0x08002e40   0x08002e40   0x00000010   Data   RO          648    .constdata          system_stm32f1xx.o
+    0x08002e50   0x08002e50   0x00000008   Data   RO          649    .constdata          system_stm32f1xx.o
+    0x08002e58   0x08002e58   0x00000020   Data   RO         3131    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08002e78, Size: 0x000010b0, Max: 0x00010000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x08002e78   0x0000000c   Data   RW          493    .data               stm32f1xx_hal.o
+    0x2000000c   0x08002e84   0x00000004   Data   RW          650    .data               system_stm32f1xx.o
+    0x20000010   0x08002e88   0x00000004   Data   RW         3105    .data               mc_w.l(stdout.o)
+    0x20000014        -       0x00000058   Zero   RW          177    .bss                spi.o
+    0x2000006c        -       0x00000040   Zero   RW          207    .bss                usart.o
+    0x200000ac   0x08002e8c   0x00000004   PAD
+    0x200000b0        -       0x00001000   Zero   RW            1    STACK               startup_stm32f103xe.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        84          8          0          0          0        799   gpio.o
+       188         36          0          0          0     459599   main.o
+       180         32          0          0         88       1413   spi.o
+        36          8        304          0       4096        796   startup_stm32f103xe.o
+       376         28          0         12          0       4769   stm32f1xx_hal.o
+       472          8          0          0          0      27198   stm32f1xx_hal_cortex.o
+      2552         66          0          0          0       6117   stm32f1xx_hal_dma.o
+       796         42          0          0          0       4263   stm32f1xx_hal_gpio.o
+       128         10          0          0          0        858   stm32f1xx_hal_msp.o
+      1768         78          0          0          0       5641   stm32f1xx_hal_rcc.o
+       130          0          0          0          0       1051   stm32f1xx_hal_spi_ex.o
+      3780         46          0          0          0      15932   stm32f1xx_hal_uart.o
+        56         20          0          0          0       1286   stm32f1xx_it.o
+       172         34         24          4          0       1485   system_stm32f1xx.o
+       212         34          0          0         64       1657   usart.o
+
+    ----------------------------------------------------------------------
+     10932        450        360         16       4252     532864   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         2          0          0          0          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+       472         14          0          0          0        184   printf3.o
+         0          0          0          4          0          0   stdout.o
+        44          0          0          0          0         80   uidiv.o
+
+    ----------------------------------------------------------------------
+       604         30          0          4          0        332   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       602         30          0          4          0        332   mc_w.l
+
+    ----------------------------------------------------------------------
+       604         30          0          4          0        332   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     11536        480        360         20       4252     531684   Grand Totals
+     11536        480        360         20       4252     531684   ELF Image Totals
+     11536        480        360         20          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                11896 (  11.62kB)
+    Total RW  Size (RW Data + ZI Data)              4272 (   4.17kB)
+    Total ROM Size (Code + RO Data + RW Data)      11916 (  11.64kB)
+
+==============================================================================
+

@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "BartLib_logo")(type "KiCad")(uri "/home/bartosz/projekty/arm/Tacho3/pcb/sense_slim/BartLib/BartLib_logo.pretty")(options "")(descr ""))
+  (lib (name "BartLib_Logo")(type "KiCad")(uri "/home/bartosz/projekty/arm/Tacho3/pcb/sense_slim/BartLib/BartLib_Logo.pretty")(options "")(descr ""))
+)

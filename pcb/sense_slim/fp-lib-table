@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name "BartLib_Connector")(type "KiCad")(uri "${KIPRJMOD}/BartLib/BartLib_Connector.pretty")(options "")(descr ""))
+  (lib (name "BartLib_Logo")(type "KiCad")(uri "${KIPRJMOD}/BartLib/BartLib_Logo.pretty")(options "")(descr ""))
+  (lib (name "BartLib_Pad")(type "KiCad")(uri "${KIPRJMOD}/BartLib/BartLib_Pad.pretty")(options "")(descr ""))
+  (lib (name "BartLib_CathodeProtection")(type "KiCad")(uri "${KIPRJMOD}/BartLib/BartLib_CathodeProtection.pretty")(options "")(descr ""))
+)

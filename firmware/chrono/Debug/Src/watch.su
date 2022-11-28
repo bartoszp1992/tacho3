@@ -1,0 +1,3 @@
+watch.c:11:6:watchInit	16	static
+watch.c:18:6:watchSwitchMode	16	static
+watch.c:23:6:watchSwitchSettingsItem	16	static
