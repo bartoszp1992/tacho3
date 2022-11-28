@@ -13,6 +13,7 @@ void watchInit(watchTypeDef *watch){
 	watch->mode = WATCH_MODE_NORMAL;
 	watch->counterSettingsMode = 0;
 	watch->flagLowBattery = 1;
+	watch->counterDontSleepTimer = WATCH_TIME_DONT_SLEEP;
 }
 
 void watchSwitchMode(watchTypeDef *watch, uint8_t mode){

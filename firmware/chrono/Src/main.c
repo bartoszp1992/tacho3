@@ -161,6 +161,7 @@ int main(void)
 	watchInit(&watch);
 	timersInit();
 	batteryCheckInit();
+	forecastInit(&forecast);
 
 	rtcGetTime(&chrono);
 	lis3mdlRead(&magnetometer);
@@ -176,18 +177,18 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 	while (1) {
 
-//		HAL_GPIO_TogglePin(LED_WKUP_GPIO_Port, LED_WKUP_Pin);
 
 		rtcGetTime(&chrono);
 		lis3mdlRead(&magnetometer);
 		lis3mdlGetCalibrationSample(&magnetometer);
 		bme280Read(&atmospherical);
 		batteryReadState();
+		forecastAppendActual(&forecast, &atmospherical, &chrono);
 
 		if (watch.mode == WATCH_MODE_NORMAL) {
 			interfaceClear(&interface);
 			interfaceDraw(&interface, &chrono, &magnetometer, &atmospherical,
-					&watch);
+					&watch, &forecast);
 		} else if (watch.mode == WATCH_MODE_SETTINGS) {
 			interfaceSettingsClear(&settings);
 			interfaceSettingsDraw(&settings, &chrono, &magnetometer,
@@ -201,19 +202,7 @@ int main(void)
 			goodNight();
 		}
 
-//		if (!HAL_GPIO_ReadPin(BUTTON_RESET_GPIO_Port, BUTTON_RESET_Pin)
-//				|| !HAL_GPIO_ReadPin(BUTTON_SET_GPIO_Port, BUTTON_SET_Pin)
-//				|| !HAL_GPIO_ReadPin(BUTTON_START_GPIO_Port, BUTTON_START_Pin)) {
-//
-//			HAL_GPIO_TogglePin(LED_WKUP_GPIO_Port, LED_WKUP_Pin);
-//
-//		}
-//
-//		HAL_Delay(200);
 
-//		interfaceClear(&interface);
-
-//		goodNight();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

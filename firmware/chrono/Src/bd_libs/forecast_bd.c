@@ -7,14 +7,37 @@
  *      Author: bartosz
  */
 
-
 #include "bd_libs/forecast_bd.h"
 
-void forecastInit(forecastTypeDef *forecast, RTCChronoTypeDef *chrono){
-	memset(forecast->pressureDatabase, 1013, sizeof(forecast->pressureDatabase));
+void forecastInit(forecastTypeDef *forecast) {
+//	memset(forecast->pressureDatabase, 1013, sizeof(forecast->pressureDatabase));
+
+	for (uint8_t i = 0; i < 24; i++) {
+		forecast->pressureDatabase[i] = 1013;
+	}
 
 }
 
-void forecastSaveValue(forecastTypeDef *forecast, bme280TypeDef *bme280, RTCChronoTypeDef *chrono){
-	forecast->pressureDatabase[chrono->actual.hour] = bme280->pressureValue/100;
+void forecastAppendActual(forecastTypeDef *forecast, bme280TypeDef *bme280,
+		RTCChronoTypeDef *chrono) {
+	forecast->pressureDatabase[chrono->actual.hour] = bme280->pressureValue
+			/ 100;
+
+	//for debug
+
+	for(uint8_t i = 0; i<24; i++){
+		forecast->pressureDatabase[i] = 1000+i;
+	}
+
+	//enf of debug
+
+	for (uint8_t i = 0; i < 24; i++) {
+		if (chrono->actual.hour >= i) {
+			forecast->pastPressureReadings[i] =
+					forecast->pressureDatabase[chrono->actual.hour - i];
+		} else {
+			forecast->pastPressureReadings[i] = forecast->pressureDatabase[24-i+chrono->actual.hour];
+		}
+	}
+
 }

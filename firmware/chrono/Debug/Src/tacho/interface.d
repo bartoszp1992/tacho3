@@ -53,7 +53,7 @@ Src/tacho/interface.o: ../Src/tacho/interface.c ../Inc/tacho/interface.h \
  ../Inc/Display_GUI/../Display_Config/DEV_Config.h \
  ../Inc/Display_GUI/../Display_Fonts/fonts.h ../Inc/bd_libs/rtc_bd.h \
  ../Inc/bd_libs/bme280_bd.h ../Inc/bd_libs/lis3mdl_bd.h \
- ../Inc/tacho/watch.h
+ ../Inc/bd_libs/forecast_bd.h ../Inc/tacho/watch.h
 
 ../Inc/tacho/interface.h:
 
@@ -172,5 +172,7 @@ Src/tacho/interface.o: ../Src/tacho/interface.c ../Inc/tacho/interface.h \
 ../Inc/bd_libs/bme280_bd.h:
 
 ../Inc/bd_libs/lis3mdl_bd.h:
+
+../Inc/bd_libs/forecast_bd.h:
 
 ../Inc/tacho/watch.h:

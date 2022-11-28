@@ -9,7 +9,6 @@
 
 #include <tacho/interface.h>
 
-
 /*
  * brief: initialisation of watch interface
  * note: remember of set coordintaes, lenghts etc. outside
@@ -87,7 +86,7 @@ void interfaceInit(interfaceTypeDef *interface) {
 	interface->pointerLengthBatteryState = 35;
 	interface->pointerLengthPressure = 100;
 	interface->pointerLenghtCompass = 18;
-	interface->pointerShiftPressure = 85;
+	interface->pointerShiftPressure = 80;
 
 	interface->indexLengthChronoDecimals = 4;
 	interface->indexLengthChronoMinutes = 2;
@@ -198,7 +197,7 @@ void interfaceSettingsClear(interfaceSettingsTypeDef *settings) {
 
 void interfaceDraw(interfaceTypeDef *interface, RTCChronoTypeDef *chrono,
 		lis3mdlTypeDef *magnetometer, bme280TypeDef *atmospherical,
-		watchTypeDef *watch) {
+		watchTypeDef *watch, forecastTypeDef *forecast) {
 
 	//			LOGO
 	Paint_DrawString_EN(82, 7, "libra", &Font12, interface->colorForeground,
@@ -651,6 +650,18 @@ void interfaceDraw(interfaceTypeDef *interface, RTCChronoTypeDef *chrono,
 				interface->pointerLengthPressure,
 				interface->pointerShiftPressure, interface->colorForeground,
 				DOT_PIXEL_3X3, LINE_STYLE_SOLID);
+
+		//past pressure pointer
+
+		interface->pointerAnglePressure = 2 * 3.14 / 100
+				* ((int32_t) forecast->pastPressureReadings[5] - 950 - 25);
+
+		Paint_DrawPointer(interface->coordinatesPressure[X],
+				interface->coordinatesPressure[Y],
+				interface->pointerAnglePressure,
+				interface->pointerLengthPressure,
+				interface->pointerShiftPressure+5, interface->colorForeground,
+				DOT_PIXEL_2X2, LINE_STYLE_SOLID);
 	}
 
 	//			LOW BATTERY INDICATOR
@@ -907,8 +918,8 @@ void interfaceSettingsDraw(interfaceSettingsTypeDef *settings,
 
 	Paint_DrawPoint(markerPosition[X] - 2, markerPosition[Y] + 7,
 			settings->colorForeground, DOT_PIXEL_3X3, DOT_STYLE_DFT);
-	Paint_DrawNum(100, 100, watch->settingsItem, &Font16,
-			settings->colorForeground, settings->colorBackground);
+//	Paint_DrawNum(100, 100, watch->settingsItem, &Font16,
+//			settings->colorForeground, settings->colorBackground);
 
 	//net
 //	Paint_DrawLine(130, 0, 130, 200, settings->colorForeground, DOT_PIXEL_2X2, LINE_STYLE_SOLID);

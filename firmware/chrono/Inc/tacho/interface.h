@@ -20,6 +20,7 @@
 #include "bd_libs/rtc_bd.h"
 #include "bd_libs/bme280_bd.h"
 #include "bd_libs/lis3mdl_bd.h"
+#include "bd_libs/forecast_bd.h"
 #include "watch.h"
 #include <string.h>
 
@@ -169,7 +170,7 @@ void interfaceUpdateModeSwitch(interfaceTypeDef *interface, uint8_t mode);
 void interfaceInit(interfaceTypeDef *interface);
 void interfaceDraw(interfaceTypeDef *interface, RTCChronoTypeDef *chrono,
 		lis3mdlTypeDef *magnetometer, bme280TypeDef *atmospherical,
-		watchTypeDef *watch);
+		watchTypeDef *watch, forecastTypeDef *forecast);
 
 void interfaceSettingsClear(interfaceSettingsTypeDef *settings);
 void interfaceSettingsInit(interfaceSettingsTypeDef *settings);

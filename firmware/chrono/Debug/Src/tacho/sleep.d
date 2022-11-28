@@ -47,7 +47,8 @@ Src/tacho/sleep.o: ../Src/tacho/sleep.c ../Inc/tacho/sleep.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_pwr.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_gpio.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h \
- ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h
+ ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h \
+ ../Inc/Display_EPD/EPD_1in54_V2.h ../Inc/Display_Config/DEV_Config.h
 
 ../Inc/tacho/sleep.h:
 
@@ -150,3 +151,7 @@ Src/tacho/sleep.o: ../Src/tacho/sleep.c ../Inc/tacho/sleep.h \
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h:
 
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h:
+
+../Inc/Display_EPD/EPD_1in54_V2.h:
+
+../Inc/Display_Config/DEV_Config.h:
