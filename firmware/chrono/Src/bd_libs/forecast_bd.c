@@ -25,9 +25,9 @@ void forecastAppendActual(forecastTypeDef *forecast, bme280TypeDef *bme280,
 
 	//for debug
 
-	for(uint8_t i = 0; i<24; i++){
-		forecast->pressureDatabase[i] = 1000+i;
-	}
+//	for(uint8_t i = 0; i<24; i++){
+//		forecast->pressureDatabase[i] = 1000+i;
+//	}
 
 	//enf of debug
 

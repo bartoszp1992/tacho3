@@ -163,9 +163,7 @@ int main(void)
 	batteryCheckInit();
 	forecastInit(&forecast);
 
-	rtcGetTime(&chrono);
-	lis3mdlRead(&magnetometer);
-	bme280Read(&atmospherical);
+
 
 	interfaceClear(&interface);
 	interfaceUpdateModeSwitch(&interface, INTERFACE_UPDATE_MODE_PARTIAL);
