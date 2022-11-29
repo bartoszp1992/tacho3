@@ -19,6 +19,11 @@
 /*
  * Chrono by Bart's design
  *
+ *todo:
+ *-fix chrono minutes indexes
+ *-automatic color change at night
+ *-fix magnetometer current drain
+ *-move settings to separate files
  *
  */
 /* USER CODE END Header */
@@ -42,6 +47,11 @@
 #include <bd_libs/lis3mdl_bd.h>
 #include <bd_libs/rtc_bd.h>
 #include <bd_libs/forecast_bd.h>
+#include <chrono/battery.h>
+#include <chrono/interface.h>
+#include <chrono/sleep.h>
+#include <chrono/timers.h>
+#include <chrono/watch.h>
 
 //			Display libraries
 #include "Display_EPD/EPD_1in54_V2.h"
@@ -51,13 +61,6 @@
 #include "Display_GUI/GUI_Paint.h"
 
 //			tacho libraries
-#include "tacho/timers.h"
-#include <tacho/battery.h>
-#include <tacho/interface.h>
-#include <tacho/sleep.h>
-#include <tacho/watch.h>
-
-//			STD libs
 #include <stdlib.h>
 
 
@@ -151,6 +154,7 @@ int main(void)
   MX_SPI1_Init();
   MX_TIM3_Init();
   MX_CRC_Init();
+  MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
 
 	rtcInit(&chrono);
@@ -185,8 +189,15 @@ int main(void)
 
 		if (watch.mode == WATCH_MODE_NORMAL) {
 			interfaceClear(&interface);
+
+			HAL_GPIO_WritePin(LED_WKUP_GPIO_Port, LED_WKUP_Pin, 0);
+
 			interfaceDraw(&interface, &chrono, &magnetometer, &atmospherical,
 					&watch, &forecast);
+
+			HAL_GPIO_WritePin(LED_WKUP_GPIO_Port, LED_WKUP_Pin, 1);
+
+
 		} else if (watch.mode == WATCH_MODE_SETTINGS) {
 			interfaceSettingsClear(&settings);
 			interfaceSettingsDraw(&settings, &chrono, &magnetometer,
@@ -221,14 +232,19 @@ void SystemClock_Config(void)
   */
   HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1);
 
+  /** Configure LSE Drive Capability
+  */
+  HAL_PWR_EnableBkUpAccess();
+  __HAL_RCC_LSEDRIVE_CONFIG(RCC_LSEDRIVE_LOW);
+
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSI;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSE;
+  RCC_OscInitStruct.LSEState = RCC_LSE_ON;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSIDiv = RCC_HSI_DIV1;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV1;

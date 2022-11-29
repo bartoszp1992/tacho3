@@ -56,12 +56,12 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
  ../Inc/Flash_Interface/flash_interface.h ../Inc/bd_libs/rtc_bd.h \
  ../Inc/bd_libs/bme280_bd.h ../Inc/bd_libs/lis3mdl_bd.h \
  ../Inc/bd_libs/rtc_bd.h ../Inc/bd_libs/forecast_bd.h \
+ ../Inc/chrono/battery.h ../Inc/chrono/interface.h ../Inc/chrono/watch.h \
  ../Inc/Display_EPD/EPD_1in54_V2.h ../Inc/Display_Config/DEV_Config.h \
  ../Inc/Display_GUI/GUI_Paint.h \
  ../Inc/Display_GUI/../Display_Config/DEV_Config.h \
- ../Inc/Display_GUI/../Display_Fonts/fonts.h ../Inc/tacho/timers.h \
- ../Inc/tacho/battery.h ../Inc/tacho/interface.h ../Inc/tacho/watch.h \
- ../Inc/tacho/sleep.h ../Inc/tacho/watch.h
+ ../Inc/Display_GUI/../Display_Fonts/fonts.h ../Inc/chrono/sleep.h \
+ ../Inc/chrono/timers.h ../Inc/chrono/touch.h
 
 ../Inc/main.h:
 
@@ -201,6 +201,12 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
 
 ../Inc/bd_libs/forecast_bd.h:
 
+../Inc/chrono/battery.h:
+
+../Inc/chrono/interface.h:
+
+../Inc/chrono/watch.h:
+
 ../Inc/Display_EPD/EPD_1in54_V2.h:
 
 ../Inc/Display_Config/DEV_Config.h:
@@ -211,14 +217,8 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
 
 ../Inc/Display_GUI/../Display_Fonts/fonts.h:
 
-../Inc/tacho/timers.h:
+../Inc/chrono/sleep.h:
 
-../Inc/tacho/battery.h:
+../Inc/chrono/timers.h:
 
-../Inc/tacho/interface.h:
-
-../Inc/tacho/watch.h:
-
-../Inc/tacho/sleep.h:
-
-../Inc/tacho/watch.h:
+../Inc/chrono/touch.h:

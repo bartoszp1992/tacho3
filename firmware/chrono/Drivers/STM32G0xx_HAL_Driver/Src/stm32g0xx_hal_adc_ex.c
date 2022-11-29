@@ -5,19 +5,23 @@
   * @brief   This file provides firmware functions to manage the following
   *          functionalities of the Analog to Digital Converter (ADC)
   *          peripheral:
-  *           + Peripheral Control functions
+  *           + Operation functions
+  *             ++ Calibration
+  *               +++ ADC automatic self-calibration
+  *               +++ Calibration factors get or set
   *          Other functions (generic functions) are available in file
   *          "stm32g0xx_hal_adc.c".
   *
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2018 STMicroelectronics.
-  * All rights reserved.
+  * <h2><center>&copy; Copyright (c) 2018 STMicroelectronics.
+  * All rights reserved.</center></h2>
   *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
+  * This software component is licensed by ST under BSD 3-Clause license,
+  * the "License"; You may not use this file except in compliance with the
+  * License. You may obtain a copy of the License at:
+  *                        opensource.org/licenses/BSD-3-Clause
   *
   ******************************************************************************
   @verbatim
@@ -57,7 +61,6 @@
 /* Calibration time max = 116 / fADC (refer to datasheet)                     */
 /*                      = 193 024 CPU cycles                                  */
 #define ADC_CALIBRATION_TIMEOUT         (193024UL)   /*!< ADC calibration time-out value (unit: CPU cycles) */
-#define ADC_DISABLE_TIMEOUT             (2UL)
 
 /**
   * @}
@@ -102,10 +105,7 @@ HAL_StatusTypeDef HAL_ADCEx_Calibration_Start(ADC_HandleTypeDef *hadc)
 {
   HAL_StatusTypeDef tmp_hal_status;
   __IO uint32_t wait_loop_index = 0UL;
-  uint32_t backup_setting_cfgr1;
-  uint32_t calibration_index;
-  uint32_t calibration_factor_accumulated = 0;
-  uint32_t tickstart;
+  uint32_t backup_setting_adc_dma_transfer; /* Note: Variable not declared as volatile because register read is already declared as volatile */
 
   /* Check the parameters */
   assert_param(IS_ADC_ALL_INSTANCE(hadc->Instance));
@@ -125,74 +125,37 @@ HAL_StatusTypeDef HAL_ADCEx_Calibration_Start(ADC_HandleTypeDef *hadc)
                       HAL_ADC_STATE_REG_BUSY,
                       HAL_ADC_STATE_BUSY_INTERNAL);
 
-    /* Manage settings impacting calibration                                  */
-    /* - Disable ADC mode auto power-off                                      */
-    /* - Disable ADC DMA transfer request during calibration                  */
+    /* Disable ADC DMA transfer request during calibration */
     /* Note: Specificity of this STM32 series: Calibration factor is          */
     /*       available in data register and also transferred by DMA.          */
     /*       To not insert ADC calibration factor among ADC conversion data   */
     /*       in array variable, DMA transfer must be disabled during          */
     /*       calibration.                                                     */
-    backup_setting_cfgr1 = READ_BIT(hadc->Instance->CFGR1, ADC_CFGR1_DMAEN | ADC_CFGR1_DMACFG | ADC_CFGR1_AUTOFF);
-    CLEAR_BIT(hadc->Instance->CFGR1, ADC_CFGR1_DMAEN | ADC_CFGR1_DMACFG | ADC_CFGR1_AUTOFF);
+    backup_setting_adc_dma_transfer = READ_BIT(hadc->Instance->CFGR1, ADC_CFGR1_DMAEN | ADC_CFGR1_DMACFG);
+    CLEAR_BIT(hadc->Instance->CFGR1, ADC_CFGR1_DMAEN | ADC_CFGR1_DMACFG);
 
-    /* ADC calibration procedure */
-    /* Note: Perform an averaging of 8 calibrations for optimized accuracy */
-    for (calibration_index = 0UL; calibration_index < 8UL; calibration_index++)
+    /* Start ADC calibration */
+    SET_BIT(hadc->Instance->CR, ADC_CR_ADCAL);
+
+    /* Wait for calibration completion */
+    while (LL_ADC_IsCalibrationOnGoing(hadc->Instance) != 0UL)
     {
-      /* Start ADC calibration */
-      LL_ADC_StartCalibration(hadc->Instance);
-
-      /* Wait for calibration completion */
-      while (LL_ADC_IsCalibrationOnGoing(hadc->Instance) != 0UL)
+      wait_loop_index++;
+      if (wait_loop_index >= ADC_CALIBRATION_TIMEOUT)
       {
-        wait_loop_index++;
-        if (wait_loop_index >= ADC_CALIBRATION_TIMEOUT)
-        {
-          /* Update ADC state machine to error */
-          ADC_STATE_CLR_SET(hadc->State,
-                            HAL_ADC_STATE_BUSY_INTERNAL,
-                            HAL_ADC_STATE_ERROR_INTERNAL);
+        /* Update ADC state machine to error */
+        ADC_STATE_CLR_SET(hadc->State,
+                          HAL_ADC_STATE_BUSY_INTERNAL,
+                          HAL_ADC_STATE_ERROR_INTERNAL);
 
-          __HAL_UNLOCK(hadc);
+        __HAL_UNLOCK(hadc);
 
-          return HAL_ERROR;
-        }
-      }
-
-      calibration_factor_accumulated += LL_ADC_GetCalibrationFactor(hadc->Instance);
-    }
-    /* Compute average */
-    calibration_factor_accumulated /= calibration_index;
-    /* Apply calibration factor */
-    LL_ADC_Enable(hadc->Instance);
-    LL_ADC_SetCalibrationFactor(hadc->Instance, calibration_factor_accumulated);
-    LL_ADC_Disable(hadc->Instance);
-
-    /* Wait for ADC effectively disabled before changing configuration */
-    /* Get tick count */
-    tickstart = HAL_GetTick();
-
-    while (LL_ADC_IsEnabled(hadc->Instance) != 0UL)
-    {
-      if ((HAL_GetTick() - tickstart) > ADC_DISABLE_TIMEOUT)
-      {
-        /* New check to avoid false timeout detection in case of preemption */
-        if (LL_ADC_IsEnabled(hadc->Instance) != 0UL)
-        {
-          /* Update ADC state machine to error */
-          SET_BIT(hadc->State, HAL_ADC_STATE_ERROR_INTERNAL);
-
-          /* Set ADC error code to ADC peripheral internal error */
-          SET_BIT(hadc->ErrorCode, HAL_ADC_ERROR_INTERNAL);
-
-          return HAL_ERROR;
-        }
+        return HAL_ERROR;
       }
     }
 
-    /* Restore configuration after calibration */
-    SET_BIT(hadc->Instance->CFGR1, backup_setting_cfgr1);
+    /* Restore ADC DMA transfer request after calibration */
+    SET_BIT(hadc->Instance->CFGR1, backup_setting_adc_dma_transfer);
 
     /* Set ADC state */
     ADC_STATE_CLR_SET(hadc->State,
@@ -382,3 +345,5 @@ HAL_StatusTypeDef HAL_ADCEx_DisableVoltageRegulator(ADC_HandleTypeDef *hadc)
 /**
   * @}
   */
+
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

@@ -1,10 +1,10 @@
-stm32g0xx_ll_crc.h:156:22:LL_CRC_ResetCRCCalculationUnit	16	static
-stm32g0xx_ll_crc.h:172:22:LL_CRC_SetPolynomialSize	16	static
-stm32g0xx_ll_crc.h:290:22:LL_CRC_SetPolynomialCoef	16	static
-stm32g0xx_ll_crc.h:324:22:LL_CRC_FeedData32	16	static
-stm32g0xx_ll_crc.h:336:22:LL_CRC_FeedData16	24	static
-stm32g0xx_ll_crc.h:374:26:LL_CRC_ReadData16	16	static
-stm32g0xx_ll_bus.h:250:22:LL_AHB1_GRP1_EnableClock	24	static
+stm32g0xx_ll_crc.h:157:22:LL_CRC_ResetCRCCalculationUnit	16	static
+stm32g0xx_ll_crc.h:173:22:LL_CRC_SetPolynomialSize	16	static
+stm32g0xx_ll_crc.h:291:22:LL_CRC_SetPolynomialCoef	16	static
+stm32g0xx_ll_crc.h:325:22:LL_CRC_FeedData32	16	static
+stm32g0xx_ll_crc.h:337:22:LL_CRC_FeedData16	24	static
+stm32g0xx_ll_crc.h:375:26:LL_CRC_ReadData16	16	static
+stm32g0xx_ll_bus.h:252:22:LL_AHB1_GRP1_EnableClock	24	static
 eeprom_emul.c:197:11:EE_Init	80	static
 eeprom_emul.c:625:11:EE_Format	32	static
 eeprom_emul.c:736:11:EE_ReadVariable32bits	32	static

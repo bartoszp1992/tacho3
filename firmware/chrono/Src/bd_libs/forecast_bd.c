@@ -18,6 +18,10 @@ void forecastInit(forecastTypeDef *forecast) {
 
 }
 
+
+/*
+ * brief: add pressure measurement, refresh tables od pressures
+ */
 void forecastAppendActual(forecastTypeDef *forecast, bme280TypeDef *bme280,
 		RTCChronoTypeDef *chrono) {
 	forecast->pressureDatabase[chrono->actual.hour] = bme280->pressureValue
@@ -41,3 +45,11 @@ void forecastAppendActual(forecastTypeDef *forecast, bme280TypeDef *bme280,
 	}
 
 }
+
+/*
+ * returns pressure difference
+ */
+//int16_t forecastPressureDifference(forecastTypeDef *forecast, uint8_t hour){
+//
+//	return forecast->pastPressureReadings[hour];
+//}

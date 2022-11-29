@@ -6,12 +6,13 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2018 STMicroelectronics.
-  * All rights reserved.
+  * <h2><center>&copy; Copyright (c) 2018 STMicroelectronics.
+  * All rights reserved.</center></h2>
   *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
+  * This software component is licensed by ST under BSD 3-Clause license,
+  * the "License"; You may not use this file except in compliance with the
+  * License. You may obtain a copy of the License at:
+  *                        opensource.org/licenses/BSD-3-Clause
   *
   ******************************************************************************
   */
@@ -786,9 +787,9 @@ typedef struct
 /** @defgroup ADC_LL_EC_AWD_THRESHOLDS  Analog watchdog - Thresholds
   * @{
   */
-#define LL_ADC_AWD_THRESHOLD_HIGH          (ADC_AWD1TR_HT1                 ) /*!< ADC analog watchdog threshold high */
-#define LL_ADC_AWD_THRESHOLD_LOW           (                 ADC_AWD1TR_LT1) /*!< ADC analog watchdog threshold low */
-#define LL_ADC_AWD_THRESHOLDS_HIGH_LOW     (ADC_AWD1TR_HT1 | ADC_AWD1TR_LT1) /*!< ADC analog watchdog both thresholds high and low concatenated into the same data */
+#define LL_ADC_AWD_THRESHOLD_HIGH          (ADC_TR1_HT1              ) /*!< ADC analog watchdog threshold high */
+#define LL_ADC_AWD_THRESHOLD_LOW           (              ADC_TR1_LT1) /*!< ADC analog watchdog threshold low */
+#define LL_ADC_AWD_THRESHOLDS_HIGH_LOW     (ADC_TR1_HT1 | ADC_TR1_LT1) /*!< ADC analog watchdog both thresholds high and low concatenated into the same data */
 /**
   * @}
   */
@@ -1983,7 +1984,8 @@ __STATIC_INLINE uint32_t LL_ADC_GetCalibrationFactor(ADC_TypeDef *ADCx)
   *         dependencies to ADC resolutions.
   * @note   On this STM32 series, setting of this feature is conditioned to
   *         ADC state:
-  *         ADC must be disabled.
+  *         ADC must be disabled or enabled without conversion on going
+  *         on group regular.
   * @rmtoll CFGR1    RES            LL_ADC_SetResolution
   * @param  ADCx ADC instance
   * @param  Resolution This parameter can be one of the following values:
@@ -2021,7 +2023,8 @@ __STATIC_INLINE uint32_t LL_ADC_GetResolution(ADC_TypeDef *ADCx)
   *         dependencies to ADC resolutions.
   * @note   On this STM32 series, setting of this feature is conditioned to
   *         ADC state:
-  *         ADC must be disabled.
+  *         ADC must be disabled or enabled without conversion on going
+  *         on group regular.
   * @rmtoll CFGR1    ALIGN          LL_ADC_SetDataAlignment
   * @param  ADCx ADC instance
   * @param  DataAlignment This parameter can be one of the following values:
@@ -2090,7 +2093,8 @@ __STATIC_INLINE uint32_t LL_ADC_GetDataAlignment(ADC_TypeDef *ADCx)
   *         ADC channel.
   * @note   On this STM32 series, setting of this feature is conditioned to
   *         ADC state:
-  *         ADC must be disabled.
+  *         ADC must be disabled or enabled without conversion on going
+  *         on group regular.
   * @rmtoll CFGR1    WAIT           LL_ADC_SetLowPowerMode\n
   *         CFGR1    AUTOFF         LL_ADC_SetLowPowerMode
   * @param  ADCx ADC instance
@@ -2311,7 +2315,8 @@ __STATIC_INLINE uint32_t LL_ADC_GetSamplingTimeCommonChannels(ADC_TypeDef *ADCx,
   *         depends on timers availability on the selected device.
   * @note   On this STM32 series, setting of this feature is conditioned to
   *         ADC state:
-  *         ADC must be disabled.
+  *         ADC must be disabled or enabled without conversion on going
+  *         on group regular.
   * @rmtoll CFGR1    EXTSEL         LL_ADC_REG_SetTriggerSource\n
   *         CFGR1    EXTEN          LL_ADC_REG_SetTriggerSource
   * @param  ADCx ADC instance
@@ -2397,7 +2402,8 @@ __STATIC_INLINE uint32_t LL_ADC_REG_IsTriggerSourceSWStart(ADC_TypeDef *ADCx)
   * @note   Applicable only for trigger source set to external trigger.
   * @note   On this STM32 series, setting of this feature is conditioned to
   *         ADC state:
-  *         ADC must be disabled.
+  *         ADC must be disabled or enabled without conversion on going
+  *         on group regular.
   * @rmtoll CFGR1    EXTEN          LL_ADC_REG_SetTriggerEdge
   * @param  ADCx ADC instance
   * @param  ExternalTriggerEdge This parameter can be one of the following values:
@@ -2450,7 +2456,8 @@ __STATIC_INLINE uint32_t LL_ADC_REG_GetTriggerEdge(ADC_TypeDef *ADCx)
   *         for more details.
   * @note   On this STM32 series, setting of this feature is conditioned to
   *         ADC state:
-  *         ADC must be disabled.
+  *         ADC must be disabled or enabled without conversion on going
+  *         on group regular.
   * @rmtoll CFGR     CHSELRMOD      LL_ADC_REG_SetSequencerConfigurable
   * @param  ADCx ADC instance
   * @param  Configurability This parameter can be one of the following values:
@@ -2620,18 +2627,13 @@ __STATIC_INLINE uint32_t LL_ADC_REG_GetSequencerLength(ADC_TypeDef *ADCx)
   __IO uint32_t channels_ranks = READ_BIT(ADCx->CHSELR, ADC_CHSELR_SQ_ALL);
   uint32_t sequencer_length = LL_ADC_REG_SEQ_SCAN_ENABLE_8RANKS;
   uint32_t rank_index;
-  uint32_t rank_shifted;
 
   /* Parse register for end of sequence identifier */
-  /* Note: Value "0xF0UL" corresponds to bitfield of sequencer 2nd rank
-           (ADC_CHSELR_SQ2), value "4" to length of end of sequence
-           identifier (0xF) */
-  for (rank_index = 0U; rank_index <= (28U - 4U); rank_index += 4U)
+  for (rank_index = 0UL; rank_index < (32U - 4U); rank_index += 4U)
   {
-    rank_shifted = (uint32_t)(0xF0UL << rank_index);
-    if ((channels_ranks & rank_shifted) == rank_shifted)
+    if ((channels_ranks & (ADC_CHSELR_SQ2 << rank_index)) == (ADC_CHSELR_SQ2 << rank_index))
     {
-      sequencer_length = rank_shifted;
+      sequencer_length = (ADC_CHSELR_SQ2 << rank_index);
       break;
     }
   }
@@ -2656,7 +2658,8 @@ __STATIC_INLINE uint32_t LL_ADC_REG_GetSequencerLength(ADC_TypeDef *ADCx)
   *         for more details.
   * @note   On this STM32 series, setting of this feature is conditioned to
   *         ADC state:
-  *         ADC must be disabled.
+  *         ADC must be disabled or enabled without conversion on going
+  *         on group regular.
   * @rmtoll CFGR1    SCANDIR        LL_ADC_REG_SetSequencerScanDirection
   * @param  ADCx ADC instance
   * @param  ScanDirection This parameter can be one of the following values:
@@ -2695,7 +2698,8 @@ __STATIC_INLINE uint32_t LL_ADC_REG_GetSequencerScanDirection(ADC_TypeDef *ADCx)
   *         continuous mode and sequencer discontinuous mode.
   * @note   On this STM32 series, setting of this feature is conditioned to
   *         ADC state:
-  *         ADC must be disabled.
+  *         ADC must be disabled or enabled without conversion on going
+  *         on group regular.
   * @rmtoll CFGR1    DISCEN         LL_ADC_REG_SetSequencerDiscont\n
   * @param  ADCx ADC instance
   * @param  SeqDiscont This parameter can be one of the following values:
@@ -3275,7 +3279,8 @@ __STATIC_INLINE uint32_t LL_ADC_REG_GetSequencerChannels(ADC_TypeDef *ADCx)
   *         continuous mode and sequencer discontinuous mode.
   * @note   On this STM32 series, setting of this feature is conditioned to
   *         ADC state:
-  *         ADC must be disabled.
+  *         ADC must be disabled or enabled without conversion on going
+  *         on group regular.
   * @rmtoll CFGR1    CONT           LL_ADC_REG_SetContinuousMode
   * @param  ADCx ADC instance
   * @param  Continuous This parameter can be one of the following values:
@@ -3327,7 +3332,8 @@ __STATIC_INLINE uint32_t LL_ADC_REG_GetContinuousMode(ADC_TypeDef *ADCx)
   *         use function @ref LL_ADC_DMA_GetRegAddr().
   * @note   On this STM32 series, setting of this feature is conditioned to
   *         ADC state:
-  *         ADC must be disabled.
+  *         ADC must be disabled or enabled without conversion on going
+  *         on group regular.
   * @rmtoll CFGR1    DMAEN          LL_ADC_REG_SetDMATransfer\n
   *         CFGR1    DMACFG         LL_ADC_REG_SetDMATransfer
   * @param  ADCx ADC instance
@@ -3386,7 +3392,8 @@ __STATIC_INLINE uint32_t LL_ADC_REG_GetDMATransfer(ADC_TypeDef *ADCx)
   *         overrun should be set to data overwritten.
   * @note   On this STM32 series, setting of this feature is conditioned to
   *         ADC state:
-  *         ADC must be disabled.
+  *         ADC must be disabled or enabled without conversion on going
+  *         on group regular.
   * @rmtoll CFGR1    OVRMOD         LL_ADC_REG_SetOverrun
   * @param  ADCx ADC instance
   * @param  Overrun This parameter can be one of the following values:
@@ -3619,7 +3626,8 @@ __STATIC_INLINE uint32_t LL_ADC_GetChannelSamplingTime(ADC_TypeDef *ADCx, uint32
   *             ADC resolution configured).
   * @note   On this STM32 series, setting of this feature is conditioned to
   *         ADC state:
-  *         ADC must be disabled.
+  *         ADC must be disabled or enabled without conversion on going
+  *         on group regular.
   * @rmtoll CFGR1    AWD1CH         LL_ADC_SetAnalogWDMonitChannels\n
   *         CFGR1    AWD1SGL        LL_ADC_SetAnalogWDMonitChannels\n
   *         CFGR1    AWD1EN         LL_ADC_SetAnalogWDMonitChannels\n
@@ -3859,12 +3867,12 @@ __STATIC_INLINE uint32_t LL_ADC_GetAnalogWDMonitChannels(ADC_TypeDef *ADCx, uint
   *         ADC state:
   *         ADC must be disabled or enabled without conversion on going
   *         on group regular.
-  * @rmtoll AWD1TR   HT1            LL_ADC_ConfigAnalogWDThresholds\n
-  *         AWD2TR   HT2            LL_ADC_ConfigAnalogWDThresholds\n
-  *         AWD3TR   HT3            LL_ADC_ConfigAnalogWDThresholds\n
-  *         AWD1TR   LT1            LL_ADC_ConfigAnalogWDThresholds\n
-  *         AWD2TR   LT2            LL_ADC_ConfigAnalogWDThresholds\n
-  *         AWD3TR   LT3            LL_ADC_ConfigAnalogWDThresholds
+  * @rmtoll TR1      HT1            LL_ADC_ConfigAnalogWDThresholds\n
+  *         TR2      HT2            LL_ADC_ConfigAnalogWDThresholds\n
+  *         TR3      HT3            LL_ADC_ConfigAnalogWDThresholds\n
+  *         TR1      LT1            LL_ADC_ConfigAnalogWDThresholds\n
+  *         TR2      LT2            LL_ADC_ConfigAnalogWDThresholds\n
+  *         TR3      LT3            LL_ADC_ConfigAnalogWDThresholds
   * @param  ADCx ADC instance
   * @param  AWDy This parameter can be one of the following values:
   *         @arg @ref LL_ADC_AWD1
@@ -3882,10 +3890,10 @@ __STATIC_INLINE void LL_ADC_ConfigAnalogWDThresholds(ADC_TypeDef *ADCx, uint32_t
   /* "AWDy".                                                                  */
   /* Parameters "AWDy" and "AWDThresholdxxxValue" are used with masks because */
   /* containing other bits reserved for other purpose.                        */
-  __IO uint32_t *preg = __ADC_PTR_REG_OFFSET(ADCx->AWD1TR, (((AWDy & ADC_AWD_TRX_REGOFFSET_MASK)) >> (ADC_AWD_TRX_REGOFFSET_BITOFFSET_POS)) + ((ADC_AWD_CR3_REGOFFSET & AWDy) >> (ADC_AWD_CRX_REGOFFSET_BITOFFSET_POS + 1UL)));
+  __IO uint32_t *preg = __ADC_PTR_REG_OFFSET(ADCx->TR1, (((AWDy & ADC_AWD_TRX_REGOFFSET_MASK)) >> (ADC_AWD_TRX_REGOFFSET_BITOFFSET_POS)) + ((ADC_AWD_CR3_REGOFFSET & AWDy) >> (ADC_AWD_CRX_REGOFFSET_BITOFFSET_POS + 1UL)));
 
   MODIFY_REG(*preg,
-             ADC_AWD1TR_HT1 | ADC_AWD1TR_LT1,
+             ADC_TR1_HT1 | ADC_TR1_LT1,
              (AWDThresholdHighValue << ADC_TR1_HT1_BITOFFSET_POS) | AWDThresholdLowValue);
 }
 
@@ -3935,12 +3943,12 @@ __STATIC_INLINE void LL_ADC_ConfigAnalogWDThresholds(ADC_TypeDef *ADCx, uint32_t
   *         ADC state:
   *         ADC can be disabled, enabled with or without conversion on going
   *         on ADC group regular.
-  * @rmtoll AWD1TR   HT1            LL_ADC_SetAnalogWDThresholds\n
-  *         AWD2TR   HT2            LL_ADC_SetAnalogWDThresholds\n
-  *         AWD3TR   HT3            LL_ADC_SetAnalogWDThresholds\n
-  *         AWD1TR   LT1            LL_ADC_SetAnalogWDThresholds\n
-  *         AWD2TR   LT2            LL_ADC_SetAnalogWDThresholds\n
-  *         AWD3TR   LT3            LL_ADC_SetAnalogWDThresholds
+  * @rmtoll TR1      HT1            LL_ADC_SetAnalogWDThresholds\n
+  *         TR2      HT2            LL_ADC_SetAnalogWDThresholds\n
+  *         TR3      HT3            LL_ADC_SetAnalogWDThresholds\n
+  *         TR1      LT1            LL_ADC_SetAnalogWDThresholds\n
+  *         TR2      LT2            LL_ADC_SetAnalogWDThresholds\n
+  *         TR3      LT3            LL_ADC_SetAnalogWDThresholds
   * @param  ADCx ADC instance
   * @param  AWDy This parameter can be one of the following values:
   *         @arg @ref LL_ADC_AWD1
@@ -3960,7 +3968,7 @@ __STATIC_INLINE void LL_ADC_SetAnalogWDThresholds(ADC_TypeDef *ADCx, uint32_t AW
   /* "AWDThresholdsHighLow" and "AWDy".                                       */
   /* Parameters "AWDy" and "AWDThresholdValue" are used with masks because    */
   /* containing other bits reserved for other purpose.                        */
-  __IO uint32_t *preg = __ADC_PTR_REG_OFFSET(ADCx->AWD1TR,
+  __IO uint32_t *preg = __ADC_PTR_REG_OFFSET(ADCx->TR1,
                                              (((AWDy & ADC_AWD_TRX_REGOFFSET_MASK)) >> (ADC_AWD_TRX_REGOFFSET_BITOFFSET_POS))
                                              + ((ADC_AWD_CR3_REGOFFSET & AWDy) >> (ADC_AWD_CRX_REGOFFSET_BITOFFSET_POS + 1UL)));
 
@@ -3980,12 +3988,12 @@ __STATIC_INLINE void LL_ADC_SetAnalogWDThresholds(ADC_TypeDef *ADCx, uint32_t AW
   * @note   In case of ADC resolution different of 12 bits,
   *         analog watchdog thresholds data require a specific shift.
   *         Use helper macro @ref __LL_ADC_ANALOGWD_GET_THRESHOLD_RESOLUTION().
-  * @rmtoll AWD1TR   HT1            LL_ADC_GetAnalogWDThresholds\n
-  *         AWD2TR   HT2            LL_ADC_GetAnalogWDThresholds\n
-  *         AWD3TR   HT3            LL_ADC_GetAnalogWDThresholds\n
-  *         AWD1TR   LT1            LL_ADC_GetAnalogWDThresholds\n
-  *         AWD2TR   LT2            LL_ADC_GetAnalogWDThresholds\n
-  *         AWD3TR   LT3            LL_ADC_GetAnalogWDThresholds
+  * @rmtoll TR1      HT1            LL_ADC_GetAnalogWDThresholds\n
+  *         TR2      HT2            LL_ADC_GetAnalogWDThresholds\n
+  *         TR3      HT3            LL_ADC_GetAnalogWDThresholds\n
+  *         TR1      LT1            LL_ADC_GetAnalogWDThresholds\n
+  *         TR2      LT2            LL_ADC_GetAnalogWDThresholds\n
+  *         TR3      LT3            LL_ADC_GetAnalogWDThresholds
   * @param  ADCx ADC instance
   * @param  AWDy This parameter can be one of the following values:
   *         @arg @ref LL_ADC_AWD1
@@ -4004,14 +4012,14 @@ __STATIC_INLINE uint32_t LL_ADC_GetAnalogWDThresholds(ADC_TypeDef *ADCx, uint32_
   /* "AWDThresholdsHighLow" and "AWDy".                                       */
   /* Parameters "AWDy" and "AWDThresholdValue" are used with masks because    */
   /* containing other bits reserved for other purpose.                        */
-  const __IO uint32_t *preg = __ADC_PTR_REG_OFFSET(ADCx->AWD1TR,
+  const __IO uint32_t *preg = __ADC_PTR_REG_OFFSET(ADCx->TR1,
                                                    (((AWDy & ADC_AWD_TRX_REGOFFSET_MASK)) >> (ADC_AWD_TRX_REGOFFSET_BITOFFSET_POS))
                                                    + ((ADC_AWD_CR3_REGOFFSET & AWDy) >> (ADC_AWD_CRX_REGOFFSET_BITOFFSET_POS + 1UL)));
 
   return (uint32_t)(READ_BIT(*preg,
-                             (AWDThresholdsHighLow | ADC_AWD1TR_LT1))
+                             (AWDThresholdsHighLow | ADC_TR1_LT1))
                     >> (((AWDThresholdsHighLow & ADC_AWD_TRX_BIT_HIGH_MASK) >> ADC_AWD_TRX_BIT_HIGH_SHIFT4)
-                        & ~(AWDThresholdsHighLow & ADC_AWD1TR_LT1)));
+                        & ~(AWDThresholdsHighLow & ADC_TR1_LT1)));
 }
 
 /**
@@ -4062,7 +4070,8 @@ __STATIC_INLINE uint32_t LL_ADC_GetOverSamplingScope(ADC_TypeDef *ADCx)
   *           needs a trigger)
   * @note   On this STM32 series, setting of this feature is conditioned to
   *         ADC state:
-  *         ADC must be disabled.
+  *         ADC must be disabled or enabled without conversion on going
+  *         on group regular.
   * @rmtoll CFGR2    TOVS           LL_ADC_SetOverSamplingDiscont
   * @param  ADCx ADC instance
   * @param  OverSamplingDiscont This parameter can be one of the following values:
@@ -4324,9 +4333,6 @@ __STATIC_INLINE uint32_t LL_ADC_IsDisableOngoing(ADC_TypeDef *ADCx)
   *         DMA transfer setting restore after calibration.
   *         Refer to functions @ref LL_ADC_REG_GetDMATransfer(),
   *         @ref LL_ADC_REG_SetDMATransfer() ).
-  * @note   In case of usage of feature auto power-off:
-  *         This mode must be disabled during calibration
-  *         Refer to function @ref LL_ADC_SetLowPowerMode().
   * @note   On this STM32 series, setting of this feature is conditioned to
   *         ADC state:
   *         ADC must be ADC disabled.
@@ -5153,3 +5159,5 @@ void        LL_ADC_REG_StructInit(LL_ADC_REG_InitTypeDef *pADC_RegInitStruct);
 #endif
 
 #endif /* STM32G0xx_LL_ADC_H */
+
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

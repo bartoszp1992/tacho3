@@ -36,7 +36,7 @@ uint32_t pastPressureReadings[24];
 
 void forecastInit(forecastTypeDef *forecast);
 void forecastAppendActual(forecastTypeDef *forecast, bme280TypeDef *bme280, RTCChronoTypeDef *chrono);
-
+//int16_t forecastPressureDifference(forecastTypeDef *forecast, uint8_t hour);
 
 
 #endif /* FORECAST_BD_H_ */

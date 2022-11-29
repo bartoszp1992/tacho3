@@ -29,6 +29,6 @@ Src/Flash_Interface \
 Src/Fonts \
 Src \
 Src/bd_libs \
-Src/tacho \
+Src/chrono \
 Startup \
 

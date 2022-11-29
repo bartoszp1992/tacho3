@@ -407,7 +407,7 @@ UWORD Color, DOT_PIXEL Line_width, LINE_STYLE Line_Style) {
  parameter:
  Xstart ：Starting Xpoint point coordinates
  Ystart ：Starting Ypoint point coordinates
- angle  ：angle between pointer and display axis
+ angle  ：angle between pointer and display axis[rad]
  length ：line length
  shift  ：distand between center point and line beginning
  Line_width : Line width
