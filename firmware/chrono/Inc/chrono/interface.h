@@ -24,6 +24,7 @@
 #include "bd_libs/forecast_bd.h"
 #include <string.h>
 
+
 #define X 0
 #define Y 1
 #define EN 2
@@ -37,6 +38,7 @@
 
 #define INTERFACE_COLOR_WHITE WHITE
 #define INTERFACE_COLOR_BLACK BLACK
+
 
 //for selecting icon
 #define INTERFACE_ICON_CLOUD 1
@@ -174,7 +176,7 @@ typedef struct{
 void interfaceClear(interfaceTypeDef *interface);
 void interfaceUpdateModeSwitch(interfaceTypeDef *interface, uint8_t mode);
 void interfaceInit(interfaceTypeDef *interface);
-void interfaceDraw(interfaceTypeDef *interface, RTCChronoTypeDef *chrono,
+void interfaceDrawMain(interfaceTypeDef *interface, RTCChronoTypeDef *chrono,
 		lis3mdlTypeDef *magnetometer, bme280TypeDef *atmospherical,
 		watchTypeDef *watch, forecastTypeDef *forecast);
 
@@ -187,6 +189,10 @@ void interfaceSettingsDraw(interfaceSettingsTypeDef *settings,
 void interfaceBurn(interfaceTypeDef *interface);
 
 void interfaceDrawIcon(uint8_t x, uint8_t y, uint8_t color, uint8_t icon);
+void interfaceDrawDialer(uint8_t x, uint8_t y, uint8_t radius, uint8_t value,
+		uint8_t maxValue, uint8_t pointerLength, uint8_t indexesNumber,
+		uint8_t indexesLength, uint8_t longerIndexesDivider, uint8_t colorFore,
+		uint8_t colorBack);
 
 //void interfaceDrawSun(uint8_t x, uint8_t y, uint8_t color);
 //void interfaceDrawCloud(uint8_t x, uint8_t y, uint8_t color);

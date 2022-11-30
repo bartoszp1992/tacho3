@@ -1,0 +1,10 @@
+interface.c:105:6:interfaceSettingsInit	16	static
+interface.c:152:6:interfaceUpdateModeSwitch	16	static
+interface.c:20:6:interfaceInit	24	static
+interface.c:176:6:interfaceBurn	8	static
+interface.c:195:6:interfaceClear	8	static
+interface.c:199:6:interfaceSettingsClear	8	static
+interface.c:719:6:interfaceSettingsDraw	64	static
+interface.c:899:6:interfaceDrawIcon	56	static
+interface.c:977:6:interfaceDrawDialer	96	dynamic
+interface.c:203:6:interfaceDrawMain	88	static

@@ -1,4 +1,5 @@
-Src/buttons.o: ../Src/buttons.c ../Inc/buttons.h ../Inc/main.h \
+Src/chrono/touch.o: ../Src/chrono/touch.c ../Inc/chrono/touch.h \
+ ../Inc/chrono/watch.h ../Inc/main.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h \
  ../Inc/stm32g0xx_hal_conf.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h \
@@ -47,9 +48,12 @@ Src/buttons.o: ../Src/buttons.c ../Inc/buttons.h ../Inc/main.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_pwr.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_gpio.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h \
- ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h ../Inc/watch.h
+ ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h \
+ ../Inc/bd_libs/rtc_bd.h ../Inc/bd_libs/bme280_bd.h
 
-../Inc/buttons.h:
+../Inc/chrono/touch.h:
+
+../Inc/chrono/watch.h:
 
 ../Inc/main.h:
 
@@ -151,4 +155,6 @@ Src/buttons.o: ../Src/buttons.c ../Inc/buttons.h ../Inc/main.h \
 
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h:
 
-../Inc/watch.h:
+../Inc/bd_libs/rtc_bd.h:
+
+../Inc/bd_libs/bme280_bd.h:

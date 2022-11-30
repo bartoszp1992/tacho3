@@ -28,5 +28,7 @@ Src/EEPROM_Emul \
 Src/Flash_Interface \
 Src/Fonts \
 Src \
+Src/bd_libs \
+Src/chrono \
 Startup \
 

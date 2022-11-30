@@ -10,6 +10,8 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include Startup/subdir.mk
+-include Src/chrono/subdir.mk
+-include Src/bd_libs/subdir.mk
 -include Src/Fonts/subdir.mk
 -include Src/Flash_Interface/subdir.mk
 -include Src/EEPROM_Emul/subdir.mk

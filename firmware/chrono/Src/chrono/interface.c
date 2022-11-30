@@ -9,6 +9,8 @@
 
 #include <chrono/interface.h>
 
+
+
 /*
  * brief: initialisation of watch interface
  * note: remember of set coordintaes, lenghts etc. outside
@@ -198,7 +200,7 @@ void interfaceSettingsClear(interfaceSettingsTypeDef *settings) {
 	Paint_Clear(settings->colorBackground);
 }
 
-void interfaceDraw(interfaceTypeDef *interface, RTCChronoTypeDef *chrono,
+void interfaceDrawMain(interfaceTypeDef *interface, RTCChronoTypeDef *chrono,
 		lis3mdlTypeDef *magnetometer, bme280TypeDef *atmospherical,
 		watchTypeDef *watch, forecastTypeDef *forecast) {
 
@@ -341,7 +343,7 @@ void interfaceDraw(interfaceTypeDef *interface, RTCChronoTypeDef *chrono,
 		//board
 		Paint_DrawCircle(interface->coordinatesCompass[X],
 				interface->coordinatesCompass[Y], interface->radiusCompass,
-				interface->colorForeground, DOT_PIXEL_1X1, DRAW_FILL_EMPTY);
+				interface->colorForeground, DOT_PIXEL_2X2, DRAW_FILL_EMPTY);
 
 		//altimeter unit
 		Paint_DrawChar(interface->coordinatesCompass[X] - 4,
@@ -421,58 +423,56 @@ void interfaceDraw(interfaceTypeDef *interface, RTCChronoTypeDef *chrono,
 	//			CHRONO DECIMALS
 	if (interface->coordinatesChronoDecimals[EN] == INTERFACE_ELEMENT_ENABLED) {
 
-		//outer circle
-		Paint_DrawCircle(interface->coordinatesChronoDecimals[X],
-				interface->coordinatesChronoDecimals[Y],
-				interface->radiusSmall + 2, interface->colorForeground,
-				DOT_PIXEL_1X1, DRAW_FILL_EMPTY);
-
-		//inner circle
-		Paint_DrawCircle(interface->coordinatesChronoDecimals[X],
+		interfaceDrawDialer(interface->coordinatesChronoDecimals[X],
 				interface->coordinatesChronoDecimals[Y], interface->radiusSmall,
-				interface->colorForeground, DOT_PIXEL_1X1, DRAW_FILL_FULL);
+				chrono->chrono.hundredth / 10, 10,
+				interface->pointerLengthChronoDecimals, 10,
+				interface->indexLengthChronoDecimals, 0,
+				interface->colorForeground, interface->colorBackground);
 
-		//dot at center
-		Paint_DrawCircle(interface->coordinatesChronoDecimals[X],
-				interface->coordinatesChronoDecimals[Y], 2,
-				interface->colorBackground, DOT_PIXEL_1X1, DRAW_FILL_FULL);
+//		//outer circle
+//		Paint_DrawCircle(interface->coordinatesChronoDecimals[X],
+//				interface->coordinatesChronoDecimals[Y],
+//				interface->radiusSmall + 2, interface->colorForeground,
+//				DOT_PIXEL_1X1, DRAW_FILL_EMPTY);
+//
+//		//inner circle
+//		Paint_DrawCircle(interface->coordinatesChronoDecimals[X],
+//				interface->coordinatesChronoDecimals[Y], interface->radiusSmall,
+//				interface->colorForeground, DOT_PIXEL_1X1, DRAW_FILL_FULL);
+//
+//		//dot at center
+//		Paint_DrawCircle(interface->coordinatesChronoDecimals[X],
+//				interface->coordinatesChronoDecimals[Y], 2,
+//				interface->colorBackground, DOT_PIXEL_1X1, DRAW_FILL_FULL);
+//
+//		//index - count angles
+//
+//		uint8_t numberOfIndexesChronoDecimals =
+//				sizeof(interface->indexAngleChronoDecimals)
+//						/ sizeof(interface->indexAngleChronoDecimals[0]);
+//
+//		for (uint8_t i = 0; i < numberOfIndexesChronoDecimals; i++) {
+//			interface->indexAngleChronoDecimals[i] = 2 * 3.14
+//					/ numberOfIndexesChronoDecimals
+//					* (i - ((float) numberOfIndexesChronoDecimals / 4));
+//		}
+//
+//		//indexes- draw
+//		for (uint8_t i = 0; i < numberOfIndexesChronoDecimals; i++) {
+//
+//			Paint_DrawPointer(interface->coordinatesChronoDecimals[X],
+//					interface->coordinatesChronoDecimals[Y],
+//					interface->indexAngleChronoDecimals[i],
+//					interface->radiusSmall,
+//					interface->radiusSmall
+//							- interface->indexLengthChronoDecimals,
+//					interface->colorBackground, DOT_PIXEL_1X1,
+//					LINE_STYLE_SOLID);
+//
+//		}
 
-		//index - count angles
-
-		uint8_t numberOfIndexesChronoDecimals =
-				sizeof(interface->indexAngleChronoDecimals)
-						/ sizeof(interface->indexAngleChronoDecimals[0]);
-
-		for (uint8_t i = 0; i < numberOfIndexesChronoDecimals; i++) {
-			interface->indexAngleChronoDecimals[i] = 2 * 3.14
-					/ numberOfIndexesChronoDecimals
-					* (i - (numberOfIndexesChronoDecimals / 4));
-		}
-
-		//indexes- draw
-		for (uint8_t i = 0; i < numberOfIndexesChronoDecimals; i++) {
-
-			Paint_DrawLine(
-					cos(interface->indexAngleChronoDecimals[i])
-							* (interface->radiusSmall
-									- interface->indexLengthChronoDecimals)
-							+ interface->coordinatesChronoDecimals[X],
-					sin(interface->indexAngleChronoDecimals[i])
-							* (interface->radiusSmall
-									- interface->indexLengthChronoDecimals)
-							+ interface->coordinatesChronoDecimals[Y],
-
-					cos(interface->indexAngleChronoDecimals[i])
-							* (interface->radiusSmall)
-							+ interface->coordinatesChronoDecimals[X],
-					sin(interface->indexAngleChronoDecimals[i])
-							* (interface->radiusSmall)
-							+ interface->coordinatesChronoDecimals[Y],
-					interface->colorBackground, DOT_PIXEL_1X1,
-					LINE_STYLE_SOLID);
-		}
-
-		//digits
+//digits
 		Paint_DrawString_EN(interface->coordinatesChronoDecimals[X] - 4,
 				interface->coordinatesChronoDecimals[Y] - 24, "0", &Font12,
 				interface->colorBackground, interface->colorForeground);
@@ -489,93 +489,29 @@ void interfaceDraw(interfaceTypeDef *interface, RTCChronoTypeDef *chrono,
 				interface->coordinatesChronoDecimals[Y] - 12, "8", &Font12,
 				interface->colorBackground, interface->colorForeground);
 
-		//pointer
-		interface->pointerAngleChronoDecimals = 2 * 3.14 / 10
-				* ((chrono->chrono.hundredth / 10) - 2.5);
-
-		Paint_DrawPointer(interface->coordinatesChronoDecimals[X],
-				interface->coordinatesChronoDecimals[Y],
-				interface->pointerAngleChronoDecimals,
-				interface->pointerLengthChronoDecimals, 0,
-				interface->colorBackground, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
+//		//pointer
+//		interface->pointerAngleChronoDecimals = 2 * 3.14 / 10
+//				* ((chrono->chrono.hundredth / 10) - 2.5);
+//
+//		Paint_DrawPointer(interface->coordinatesChronoDecimals[X],
+//				interface->coordinatesChronoDecimals[Y],
+//				interface->pointerAngleChronoDecimals,
+//				interface->pointerLengthChronoDecimals, 0,
+//				interface->colorBackground, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
 	}
 
 	//			CHRONO MINUTES
 
 	if (interface->coordinatesChronoMinutes[EN] == INTERFACE_ELEMENT_ENABLED) {
-		//outer circle
-		Paint_DrawCircle(interface->coordinatesChronoMinutes[X],
-				interface->coordinatesChronoMinutes[Y],
-				interface->radiusSmall + 2, interface->colorForeground,
-				DOT_PIXEL_1X1, DRAW_FILL_EMPTY);
-		//inner circle
-		Paint_DrawCircle(interface->coordinatesChronoMinutes[X],
+
+		interfaceDrawDialer(interface->coordinatesChronoMinutes[X],
 				interface->coordinatesChronoMinutes[Y], interface->radiusSmall,
-				interface->colorForeground, DOT_PIXEL_1X1, DRAW_FILL_FULL);
+				chrono->chrono.minute, 30,
+				interface->pointerLengthChronoMinutes, 30,
+				interface->indexLengthChronoMinutes, 5,
+				interface->colorForeground, interface->colorBackground);
 
-		//dot at center
-		Paint_DrawCircle(interface->coordinatesChronoMinutes[X],
-				interface->coordinatesChronoMinutes[Y], 2,
-				interface->colorBackground, DOT_PIXEL_1X1, DRAW_FILL_FULL);
-
-		//indexes- count angles
-		uint8_t numberOfIndexesChronoMinutes =
-				sizeof(interface->indexAngleChronoMinutes)
-						/ sizeof(interface->indexAngleChronoMinutes[0]);
-
-		for (uint8_t i = 0; i < numberOfIndexesChronoMinutes; i++) {
-			interface->indexAngleChronoMinutes[i] = 2 * 3.14
-					/ numberOfIndexesChronoMinutes
-					* (i - (numberOfIndexesChronoMinutes / 4));
-		}
-
-		//indexes- draw
-		for (uint8_t i = 0; i < numberOfIndexesChronoMinutes; i++) {
-
-			Paint_DrawLine(
-					cos(interface->indexAngleChronoMinutes[i])
-							* (interface->radiusSmall
-									- interface->indexLengthChronoMinutes)
-							+ interface->coordinatesChronoMinutes[X],
-					sin(interface->indexAngleChronoMinutes[i])
-							* (interface->radiusSmall
-									- interface->indexLengthChronoMinutes)
-							+ interface->coordinatesChronoMinutes[Y],
-
-					cos(interface->indexAngleChronoMinutes[i])
-							* (interface->radiusSmall)
-							+ interface->coordinatesChronoMinutes[X],
-					sin(interface->indexAngleChronoMinutes[i])
-							* (interface->radiusSmall)
-							+ interface->coordinatesChronoMinutes[Y],
-					interface->colorBackground, DOT_PIXEL_1X1,
-					LINE_STYLE_SOLID);
-
-			if (i % 5 == 0) {
-				Paint_DrawLine(
-						cos(interface->indexAngleChronoMinutes[i])
-								* (interface->radiusSmall
-										- (interface->indexLengthChronoMinutes
-												+ 5))
-								+ interface->coordinatesChronoMinutes[X],
-						sin(interface->indexAngleChronoMinutes[i])
-								* (interface->radiusSmall
-										- (interface->indexLengthChronoMinutes
-												+ 5))
-								+ interface->coordinatesChronoMinutes[Y],
-
-						cos(interface->indexAngleChronoMinutes[i])
-								* (interface->radiusSmall)
-								+ interface->coordinatesChronoMinutes[X],
-						sin(interface->indexAngleChronoMinutes[i])
-								* (interface->radiusSmall)
-								+ interface->coordinatesChronoMinutes[Y],
-						interface->colorBackground, DOT_PIXEL_1X1,
-						LINE_STYLE_SOLID);
-			}
-		}
-
-		//digits
+//digits
 		Paint_DrawString_EN(interface->coordinatesChronoMinutes[X] - 8,
 				interface->coordinatesChronoMinutes[Y] - 20, "30", &Font12,
 				interface->colorBackground, interface->colorForeground);
@@ -586,17 +522,8 @@ void interfaceDraw(interfaceTypeDef *interface, RTCChronoTypeDef *chrono,
 				interface->coordinatesChronoMinutes[Y] + 2, "20", &Font12,
 				interface->colorBackground, interface->colorForeground);
 
-		//pointer
-		interface->pointerAngleChronoMinutes = 2 * 3.14 / 30
-				* (chrono->chrono.minute - 7.5);
 
-		Paint_DrawPointer(interface->coordinatesChronoMinutes[X],
-				interface->coordinatesChronoMinutes[Y],
-				interface->pointerAngleChronoMinutes,
-				interface->pointerLengthChronoMinutes, 0,
-				interface->colorBackground, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
-
-		//half hours dots
+//half hours dots
 		for (uint8_t halfHours = (chrono->chrono.hour * 2)
 				+ (chrono->chrono.minute / 30); halfHours > 0; halfHours--) {
 			Paint_DrawPoint(
@@ -657,7 +584,7 @@ void interfaceDraw(interfaceTypeDef *interface, RTCChronoTypeDef *chrono,
 		//past pressure pointer
 
 		interface->pointerAnglePressure = 2 * 3.14 / 100
-				* ((int32_t) forecast->pastPressureReadings[5] - 950 - 25);
+				* ((int32_t) forecast->pastPressureReadings[20] - 950 - 25);
 
 		Paint_DrawPointer(interface->coordinatesPressure[X],
 				interface->coordinatesPressure[Y],
@@ -673,15 +600,15 @@ void interfaceDraw(interfaceTypeDef *interface, RTCChronoTypeDef *chrono,
 		int8_t cloudyRange = 4; //difference is 3 more or less than 0 for medium weather
 
 		int16_t pressureDifference = atmospherical->pressureValue / 100
-				- forecast->pastPressureReadings[5];
+				- forecast->pastPressureReadings[20];
 
-		if (pressureDifference < (0 - cloudyRange)) { //rainy
+		if (pressureDifference < (0 - (cloudyRange / 2))) { //rainy
 
 			interfaceDrawIcon(interface->coordinatesForecast[X],
 					interface->coordinatesForecast[Y],
 					interface->colorForeground, INTERFACE_ICON_RAIN);
 
-		} else if (pressureDifference > cloudyRange) { //sunny
+		} else if (pressureDifference > (cloudyRange / 2)) { //sunny
 
 			interfaceDrawIcon(interface->coordinatesForecast[X],
 					interface->coordinatesForecast[Y],
@@ -728,18 +655,10 @@ void interfaceDraw(interfaceTypeDef *interface, RTCChronoTypeDef *chrono,
 	//indexes- draw
 	for (uint8_t i = 1; i < numberOfIndexesMain; i++) {
 
-		Paint_DrawLine(
-				cos(interface->indexAngleMain[i])
-						* (interface->radiusMain - interface->indexLengthMain)
-						+ interface->coordinatesMain[X],
-				sin(interface->indexAngleMain[i])
-						* (interface->radiusMain - interface->indexLengthMain)
-						+ interface->coordinatesMain[Y],
-
-				cos(interface->indexAngleMain[i]) * (interface->radiusMain)
-						+ interface->coordinatesMain[X],
-				sin(interface->indexAngleMain[i]) * (interface->radiusMain)
-						+ interface->coordinatesMain[Y],
+		Paint_DrawPointer(interface->coordinatesMain[X],
+				interface->coordinatesMain[Y], interface->indexAngleMain[i],
+				interface->radiusMain,
+				interface->radiusMain - interface->indexLengthMain,
 				interface->colorForeground, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
 
 	}
@@ -1026,14 +945,77 @@ void interfaceDrawIcon(uint8_t x, uint8_t y, uint8_t color, uint8_t icon) {
 		uint8_t xShift = 3;
 		uint8_t yShift = 6;
 
-
-
 //		Paint_DrawLine(x-10, y+13, x-xShift-10, y+yShift+13, color, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
-		Paint_DrawLine(x-6, y+13, x-xShift-6, y+yShift+13, color, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
-		Paint_DrawLine(x-2, y+13, x-xShift-2, y+yShift+13, color, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
-		Paint_DrawLine(x+2, y+13, x-xShift+2, y+yShift+13, color, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
-		Paint_DrawLine(x+6, y+13, x-xShift+6, y+yShift+13, color, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
+		Paint_DrawLine(x - 6, y + 13, x - xShift - 6, y + yShift + 13, color,
+				DOT_PIXEL_1X1, LINE_STYLE_SOLID);
+		Paint_DrawLine(x - 2, y + 13, x - xShift - 2, y + yShift + 13, color,
+				DOT_PIXEL_1X1, LINE_STYLE_SOLID);
+		Paint_DrawLine(x + 2, y + 13, x - xShift + 2, y + yShift + 13, color,
+				DOT_PIXEL_1X1, LINE_STYLE_SOLID);
+		Paint_DrawLine(x + 6, y + 13, x - xShift + 6, y + yShift + 13, color,
+				DOT_PIXEL_1X1, LINE_STYLE_SOLID);
 //		Paint_DrawLine(x+10, y+13, x-xShift+10, y+yShift+13, color, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
 	}
 }
 
+
+
+/*
+ * brief: draw chronograph dialer
+ * @param: x position
+ * @param: y position
+ * @param: radius of inner circle
+ * @param: pointed value(e.g actual second)
+ * @param: maximum value on scale(e.g 60 minutes, 10 seconds)
+ * @param: length of pointer
+ * @param: number of indexes
+ * @param: length of indexes
+ * @param: whitch indexes have to be longer(e.g 5 means that 5, 10, 15, 20... index will be longer. 0 for any
+ * @param: foreground color
+ * @param: background color
+ */
+void interfaceDrawDialer(uint8_t x, uint8_t y, uint8_t radius, uint8_t value,
+		uint8_t maxValue, uint8_t pointerLength, uint8_t indexesNumber,
+		uint8_t indexesLength, uint8_t longerIndexesDivider, uint8_t colorFore,
+		uint8_t colorBack) {
+	//outer circle
+	Paint_DrawCircle(x, y, radius + 2, colorFore, DOT_PIXEL_1X1,
+			DRAW_FILL_EMPTY);
+	//inner circle
+	Paint_DrawCircle(x, y, radius, colorFore, DOT_PIXEL_1X1, DRAW_FILL_FULL);
+
+	//dot at center
+	Paint_DrawCircle(x, y, 2, colorBack, DOT_PIXEL_1X1, DRAW_FILL_FULL);
+
+	//indexes- count angles
+	float indexAngles[indexesNumber];
+
+	//count angle for every index
+	for (uint8_t i = 0; i < indexesNumber; i++) {
+		indexAngles[i] = 2 * 3.14 / indexesNumber
+				* (i - ((float) indexesNumber / 4)); //have to subtract 1/4 from start counting from 12.
+	}
+
+	//indexes- draw
+	for (uint8_t i = 0; i < indexesNumber; i++) {
+
+		Paint_DrawPointer(x, y, indexAngles[i], radius, radius - indexesLength,
+				colorBack, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
+
+		if (longerIndexesDivider > 0) {
+			if (i % longerIndexesDivider == 0) {
+				Paint_DrawPointer(x, y, indexAngles[i], radius,
+						radius - indexesLength - 4, colorBack, DOT_PIXEL_1X1,
+						LINE_STYLE_SOLID);
+			}
+		}
+
+	}
+
+	//pointer
+	float pointerAngle = 2 * 3.14 / maxValue * (value - ((float) maxValue / 4));
+
+	Paint_DrawPointer(x, y, pointerAngle, pointerLength, 0, colorBack,
+			DOT_PIXEL_1X1, LINE_STYLE_SOLID);
+
+}

@@ -1,5 +1,5 @@
-Src/rtc_bd.o: ../Src/rtc_bd.c ../Inc/main.h \
- ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h \
+Src/chrono/sleep.o: ../Src/chrono/sleep.c ../Inc/chrono/sleep.h \
+ ../Inc/main.h ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h \
  ../Inc/stm32g0xx_hal_conf.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h \
@@ -47,7 +47,10 @@ Src/rtc_bd.o: ../Src/rtc_bd.c ../Inc/main.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_pwr.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_gpio.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h \
- ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h ../Inc/rtc_bd.h
+ ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h \
+ ../Inc/Display_EPD/EPD_1in54_V2.h ../Inc/Display_Config/DEV_Config.h
+
+../Inc/chrono/sleep.h:
 
 ../Inc/main.h:
 
@@ -149,4 +152,6 @@ Src/rtc_bd.o: ../Src/rtc_bd.c ../Inc/main.h \
 
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h:
 
-../Inc/rtc_bd.h:
+../Inc/Display_EPD/EPD_1in54_V2.h:
+
+../Inc/Display_Config/DEV_Config.h:

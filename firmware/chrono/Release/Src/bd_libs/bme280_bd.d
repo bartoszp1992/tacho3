@@ -1,7 +1,5 @@
-Src/backup_bd.o: ../Src/backup_bd.c ../Inc/backup_bd.h \
- ../Inc/EEPROM_Emul/eeprom_emul.h ../Inc/EEPROM_Emul/eeprom_emul_conf.h \
- ../Inc/EEPROM_Emul/eeprom_emul_types.h \
- ../Inc/Flash_Interface/flash_interface.h \
+Src/bd_libs/bme280_bd.o: ../Src/bd_libs/bme280_bd.c \
+ ../Inc/bd_libs/bme280_bd.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h \
  ../Inc/stm32g0xx_hal_conf.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h \
@@ -40,19 +38,9 @@ Src/backup_bd.o: ../Src/backup_bd.c ../Inc/backup_bd.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi_ex.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h \
- ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h \
- ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_crc.h \
- ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_bus.h ../Inc/rtc_bd.h
+ ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h
 
-../Inc/backup_bd.h:
-
-../Inc/EEPROM_Emul/eeprom_emul.h:
-
-../Inc/EEPROM_Emul/eeprom_emul_conf.h:
-
-../Inc/EEPROM_Emul/eeprom_emul_types.h:
-
-../Inc/Flash_Interface/flash_interface.h:
+../Inc/bd_libs/bme280_bd.h:
 
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:
 
@@ -131,9 +119,3 @@ Src/backup_bd.o: ../Src/backup_bd.c ../Inc/backup_bd.h \
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h:
 
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h:
-
-../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_crc.h:
-
-../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_bus.h:
-
-../Inc/rtc_bd.h:

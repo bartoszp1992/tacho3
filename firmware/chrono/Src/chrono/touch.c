@@ -37,8 +37,6 @@ void HAL_GPIO_EXTI_Falling_Callback(uint16_t GPIO_Pin) {
 			watch.counterDontSleepTimer = 0;
 		}
 
-//		watch.counterDontSleepTimer = WATCH_TIME_DONT_SLEEP
-//				- WATCH_TIME_SETTINGS_MODE + 2; //if set pressed, set timer to avoid sleep in settings mode
 
 		if (buttonRegister == BUTTON_START) {
 

@@ -20,7 +20,6 @@
  * Chrono by Bart's design
  *
  *todo:
- *-fix chrono minutes indexes
  *-automatic color change at night
  *-fix magnetometer current drain
  *-move settings to separate files
@@ -192,7 +191,7 @@ int main(void)
 
 			HAL_GPIO_WritePin(LED_WKUP_GPIO_Port, LED_WKUP_Pin, 0);
 
-			interfaceDraw(&interface, &chrono, &magnetometer, &atmospherical,
+			interfaceDrawMain(&interface, &chrono, &magnetometer, &atmospherical,
 					&watch, &forecast);
 
 			HAL_GPIO_WritePin(LED_WKUP_GPIO_Port, LED_WKUP_Pin, 1);

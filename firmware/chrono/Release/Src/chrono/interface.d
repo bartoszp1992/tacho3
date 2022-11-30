@@ -1,5 +1,7 @@
-Src/sleep.o: ../Src/sleep.c ../Inc/sleep.h ../Inc/main.h \
- ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h \
+Src/chrono/interface.o: ../Src/chrono/interface.c \
+ ../Inc/chrono/interface.h ../Inc/chrono/watch.h \
+ ../Inc/Display_EPD/EPD_1in54_V2.h ../Inc/Display_Config/DEV_Config.h \
+ ../Inc/main.h ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h \
  ../Inc/stm32g0xx_hal_conf.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h \
@@ -47,9 +49,20 @@ Src/sleep.o: ../Src/sleep.c ../Inc/sleep.h ../Inc/main.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_pwr.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_gpio.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h \
- ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h
+ ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h \
+ ../Inc/Display_GUI/GUI_Paint.h \
+ ../Inc/Display_GUI/../Display_Config/DEV_Config.h \
+ ../Inc/Display_GUI/../Display_Fonts/fonts.h ../Inc/bd_libs/rtc_bd.h \
+ ../Inc/bd_libs/bme280_bd.h ../Inc/bd_libs/lis3mdl_bd.h \
+ ../Inc/bd_libs/forecast_bd.h
 
-../Inc/sleep.h:
+../Inc/chrono/interface.h:
+
+../Inc/chrono/watch.h:
+
+../Inc/Display_EPD/EPD_1in54_V2.h:
+
+../Inc/Display_Config/DEV_Config.h:
 
 ../Inc/main.h:
 
@@ -150,3 +163,17 @@ Src/sleep.o: ../Src/sleep.c ../Inc/sleep.h ../Inc/main.h \
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h:
 
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h:
+
+../Inc/Display_GUI/GUI_Paint.h:
+
+../Inc/Display_GUI/../Display_Config/DEV_Config.h:
+
+../Inc/Display_GUI/../Display_Fonts/fonts.h:
+
+../Inc/bd_libs/rtc_bd.h:
+
+../Inc/bd_libs/bme280_bd.h:
+
+../Inc/bd_libs/lis3mdl_bd.h:
+
+../Inc/bd_libs/forecast_bd.h:

@@ -49,19 +49,19 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h ../Inc/adc.h \
  ../Inc/main.h ../Inc/crc.h ../Inc/i2c.h ../Inc/rtc.h ../Inc/spi.h \
- ../Inc/tim.h ../Inc/gpio.h ../Inc/adc_bd.h ../Inc/backup_bd.h \
- ../Inc/EEPROM_Emul/eeprom_emul.h ../Inc/EEPROM_Emul/eeprom_emul_conf.h \
+ ../Inc/tim.h ../Inc/gpio.h ../Inc/bd_libs/adc_bd.h \
+ ../Inc/bd_libs/backup_bd.h ../Inc/EEPROM_Emul/eeprom_emul.h \
+ ../Inc/EEPROM_Emul/eeprom_emul_conf.h \
  ../Inc/EEPROM_Emul/eeprom_emul_types.h \
- ../Inc/Flash_Interface/flash_interface.h ../Inc/rtc_bd.h \
- ../Inc/bme280_bd.h ../Inc/lis3mdl_bd.h ../Inc/rtc_bd.h \
- ../Inc/interface_bd.h ../Inc/interface_bd.h \
+ ../Inc/Flash_Interface/flash_interface.h ../Inc/bd_libs/rtc_bd.h \
+ ../Inc/bd_libs/bme280_bd.h ../Inc/bd_libs/lis3mdl_bd.h \
+ ../Inc/bd_libs/rtc_bd.h ../Inc/bd_libs/forecast_bd.h \
+ ../Inc/chrono/battery.h ../Inc/chrono/interface.h ../Inc/chrono/watch.h \
  ../Inc/Display_EPD/EPD_1in54_V2.h ../Inc/Display_Config/DEV_Config.h \
- ../Inc/Display_Config/DEV_Config.h ../Inc/Display_GUI/GUI_Paint.h \
+ ../Inc/Display_GUI/GUI_Paint.h \
  ../Inc/Display_GUI/../Display_Config/DEV_Config.h \
- ../Inc/Display_GUI/../Display_Fonts/fonts.h ../Inc/bme280_bd.h \
- ../Inc/lis3mdl_bd.h ../Inc/watch.h ../Inc/watch.h ../Src/timers.h \
- ../Inc/Display_EPD/EPD_1in54_V2.h ../Inc/Display_GUI/GUI_Paint.h \
- ../Inc/EEPROM_Emul/eeprom_emul.h ../Inc/sleep.h
+ ../Inc/Display_GUI/../Display_Fonts/fonts.h ../Inc/chrono/sleep.h \
+ ../Inc/chrono/timers.h ../Inc/chrono/touch.h
 
 ../Inc/main.h:
 
@@ -179,9 +179,9 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
 
 ../Inc/gpio.h:
 
-../Inc/adc_bd.h:
+../Inc/bd_libs/adc_bd.h:
 
-../Inc/backup_bd.h:
+../Inc/bd_libs/backup_bd.h:
 
 ../Inc/EEPROM_Emul/eeprom_emul.h:
 
@@ -191,21 +191,23 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
 
 ../Inc/Flash_Interface/flash_interface.h:
 
-../Inc/rtc_bd.h:
+../Inc/bd_libs/rtc_bd.h:
 
-../Inc/bme280_bd.h:
+../Inc/bd_libs/bme280_bd.h:
 
-../Inc/lis3mdl_bd.h:
+../Inc/bd_libs/lis3mdl_bd.h:
 
-../Inc/rtc_bd.h:
+../Inc/bd_libs/rtc_bd.h:
 
-../Inc/interface_bd.h:
+../Inc/bd_libs/forecast_bd.h:
 
-../Inc/interface_bd.h:
+../Inc/chrono/battery.h:
+
+../Inc/chrono/interface.h:
+
+../Inc/chrono/watch.h:
 
 ../Inc/Display_EPD/EPD_1in54_V2.h:
-
-../Inc/Display_Config/DEV_Config.h:
 
 ../Inc/Display_Config/DEV_Config.h:
 
@@ -215,20 +217,8 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
 
 ../Inc/Display_GUI/../Display_Fonts/fonts.h:
 
-../Inc/bme280_bd.h:
+../Inc/chrono/sleep.h:
 
-../Inc/lis3mdl_bd.h:
+../Inc/chrono/timers.h:
 
-../Inc/watch.h:
-
-../Inc/watch.h:
-
-../Src/timers.h:
-
-../Inc/Display_EPD/EPD_1in54_V2.h:
-
-../Inc/Display_GUI/GUI_Paint.h:
-
-../Inc/EEPROM_Emul/eeprom_emul.h:
-
-../Inc/sleep.h:
+../Inc/chrono/touch.h:

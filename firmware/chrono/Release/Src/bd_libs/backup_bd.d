@@ -1,4 +1,8 @@
-Src/timers.o: ../Src/timers.c ../Src/timers.h ../Inc/tim.h ../Inc/main.h \
+Src/bd_libs/backup_bd.o: ../Src/bd_libs/backup_bd.c \
+ ../Inc/bd_libs/backup_bd.h ../Inc/EEPROM_Emul/eeprom_emul.h \
+ ../Inc/EEPROM_Emul/eeprom_emul_conf.h \
+ ../Inc/EEPROM_Emul/eeprom_emul_types.h \
+ ../Inc/Flash_Interface/flash_interface.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h \
  ../Inc/stm32g0xx_hal_conf.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h \
@@ -40,6 +44,7 @@ Src/timers.o: ../Src/timers.c ../Src/timers.h ../Inc/tim.h ../Inc/main.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_crc.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_bus.h \
+ ../Inc/bd_libs/rtc_bd.h ../Inc/main.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_cortex.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h \
@@ -47,13 +52,17 @@ Src/timers.o: ../Src/timers.c ../Src/timers.h ../Inc/tim.h ../Inc/main.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_pwr.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_gpio.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h \
- ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h ../Inc/watch.h
+ ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h
 
-../Src/timers.h:
+../Inc/bd_libs/backup_bd.h:
 
-../Inc/tim.h:
+../Inc/EEPROM_Emul/eeprom_emul.h:
 
-../Inc/main.h:
+../Inc/EEPROM_Emul/eeprom_emul_conf.h:
+
+../Inc/EEPROM_Emul/eeprom_emul_types.h:
+
+../Inc/Flash_Interface/flash_interface.h:
 
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:
 
@@ -137,6 +146,10 @@ Src/timers.o: ../Src/timers.c ../Src/timers.h ../Inc/tim.h ../Inc/main.h \
 
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_bus.h:
 
+../Inc/bd_libs/rtc_bd.h:
+
+../Inc/main.h:
+
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_cortex.h:
 
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h:
@@ -152,5 +165,3 @@ Src/timers.o: ../Src/timers.c ../Src/timers.h ../Inc/tim.h ../Inc/main.h \
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h:
 
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h:
-
-../Inc/watch.h:

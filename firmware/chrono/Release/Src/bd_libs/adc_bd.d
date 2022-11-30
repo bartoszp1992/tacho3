@@ -1,6 +1,4 @@
-Src/interface_bd.o: ../Src/interface_bd.c ../Inc/interface_bd.h \
- ../Inc/interface_bd.h ../Inc/Display_EPD/EPD_1in54_V2.h \
- ../Inc/Display_Config/DEV_Config.h ../Inc/main.h \
+Src/bd_libs/adc_bd.o: ../Src/bd_libs/adc_bd.c ../Inc/adc.h ../Inc/main.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h \
  ../Inc/stm32g0xx_hal_conf.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h \
@@ -49,19 +47,9 @@ Src/interface_bd.o: ../Src/interface_bd.c ../Inc/interface_bd.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_pwr.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_gpio.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h \
- ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h \
- ../Inc/Display_Config/DEV_Config.h ../Inc/Display_GUI/GUI_Paint.h \
- ../Inc/Display_GUI/../Display_Config/DEV_Config.h \
- ../Inc/Display_GUI/../Display_Fonts/fonts.h ../Inc/rtc_bd.h \
- ../Inc/bme280_bd.h ../Inc/lis3mdl_bd.h ../Inc/watch.h
+ ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h
 
-../Inc/interface_bd.h:
-
-../Inc/interface_bd.h:
-
-../Inc/Display_EPD/EPD_1in54_V2.h:
-
-../Inc/Display_Config/DEV_Config.h:
+../Inc/adc.h:
 
 ../Inc/main.h:
 
@@ -162,19 +150,3 @@ Src/interface_bd.o: ../Src/interface_bd.c ../Inc/interface_bd.h \
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h:
 
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h:
-
-../Inc/Display_Config/DEV_Config.h:
-
-../Inc/Display_GUI/GUI_Paint.h:
-
-../Inc/Display_GUI/../Display_Config/DEV_Config.h:
-
-../Inc/Display_GUI/../Display_Fonts/fonts.h:
-
-../Inc/rtc_bd.h:
-
-../Inc/bme280_bd.h:
-
-../Inc/lis3mdl_bd.h:
-
-../Inc/watch.h:

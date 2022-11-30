@@ -1,4 +1,5 @@
-Src/bme280_bd.o: ../Src/bme280_bd.c ../Inc/bme280_bd.h \
+Src/chrono/timers.o: ../Src/chrono/timers.c ../Inc/chrono/timers.h \
+ ../Inc/tim.h ../Inc/main.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h \
  ../Inc/stm32g0xx_hal_conf.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h \
@@ -37,9 +38,25 @@ Src/bme280_bd.o: ../Src/bme280_bd.c ../Inc/bme280_bd.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi_ex.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h \
- ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h
+ ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h \
+ ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_crc.h \
+ ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_bus.h \
+ ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_cortex.h \
+ ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h \
+ ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h \
+ ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_utils.h \
+ ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_pwr.h \
+ ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_gpio.h \
+ ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h \
+ ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h \
+ ../Inc/chrono/touch.h ../Inc/chrono/watch.h ../Inc/main.h \
+ ../Inc/bd_libs/rtc_bd.h ../Inc/bd_libs/bme280_bd.h
 
-../Inc/bme280_bd.h:
+../Inc/chrono/timers.h:
+
+../Inc/tim.h:
+
+../Inc/main.h:
 
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:
 
@@ -118,3 +135,33 @@ Src/bme280_bd.o: ../Src/bme280_bd.c ../Inc/bme280_bd.h \
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h:
 
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h:
+
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_crc.h:
+
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_bus.h:
+
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_cortex.h:
+
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h:
+
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h:
+
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_utils.h:
+
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_pwr.h:
+
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_gpio.h:
+
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h:
+
+../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_exti.h:
+
+../Inc/chrono/touch.h:
+
+../Inc/chrono/watch.h:
+
+../Inc/main.h:
+
+../Inc/bd_libs/rtc_bd.h:
+
+../Inc/bd_libs/bme280_bd.h:

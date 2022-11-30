@@ -1,4 +1,5 @@
-Src/lis3mdl_bd.o: ../Src/lis3mdl_bd.c ../Inc/lis3mdl_bd.h \
+Src/bd_libs/lis3mdl_bd.o: ../Src/bd_libs/lis3mdl_bd.c \
+ ../Inc/bd_libs/lis3mdl_bd.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h \
  ../Inc/stm32g0xx_hal_conf.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h \
@@ -39,7 +40,7 @@ Src/lis3mdl_bd.o: ../Src/lis3mdl_bd.c ../Inc/lis3mdl_bd.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h
 
-../Inc/lis3mdl_bd.h:
+../Inc/bd_libs/lis3mdl_bd.h:
 
 ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:
 
