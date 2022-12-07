@@ -5,7 +5,7 @@
       "Application": "Pcbnew",
       "Version": "6.0.7-1.fc35"
     },
-    "CreationDate": "2022-12-05T16:37:48+01:00"
+    "CreationDate": "2022-12-05T21:33:06+01:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -33,8 +33,48 @@
   ],
   "FilesAttributes": [
     {
+      "Path": "Base-F_Cu.gbr",
+      "FileFunction": "Copper,L1,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Base-B_Cu.gbr",
+      "FileFunction": "Copper,L2,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Base-F_Paste.gbr",
+      "FileFunction": "SolderPaste,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Base-B_Paste.gbr",
+      "FileFunction": "SolderPaste,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
       "Path": "Base-F_Silkscreen.gbr",
       "FileFunction": "Legend,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Base-B_Silkscreen.gbr",
+      "FileFunction": "Legend,Bot",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Base-F_Mask.gbr",
+      "FileFunction": "SolderMask,Top",
+      "FilePolarity": "Negative"
+    },
+    {
+      "Path": "Base-B_Mask.gbr",
+      "FileFunction": "SolderMask,Bot",
+      "FilePolarity": "Negative"
+    },
+    {
+      "Path": "Base-Edge_Cuts.gbr",
+      "FileFunction": "Profile",
       "FilePolarity": "Positive"
     }
   ],
