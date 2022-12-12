@@ -1,5 +1,0 @@
-bme280_bd.c:70:6:bme280Init	80	static
-bme280_bd.c:230:9:_BME280_compensate_T_int32	8	static
-bme280_bd.c:243:10:_BME280_compensate_P_int64	48	static
-bme280_bd.c:264:10:_BME280_compensate_H_int32	8	static
-bme280_bd.c:153:6:bme280Read	64	static

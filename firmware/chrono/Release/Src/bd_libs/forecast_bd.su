@@ -1,2 +1,0 @@
-forecast_bd.c:12:6:forecastInit	0	static
-forecast_bd.c:25:6:forecastAppendActual	16	static

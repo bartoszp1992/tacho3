@@ -1,0 +1,3 @@
+../Src/bd_libs/backup_bd.c:28:6:backupInit	8	static
+../Src/bd_libs/backup_bd.c:60:6:backupRestore	24	static
+../Src/bd_libs/backup_bd.c:103:6:backupWrite	16	static

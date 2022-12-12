@@ -1,0 +1,5 @@
+../Src/bd_libs/adc_bd.c:25:6:adcInit	8	static
+../Src/bd_libs/adc_bd.c:40:6:adcSetChannel	32	static
+../Src/bd_libs/adc_bd.c:62:10:adcRead	8	static
+../Src/bd_libs/adc_bd.c:80:10:adcTemperature	16	static
+../Src/bd_libs/adc_bd.c:94:10:adcVoltage	8	static

@@ -1,9 +1,0 @@
-rtc_bd.c:28:6:rtcInit	8	static
-rtc_bd.c:51:6:rtcGetTime	56	static
-rtc_bd.c:156:6:rtcSetTime	16	static
-rtc_bd.c:178:6:rtcStartChrono	24	static
-rtc_bd.c:203:6:rtcStopChrono	32	static
-rtc_bd.c:241:6:rtcResumeChrono	0	static
-rtc_bd.c:254:6:rtcResetChrono	0	static
-rtc_bd.c:289:6:rtcChangeValue	8	static
-rtc_bd.c:378:9:rtcBlink	16	static

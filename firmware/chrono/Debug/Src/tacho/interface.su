@@ -1,8 +1,0 @@
-interface.c:18:6:interfaceInit	32	static
-interface.c:100:6:interfaceSettingsInit	16	static
-interface.c:147:6:interfaceUpdateModeSwitch	16	static
-interface.c:171:6:interfaceBurn	16	static
-interface.c:190:6:interfaceClear	16	static
-interface.c:194:6:interfaceSettingsClear	16	static
-interface.c:198:6:interfaceDraw	88	static
-interface.c:767:6:interfaceSettingsDraw	56	static

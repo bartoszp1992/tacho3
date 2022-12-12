@@ -1,2 +1,0 @@
-buttons.c:38:9:buttonRead	16	static
-buttons.c:12:6:HAL_GPIO_EXTI_Falling_Callback	16	static

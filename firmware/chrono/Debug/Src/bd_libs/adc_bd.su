@@ -1,5 +1,0 @@
-adc_bd.c:25:6:adcInit	16	static
-adc_bd.c:40:6:adcSetChannel	40	static
-adc_bd.c:62:10:adcRead	16	static
-adc_bd.c:80:10:adcTemperature	16	static
-adc_bd.c:94:10:adcVoltage	16	static
