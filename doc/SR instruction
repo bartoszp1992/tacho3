@@ -1,0 +1,71 @@
+Main- pierścień nieruchomy
+Slider- pierścień ruchomy
+
+1. Mnożenie
+12x15
+
+Zestaw 12 slidera z 10 main
+
+15 main wskaże wynik- 18 -> 180
+
+2. Dzielenie
+300/15
+
+zestaw 30 slidera z 15 main
+
+10 main wskaże wynik- 20
+
+3. Proporcje
+50:20 = 30:?
+
+zestaw 50 slidera z 20 main
+
+30 slidera wskaże wynik- 12
+
+4. Dystans lotu
+Oblicz dystans lotu z prędkością 180 węzłów przez 40 minut
+
+Zestaw 18 slidera z indeksem prędkości MPH
+
+40 main wskaże wynik- 12->120mil
+
+5. Spalanie
+Oblicz zużycie paliwa(gal/h) kiedy lot trwa 40 minut i zużyto 140 galonów
+
+Zestaw 14 slidera z 40 main
+
+indeks prędkości wskaże wynik- 21->210 GAL/h
+
+6. Konwersja dystansu/prędkości
+Przelicz 45 mil na mile morskie/km
+
+Zestaw 45 slidera ze STAT
+
+NAUT wskaże wynik z milach morskich -39
+KM wskaże wynik w kilometrach- 72
+
+7. Konwersja masy
+Przelicz 16.4 OIL LBS na US.GAL/IMP GAL/LT
+
+zestaw 16.4 slidera z OIL LBS main
+
+US GAL wskaże 22->2.2US GAL
+IMP GAL wskaże 18- ->1,8 IMP GAL
+LT wskaże 83- 8.3litra
+
+8. Konwersja objętości
+Przelicz 13.1 fuel LBS to US GAL /IMP GAL/LT
+
+Zestaw 13.1 slidera z FUEL LBS 
+
+US GAL wskaże wynik- 22->2.2 US GAL
+IMP GAL wskaże wynik- 18 -> 1.8 IMP GAL
+LT wskaże wynik- 83->8,3 litra
+
+9. Paliwo
+Przelicz 16.8 US GAL na IMP GAL/LT
+
+Zestaw 16.8 slidera z US GAL
+
+IMP GAL wskaże 14 IMP GAL
+LT wskaże wynik 63,5
