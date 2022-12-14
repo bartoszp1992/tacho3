@@ -1,7 +1,7 @@
 (kicad_pcb (version 20211014) (generator pcbnew)
 
   (general
-    (thickness 1.6)
+    (thickness 1)
   )
 
   (paper "A4")
@@ -38,6 +38,19 @@
   )
 
   (setup
+    (stackup
+      (layer "F.SilkS" (type "Top Silk Screen"))
+      (layer "F.Paste" (type "Top Solder Paste"))
+      (layer "F.Mask" (type "Top Solder Mask") (thickness 0.01))
+      (layer "F.Cu" (type "copper") (thickness 0.035))
+      (layer "dielectric 1" (type "core") (thickness 0.91) (material "FR4") (epsilon_r 4.5) (loss_tangent 0.02))
+      (layer "B.Cu" (type "copper") (thickness 0.035))
+      (layer "B.Mask" (type "Bottom Solder Mask") (thickness 0.01))
+      (layer "B.Paste" (type "Bottom Solder Paste"))
+      (layer "B.SilkS" (type "Bottom Silk Screen"))
+      (copper_finish "None")
+      (dielectric_constraints no)
+    )
     (pad_to_mask_clearance 0)
     (pcbplotparams
       (layerselection 0x00010fc_ffffffff)
@@ -136,7 +149,7 @@
   (gr_arc (start 212.433012 79.465391) (mid 213.768821 80.336085) (end 215.043879 81.29354) (layer "Edge.Cuts") (width 0.05) (tstamp bfb47430-2c7e-43cc-8f2f-b4ec86346c39))
   (gr_arc (start 221.034609 88.433013) (mid 221.756106 89.854961) (end 222.381612 91.32167) (layer "Edge.Cuts") (width 0.05) (tstamp c2b00556-8d95-4e77-a7bb-a5c0131fb35c))
   (gr_arc (start 203.675152 123.72221) (mid 204.080732 123.142982) (end 204.65996 123.548562) (layer "Edge.Cuts") (width 0.05) (tstamp c3c7ab67-1981-4c00-b436-6e1221ace079))
-  (gr_circle (center 200 100) (end 221.6 100) (layer "Edge.Cuts") (width 0.05) (fill none) (tstamp c5b93277-3fc0-4b06-bd36-45cb16cbb369))
+  (gr_circle (center 200 100) (end 220.5 100) (layer "Edge.Cuts") (width 0.05) (fill none) (tstamp c5b93277-3fc0-4b06-bd36-45cb16cbb369))
   (gr_arc (start 179.46539 87.566987) (mid 179.648403 88.25) (end 178.96539 88.433013) (layer "Edge.Cuts") (width 0.05) (tstamp cbe8250f-522e-42b8-a3f2-ec746d9665da))
   (gr_arc (start 215.809924 81.936328) (mid 216.974244 83.025756) (end 218.063672 84.190076) (layer "Edge.Cuts") (width 0.05) (tstamp d739acc4-1a9c-45c6-9c56-9818e32043ab))
   (gr_arc (start 176.000001 99.5) (mid 176.08614 97.907808) (end 176.277791 96.324848) (layer "Edge.Cuts") (width 0.05) (tstamp d8bfe70e-cbc5-4e57-8dd3-94fe473a77da))
@@ -151,6 +164,8 @@
   (gr_arc (start 208.678329 77.618388) (mid 210.145039 78.243894) (end 211.566987 78.965391) (layer "Edge.Cuts") (width 0.05) (tstamp f732f801-8bd2-4820-aea5-6a4a70cef8ae))
   (gr_arc (start 177.276368 107.738637) (mid 176.812751 106.213005) (end 176.451439 104.65996) (layer "Edge.Cuts") (width 0.05) (tstamp f798895f-c58c-4854-9be3-f8ac09a831ab))
   (gr_arc (start 223.999999 100.5) (mid 223.91386 102.092192) (end 223.722209 103.675152) (layer "Edge.Cuts") (width 0.05) (tstamp fe712276-277d-4b0f-8dce-cf5a5e9943f0))
+  (gr_circle (center 200 100) (end 220.9 100) (layer "User.1") (width 0.1) (fill none) (tstamp 47660a2a-4de3-4931-b35d-2652cce9ac96))
+  (gr_circle (center 200 100) (end 223.5 100) (layer "User.1") (width 0.1) (fill none) (tstamp e9313925-bec0-41f7-8b38-5868830e793b))
   (gr_circle (center 200 100) (end 200.07 100) (layer "User.1") (width 0.1) (fill none) (tstamp ec060531-6276-4b06-9366-b8c7c0f8b06a))
   (gr_text "avia slider v1.0" (at 200.23 85.5) (layer "B.SilkS") (tstamp 969ed568-e8da-4758-ae69-de4aab13bde9)
     (effects (font (size 0.6 0.6) (thickness 0.12)) (justify mirror))
