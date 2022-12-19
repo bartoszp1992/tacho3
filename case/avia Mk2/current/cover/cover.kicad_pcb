@@ -6425,7 +6425,7 @@
   (gr_line (start 200 83.72) (end 182.1 83.72) (layer "User.1") (width 0.1) (tstamp b6ee1266-3a0f-489c-9359-09549febb5f7))
   (gr_line (start 166.19 100) (end 232.37 100) (layer "User.1") (width 0.1) (tstamp b8cb9d0f-48b9-4a7a-8ee7-9f829f52f2e7))
   (gr_circle (center 200 100) (end 199.298858 100) (layer "User.1") (width 1) (fill none) (tstamp beabe192-73b1-4cc1-9e21-33860fdad994))
-  (gr_text "avia Mk1" (at 200.113504 82.57) (layer "F.SilkS") (tstamp 1be5cced-f9a9-4e7c-ba94-2e91ffe53986)
+  (gr_text "avia Mk2" (at 200.113504 82.57) (layer "F.SilkS") (tstamp 1be5cced-f9a9-4e7c-ba94-2e91ffe53986)
     (effects (font (size 1 1.4) (thickness 0.2)))
   )
   (gr_text "W" (at 187.021752 100) (layer "F.SilkS") (tstamp 1f5933bc-ca52-4761-afe4-bc6c1d679d69)
