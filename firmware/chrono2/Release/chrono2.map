@@ -2147,7 +2147,7 @@ LOAD /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.
                 0x0000000008000000                g_pfnVectors
                 0x00000000080000bc                . = ALIGN (0x4)
 
-.text           0x00000000080000bc     0xc088
+.text           0x00000000080000bc     0xc068
                 0x00000000080000bc                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000080000bc       0x48 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
@@ -2751,395 +2751,395 @@ LOAD /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.
                 0x00000000080087e0      0x1d4 ./Src/chrono/interface.o
                 0x00000000080087e0                interfaceDrawDialer
  .text.interfaceDrawMain
-                0x00000000080089b4      0xb70 ./Src/chrono/interface.o
+                0x00000000080089b4      0xb50 ./Src/chrono/interface.o
                 0x00000000080089b4                interfaceDrawMain
  .text.goodNight
-                0x0000000008009524       0x38 ./Src/chrono/sleep.o
-                0x0000000008009524                goodNight
+                0x0000000008009504       0x38 ./Src/chrono/sleep.o
+                0x0000000008009504                goodNight
  .text.HAL_TIM_PeriodElapsedCallback
-                0x000000000800955c       0x4c ./Src/chrono/timers.o
-                0x000000000800955c                HAL_TIM_PeriodElapsedCallback
+                0x000000000800953c       0x4c ./Src/chrono/timers.o
+                0x000000000800953c                HAL_TIM_PeriodElapsedCallback
  .text.timersInit
-                0x00000000080095a8       0x10 ./Src/chrono/timers.o
-                0x00000000080095a8                timersInit
+                0x0000000008009588       0x10 ./Src/chrono/timers.o
+                0x0000000008009588                timersInit
  .text.touchRead
-                0x00000000080095b8       0x2e ./Src/chrono/touch.o
-                0x00000000080095b8                touchRead
- *fill*         0x00000000080095e6        0x2 
+                0x0000000008009598       0x2e ./Src/chrono/touch.o
+                0x0000000008009598                touchRead
+ *fill*         0x00000000080095c6        0x2 
  .text.HAL_GPIO_EXTI_Falling_Callback
-                0x00000000080095e8       0xcc ./Src/chrono/touch.o
-                0x00000000080095e8                HAL_GPIO_EXTI_Falling_Callback
+                0x00000000080095c8       0xcc ./Src/chrono/touch.o
+                0x00000000080095c8                HAL_GPIO_EXTI_Falling_Callback
  .text.watchInit
-                0x00000000080096b4       0x10 ./Src/chrono/watch.o
-                0x00000000080096b4                watchInit
+                0x0000000008009694       0x10 ./Src/chrono/watch.o
+                0x0000000008009694                watchInit
  .text.watchSwitchMode
-                0x00000000080096c4        0x8 ./Src/chrono/watch.o
-                0x00000000080096c4                watchSwitchMode
+                0x00000000080096a4        0x8 ./Src/chrono/watch.o
+                0x00000000080096a4                watchSwitchMode
  .text.watchSwitchSettingsItem
-                0x00000000080096cc       0x12 ./Src/chrono/watch.o
-                0x00000000080096cc                watchSwitchSettingsItem
- *fill*         0x00000000080096de        0x2 
+                0x00000000080096ac       0x12 ./Src/chrono/watch.o
+                0x00000000080096ac                watchSwitchSettingsItem
+ *fill*         0x00000000080096be        0x2 
  .text.Reset_Handler
-                0x00000000080096e0       0x50 ./Startup/startup_stm32g071kbtx.o
-                0x00000000080096e0                Reset_Handler
+                0x00000000080096c0       0x50 ./Startup/startup_stm32g071kbtx.o
+                0x00000000080096c0                Reset_Handler
  .text.Default_Handler
-                0x0000000008009730        0x2 ./Startup/startup_stm32g071kbtx.o
-                0x0000000008009730                USART3_4_LPUART1_IRQHandler
-                0x0000000008009730                TIM1_CC_IRQHandler
-                0x0000000008009730                ADC1_COMP_IRQHandler
-                0x0000000008009730                PVD_IRQHandler
-                0x0000000008009730                I2C1_IRQHandler
-                0x0000000008009730                TIM7_LPTIM2_IRQHandler
-                0x0000000008009730                SPI1_IRQHandler
-                0x0000000008009730                I2C2_IRQHandler
-                0x0000000008009730                TIM17_IRQHandler
-                0x0000000008009730                TIM16_IRQHandler
-                0x0000000008009730                RCC_IRQHandler
-                0x0000000008009730                DMA1_Channel1_IRQHandler
-                0x0000000008009730                Default_Handler
-                0x0000000008009730                CEC_IRQHandler
-                0x0000000008009730                TIM14_IRQHandler
-                0x0000000008009730                TIM15_IRQHandler
-                0x0000000008009730                EXTI0_1_IRQHandler
-                0x0000000008009730                SPI2_IRQHandler
-                0x0000000008009730                WWDG_IRQHandler
-                0x0000000008009730                TIM2_IRQHandler
-                0x0000000008009730                DMA1_Ch4_7_DMAMUX1_OVR_IRQHandler
-                0x0000000008009730                DMA1_Channel2_3_IRQHandler
-                0x0000000008009730                UCPD1_2_IRQHandler
-                0x0000000008009730                USART2_IRQHandler
-                0x0000000008009730                FLASH_IRQHandler
-                0x0000000008009730                USART1_IRQHandler
-                0x0000000008009730                TIM1_BRK_UP_TRG_COM_IRQHandler
- *fill*         0x0000000008009732        0x2 
- .text.__errno  0x0000000008009734        0xc /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-errno.o)
-                0x0000000008009734                __errno
+                0x0000000008009710        0x2 ./Startup/startup_stm32g071kbtx.o
+                0x0000000008009710                USART3_4_LPUART1_IRQHandler
+                0x0000000008009710                TIM1_CC_IRQHandler
+                0x0000000008009710                ADC1_COMP_IRQHandler
+                0x0000000008009710                PVD_IRQHandler
+                0x0000000008009710                I2C1_IRQHandler
+                0x0000000008009710                TIM7_LPTIM2_IRQHandler
+                0x0000000008009710                SPI1_IRQHandler
+                0x0000000008009710                I2C2_IRQHandler
+                0x0000000008009710                TIM17_IRQHandler
+                0x0000000008009710                TIM16_IRQHandler
+                0x0000000008009710                RCC_IRQHandler
+                0x0000000008009710                DMA1_Channel1_IRQHandler
+                0x0000000008009710                Default_Handler
+                0x0000000008009710                CEC_IRQHandler
+                0x0000000008009710                TIM14_IRQHandler
+                0x0000000008009710                TIM15_IRQHandler
+                0x0000000008009710                EXTI0_1_IRQHandler
+                0x0000000008009710                SPI2_IRQHandler
+                0x0000000008009710                WWDG_IRQHandler
+                0x0000000008009710                TIM2_IRQHandler
+                0x0000000008009710                DMA1_Ch4_7_DMAMUX1_OVR_IRQHandler
+                0x0000000008009710                DMA1_Channel2_3_IRQHandler
+                0x0000000008009710                UCPD1_2_IRQHandler
+                0x0000000008009710                USART2_IRQHandler
+                0x0000000008009710                FLASH_IRQHandler
+                0x0000000008009710                USART1_IRQHandler
+                0x0000000008009710                TIM1_BRK_UP_TRG_COM_IRQHandler
+ *fill*         0x0000000008009712        0x2 
+ .text.__errno  0x0000000008009714        0xc /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-errno.o)
+                0x0000000008009714                __errno
  .text.__libc_init_array
-                0x0000000008009740       0x48 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
-                0x0000000008009740                __libc_init_array
- .text.malloc   0x0000000008009788       0x14 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-malloc.o)
-                0x0000000008009788                malloc
- .text.memset   0x000000000800979c       0x10 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
-                0x000000000800979c                memset
- .text._free_r  0x00000000080097ac       0x94 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-freer.o)
-                0x00000000080097ac                _free_r
+                0x0000000008009720       0x48 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-init.o)
+                0x0000000008009720                __libc_init_array
+ .text.malloc   0x0000000008009768       0x14 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-malloc.o)
+                0x0000000008009768                malloc
+ .text.memset   0x000000000800977c       0x10 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memset.o)
+                0x000000000800977c                memset
+ .text._free_r  0x000000000800978c       0x94 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-freer.o)
+                0x000000000800978c                _free_r
  .text.sbrk_aligned
-                0x0000000008009840       0x44 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000008009820       0x44 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
  .text._malloc_r
-                0x0000000008009884       0xec /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
-                0x0000000008009884                _malloc_r
- .text.printf   0x0000000008009970       0x34 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-printf.o)
-                0x0000000008009970                printf
-                0x0000000008009970                iprintf
- .text._puts_r  0x00000000080099a4       0xe4 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-puts.o)
-                0x00000000080099a4                _puts_r
- .text.puts     0x0000000008009a88       0x14 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-puts.o)
-                0x0000000008009a88                puts
- .text._sbrk_r  0x0000000008009a9c       0x24 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-sbrkr.o)
-                0x0000000008009a9c                _sbrk_r
+                0x0000000008009864       0xec /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000008009864                _malloc_r
+ .text.printf   0x0000000008009950       0x34 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-printf.o)
+                0x0000000008009950                printf
+                0x0000000008009950                iprintf
+ .text._puts_r  0x0000000008009984       0xe4 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-puts.o)
+                0x0000000008009984                _puts_r
+ .text.puts     0x0000000008009a68       0x14 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-puts.o)
+                0x0000000008009a68                puts
+ .text._sbrk_r  0x0000000008009a7c       0x24 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-sbrkr.o)
+                0x0000000008009a7c                _sbrk_r
  .text.__swbuf_r
-                0x0000000008009ac0       0xac /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-wbuf.o)
-                0x0000000008009ac0                __swbuf_r
+                0x0000000008009aa0       0xac /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-wbuf.o)
+                0x0000000008009aa0                __swbuf_r
  .text.__swsetup_r
-                0x0000000008009b6c       0xf0 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-wsetup.o)
-                0x0000000008009b6c                __swsetup_r
+                0x0000000008009b4c       0xf0 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-wsetup.o)
+                0x0000000008009b4c                __swsetup_r
  .text.__sflush_r
-                0x0000000008009c5c      0x118 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-fflush.o)
-                0x0000000008009c5c                __sflush_r
+                0x0000000008009c3c      0x118 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-fflush.o)
+                0x0000000008009c3c                __sflush_r
  .text._fflush_r
-                0x0000000008009d74       0x80 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-fflush.o)
-                0x0000000008009d74                _fflush_r
- .text.std      0x0000000008009df4       0x48 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
+                0x0000000008009d54       0x80 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-fflush.o)
+                0x0000000008009d54                _fflush_r
+ .text.std      0x0000000008009dd4       0x48 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
  .text._cleanup_r
-                0x0000000008009e3c       0x10 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
-                0x0000000008009e3c                _cleanup_r
+                0x0000000008009e1c       0x10 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
+                0x0000000008009e1c                _cleanup_r
  .text.__sfmoreglue
-                0x0000000008009e4c       0x2c /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
-                0x0000000008009e4c                __sfmoreglue
+                0x0000000008009e2c       0x2c /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
+                0x0000000008009e2c                __sfmoreglue
  .text.__sfp_lock_acquire
-                0x0000000008009e78       0x10 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
-                0x0000000008009e78                __sfp_lock_acquire
+                0x0000000008009e58       0x10 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
+                0x0000000008009e58                __sfp_lock_acquire
  .text.__sfp_lock_release
-                0x0000000008009e88       0x10 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
-                0x0000000008009e88                __sfp_lock_release
+                0x0000000008009e68       0x10 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
+                0x0000000008009e68                __sfp_lock_release
  .text.__sinit_lock_acquire
-                0x0000000008009e98       0x10 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
-                0x0000000008009e98                __sinit_lock_acquire
+                0x0000000008009e78       0x10 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
+                0x0000000008009e78                __sinit_lock_acquire
  .text.__sinit_lock_release
-                0x0000000008009ea8       0x10 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
-                0x0000000008009ea8                __sinit_lock_release
- .text.__sinit  0x0000000008009eb8       0x70 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
-                0x0000000008009eb8                __sinit
- .text.__sfp    0x0000000008009f28       0x90 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
-                0x0000000008009f28                __sfp
+                0x0000000008009e88       0x10 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
+                0x0000000008009e88                __sinit_lock_release
+ .text.__sinit  0x0000000008009e98       0x70 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
+                0x0000000008009e98                __sinit
+ .text.__sfp    0x0000000008009f08       0x90 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
+                0x0000000008009f08                __sfp
  .text._fwalk_reent
-                0x0000000008009fb8       0x40 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-fwalk.o)
-                0x0000000008009fb8                _fwalk_reent
+                0x0000000008009f98       0x40 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-fwalk.o)
+                0x0000000008009f98                _fwalk_reent
  .text.__retarget_lock_init_recursive
-                0x0000000008009ff8        0x2 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-lock.o)
-                0x0000000008009ff8                __retarget_lock_init_recursive
+                0x0000000008009fd8        0x2 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-lock.o)
+                0x0000000008009fd8                __retarget_lock_init_recursive
  .text.__retarget_lock_acquire_recursive
-                0x0000000008009ffa        0x2 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-lock.o)
-                0x0000000008009ffa                __retarget_lock_acquire_recursive
+                0x0000000008009fda        0x2 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-lock.o)
+                0x0000000008009fda                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x0000000008009ffc        0x2 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-lock.o)
-                0x0000000008009ffc                __retarget_lock_release_recursive
- *fill*         0x0000000008009ffe        0x2 
+                0x0000000008009fdc        0x2 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-lock.o)
+                0x0000000008009fdc                __retarget_lock_release_recursive
+ *fill*         0x0000000008009fde        0x2 
  .text.__swhatbuf_r
-                0x000000000800a000       0x50 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-makebuf.o)
-                0x000000000800a000                __swhatbuf_r
+                0x0000000008009fe0       0x50 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-makebuf.o)
+                0x0000000008009fe0                __swhatbuf_r
  .text.__smakebuf_r
-                0x000000000800a050       0x88 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-makebuf.o)
-                0x000000000800a050                __smakebuf_r
+                0x000000000800a030       0x88 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-makebuf.o)
+                0x000000000800a030                __smakebuf_r
  .text.__malloc_lock
-                0x000000000800a0d8       0x10 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-mlock.o)
-                0x000000000800a0d8                __malloc_lock
+                0x000000000800a0b8       0x10 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-mlock.o)
+                0x000000000800a0b8                __malloc_lock
  .text.__malloc_unlock
-                0x000000000800a0e8       0x10 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-mlock.o)
-                0x000000000800a0e8                __malloc_unlock
+                0x000000000800a0c8       0x10 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-mlock.o)
+                0x000000000800a0c8                __malloc_unlock
  .text.__sfputc_r
-                0x000000000800a0f8       0x2a /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf.o)
+                0x000000000800a0d8       0x2a /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf.o)
  .text.__sfputs_r
-                0x000000000800a122       0x24 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf.o)
-                0x000000000800a122                __sfputs_r
- *fill*         0x000000000800a146        0x2 
+                0x000000000800a102       0x24 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf.o)
+                0x000000000800a102                __sfputs_r
+ *fill*         0x000000000800a126        0x2 
  .text._vfprintf_r
-                0x000000000800a148      0x274 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf.o)
-                0x000000000800a148                _vfiprintf_r
-                0x000000000800a148                _vfprintf_r
+                0x000000000800a128      0x274 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf.o)
+                0x000000000800a128                _vfiprintf_r
+                0x000000000800a128                _vfprintf_r
  .text._printf_common
-                0x000000000800a3bc       0xde /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x000000000800a3bc                _printf_common
- *fill*         0x000000000800a49a        0x2 
+                0x000000000800a39c       0xde /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x000000000800a39c                _printf_common
+ *fill*         0x000000000800a47a        0x2 
  .text._printf_i
-                0x000000000800a49c      0x224 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x000000000800a49c                _printf_i
- .text.__sread  0x000000000800a6c0       0x28 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-stdio.o)
-                0x000000000800a6c0                __sread
+                0x000000000800a47c      0x224 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x000000000800a47c                _printf_i
+ .text.__sread  0x000000000800a6a0       0x28 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-stdio.o)
+                0x000000000800a6a0                __sread
  .text.__swrite
-                0x000000000800a6e8       0x38 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-stdio.o)
-                0x000000000800a6e8                __swrite
- .text.__sseek  0x000000000800a720       0x2c /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-stdio.o)
-                0x000000000800a720                __sseek
+                0x000000000800a6c8       0x38 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-stdio.o)
+                0x000000000800a6c8                __swrite
+ .text.__sseek  0x000000000800a700       0x2c /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-stdio.o)
+                0x000000000800a700                __sseek
  .text.__sclose
-                0x000000000800a74c        0xc /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-stdio.o)
-                0x000000000800a74c                __sclose
+                0x000000000800a72c        0xc /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-stdio.o)
+                0x000000000800a72c                __sclose
  .text._write_r
-                0x000000000800a758       0x28 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-writer.o)
-                0x000000000800a758                _write_r
+                0x000000000800a738       0x28 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-writer.o)
+                0x000000000800a738                _write_r
  .text._close_r
-                0x000000000800a780       0x24 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-closer.o)
-                0x000000000800a780                _close_r
+                0x000000000800a760       0x24 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-closer.o)
+                0x000000000800a760                _close_r
  .text._fstat_r
-                0x000000000800a7a4       0x24 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-fstatr.o)
-                0x000000000800a7a4                _fstat_r
+                0x000000000800a784       0x24 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-fstatr.o)
+                0x000000000800a784                _fstat_r
  .text._isatty_r
-                0x000000000800a7c8       0x24 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-isattyr.o)
-                0x000000000800a7c8                _isatty_r
+                0x000000000800a7a8       0x24 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-isattyr.o)
+                0x000000000800a7a8                _isatty_r
  .text._lseek_r
-                0x000000000800a7ec       0x28 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-lseekr.o)
-                0x000000000800a7ec                _lseek_r
- .text.memchr   0x000000000800a814       0x16 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
-                0x000000000800a814                memchr
- *fill*         0x000000000800a82a        0x2 
- .text._read_r  0x000000000800a82c       0x28 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-readr.o)
-                0x000000000800a82c                _read_r
- .text.cos      0x000000000800a854       0x84 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-s_cos.o)
-                0x000000000800a854                cos
- .text.sin      0x000000000800a8d8       0x8c /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-s_sin.o)
-                0x000000000800a8d8                sin
- .text.atan2    0x000000000800a964        0x8 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-w_atan2.o)
-                0x000000000800a964                atan2
- .text.log      0x000000000800a96c       0x6c /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-w_log.o)
-                0x000000000800a96c                log
+                0x000000000800a7cc       0x28 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-lseekr.o)
+                0x000000000800a7cc                _lseek_r
+ .text.memchr   0x000000000800a7f4       0x16 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-memchr-stub.o)
+                0x000000000800a7f4                memchr
+ *fill*         0x000000000800a80a        0x2 
+ .text._read_r  0x000000000800a80c       0x28 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-readr.o)
+                0x000000000800a80c                _read_r
+ .text.cos      0x000000000800a834       0x84 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-s_cos.o)
+                0x000000000800a834                cos
+ .text.sin      0x000000000800a8b8       0x8c /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-s_sin.o)
+                0x000000000800a8b8                sin
+ .text.atan2    0x000000000800a944        0x8 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-w_atan2.o)
+                0x000000000800a944                atan2
+ .text.log      0x000000000800a94c       0x6c /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-w_log.o)
+                0x000000000800a94c                log
  .text.__ieee754_atan2
-                0x000000000800a9d8      0x158 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-e_atan2.o)
-                0x000000000800a9d8                __ieee754_atan2
+                0x000000000800a9b8      0x158 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-e_atan2.o)
+                0x000000000800a9b8                __ieee754_atan2
  .text.__ieee754_log
-                0x000000000800ab30      0x360 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-e_log.o)
-                0x000000000800ab30                __ieee754_log
+                0x000000000800ab10      0x360 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-e_log.o)
+                0x000000000800ab10                __ieee754_log
  .text.__ieee754_rem_pio2
-                0x000000000800ae90      0x3e0 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-e_rem_pio2.o)
-                0x000000000800ae90                __ieee754_rem_pio2
+                0x000000000800ae70      0x3e0 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-e_rem_pio2.o)
+                0x000000000800ae70                __ieee754_rem_pio2
  .text.__kernel_cos
-                0x000000000800b270      0x180 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-k_cos.o)
-                0x000000000800b270                __kernel_cos
+                0x000000000800b250      0x180 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-k_cos.o)
+                0x000000000800b250                __kernel_cos
  .text.__kernel_rem_pio2
-                0x000000000800b3f0      0x6d4 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-k_rem_pio2.o)
-                0x000000000800b3f0                __kernel_rem_pio2
+                0x000000000800b3d0      0x6d4 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-k_rem_pio2.o)
+                0x000000000800b3d0                __kernel_rem_pio2
  .text.__kernel_sin
-                0x000000000800bac4      0x158 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-k_sin.o)
-                0x000000000800bac4                __kernel_sin
- .text.atan     0x000000000800bc1c      0x300 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-s_atan.o)
-                0x000000000800bc1c                atan
- .text.fabs     0x000000000800bf1c        0x6 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-s_fabs.o)
-                0x000000000800bf1c                fabs
- *fill*         0x000000000800bf22        0x2 
- .text.floor    0x000000000800bf24      0x114 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-s_floor.o)
-                0x000000000800bf24                floor
- .text.nan      0x000000000800c038        0xc /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-s_nan.o)
-                0x000000000800c038                nan
- .text.scalbn   0x000000000800c044       0xe8 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-s_scalbn.o)
-                0x000000000800c044                scalbn
+                0x000000000800baa4      0x158 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-k_sin.o)
+                0x000000000800baa4                __kernel_sin
+ .text.atan     0x000000000800bbfc      0x300 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-s_atan.o)
+                0x000000000800bbfc                atan
+ .text.fabs     0x000000000800befc        0x6 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-s_fabs.o)
+                0x000000000800befc                fabs
+ *fill*         0x000000000800bf02        0x2 
+ .text.floor    0x000000000800bf04      0x114 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-s_floor.o)
+                0x000000000800bf04                floor
+ .text.nan      0x000000000800c018        0xc /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-s_nan.o)
+                0x000000000800c018                nan
+ .text.scalbn   0x000000000800c024       0xe8 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-s_scalbn.o)
+                0x000000000800c024                scalbn
  *(.glue_7)
- .glue_7        0x000000000800c12c        0x0 linker stubs
+ .glue_7        0x000000000800c10c        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x000000000800c12c        0x0 linker stubs
+ .glue_7t       0x000000000800c10c        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x000000000800c12c        0x0 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+ .eh_frame      0x000000000800c10c        0x0 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
  *(.init)
- .init          0x000000000800c12c        0x4 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
-                0x000000000800c12c                _init
- .init          0x000000000800c130        0x8 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtn.o
+ .init          0x000000000800c10c        0x4 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
+                0x000000000800c10c                _init
+ .init          0x000000000800c110        0x8 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtn.o
  *(.fini)
- .fini          0x000000000800c138        0x4 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
-                0x000000000800c138                _fini
- .fini          0x000000000800c13c        0x8 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtn.o
-                0x000000000800c144                . = ALIGN (0x4)
-                0x000000000800c144                _etext = .
+ .fini          0x000000000800c118        0x4 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
+                0x000000000800c118                _fini
+ .fini          0x000000000800c11c        0x8 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtn.o
+                0x000000000800c124                . = ALIGN (0x4)
+                0x000000000800c124                _etext = .
 
-.vfp11_veneer   0x000000000800c144        0x0
- .vfp11_veneer  0x000000000800c144        0x0 linker stubs
+.vfp11_veneer   0x000000000800c124        0x0
+ .vfp11_veneer  0x000000000800c124        0x0 linker stubs
 
-.v4_bx          0x000000000800c144        0x0
- .v4_bx         0x000000000800c144        0x0 linker stubs
+.v4_bx          0x000000000800c124        0x0
+ .v4_bx         0x000000000800c124        0x0 linker stubs
 
-.iplt           0x000000000800c144        0x0
- .iplt          0x000000000800c144        0x0 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x000000000800c124        0x0
+ .iplt          0x000000000800c124        0x0 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x000000000800c148     0x4420
-                0x000000000800c148                . = ALIGN (0x4)
+.rodata         0x000000000800c128     0x4420
+                0x000000000800c128                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x000000000800c148       0x80 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(divsf3.o)
- .rodata        0x000000000800c1c8       0x40 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(mulsf3.o)
- .rodata        0x000000000800c208       0x40 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(divdf3.o)
- .rodata        0x000000000800c248       0x40 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(muldf3.o)
+ .rodata        0x000000000800c128       0x80 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(divsf3.o)
+ .rodata        0x000000000800c1a8       0x40 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(mulsf3.o)
+ .rodata        0x000000000800c1e8       0x40 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(divdf3.o)
+ .rodata        0x000000000800c228       0x40 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(muldf3.o)
  *(.rodata*)
  .rodata.EPD_1IN54_V2_ReadBusy.str1.1
-                0x000000000800c288       0x32 ./Src/Display_EPD/EPD_1in54_V2.o
+                0x000000000800c268       0x32 ./Src/Display_EPD/EPD_1in54_V2.o
  .rodata.Paint_SetPixel.str1.1
-                0x000000000800c2ba       0x25 ./Src/Display_GUI/GUI_Paint.o
+                0x000000000800c29a       0x25 ./Src/Display_GUI/GUI_Paint.o
  .rodata.Paint_DrawPoint.str1.1
-                0x000000000800c2df       0x88 ./Src/Display_GUI/GUI_Paint.o
+                0x000000000800c2bf       0x88 ./Src/Display_GUI/GUI_Paint.o
  .rodata.Paint_DrawLine.str1.1
-                0x000000000800c367       0x3e ./Src/Display_GUI/GUI_Paint.o
+                0x000000000800c347       0x3e ./Src/Display_GUI/GUI_Paint.o
  .rodata.Paint_DrawRectangle.str1.1
-                0x000000000800c3a5       0x2f ./Src/Display_GUI/GUI_Paint.o
+                0x000000000800c385       0x2f ./Src/Display_GUI/GUI_Paint.o
  .rodata.Paint_DrawCircle.str1.1
-                0x000000000800c3d4       0x40 ./Src/Display_GUI/GUI_Paint.o
+                0x000000000800c3b4       0x40 ./Src/Display_GUI/GUI_Paint.o
  .rodata.Paint_DrawChar.str1.1
-                0x000000000800c414       0x3e ./Src/Display_GUI/GUI_Paint.o
+                0x000000000800c3f4       0x3e ./Src/Display_GUI/GUI_Paint.o
  .rodata.Paint_DrawString_EN.str1.1
-                0x000000000800c452       0x43 ./Src/Display_GUI/GUI_Paint.o
+                0x000000000800c432       0x43 ./Src/Display_GUI/GUI_Paint.o
  .rodata.Paint_DrawNum.str1.1
-                0x000000000800c495       0x3c ./Src/Display_GUI/GUI_Paint.o
+                0x000000000800c475       0x3c ./Src/Display_GUI/GUI_Paint.o
  .rodata.Font12_Table
-                0x000000000800c4d1      0x474 ./Src/Fonts/font12.o
-                0x000000000800c4d1                Font12_Table
+                0x000000000800c4b1      0x474 ./Src/Fonts/font12.o
+                0x000000000800c4b1                Font12_Table
  .rodata.Font16_Table
-                0x000000000800c945      0xbe0 ./Src/Fonts/font16.o
-                0x000000000800c945                Font16_Table
+                0x000000000800c925      0xbe0 ./Src/Fonts/font16.o
+                0x000000000800c925                Font16_Table
  .rodata.Font20_Table
-                0x000000000800d525      0xed8 ./Src/Fonts/font20.o
-                0x000000000800d525                Font20_Table
+                0x000000000800d505      0xed8 ./Src/Fonts/font20.o
+                0x000000000800d505                Font20_Table
  .rodata.Font24_Table
-                0x000000000800e3fd     0x1ab8 ./Src/Fonts/font24.o
-                0x000000000800e3fd                Font24_Table
+                0x000000000800e3dd     0x1ab8 ./Src/Fonts/font24.o
+                0x000000000800e3dd                Font24_Table
  .rodata.Font8_Table
-                0x000000000800feb5      0x2f8 ./Src/Fonts/font8.o
-                0x000000000800feb5                Font8_Table
- *fill*         0x00000000080101ad        0x3 
+                0x000000000800fe95      0x2f8 ./Src/Fonts/font8.o
+                0x000000000800fe95                Font8_Table
+ *fill*         0x000000000801018d        0x3 
  .rodata.AHBPrescTable
-                0x00000000080101b0       0x40 ./Src/system_stm32g0xx.o
-                0x00000000080101b0                AHBPrescTable
+                0x0000000008010190       0x40 ./Src/system_stm32g0xx.o
+                0x0000000008010190                AHBPrescTable
  .rodata.interfaceInit.str1.1
-                0x00000000080101f0       0x68 ./Src/chrono/interface.o
+                0x00000000080101d0       0x68 ./Src/chrono/interface.o
  .rodata.interfaceSettingsDraw.str1.1
-                0x0000000008010258        0x9 ./Src/chrono/interface.o
+                0x0000000008010238        0x9 ./Src/chrono/interface.o
  .rodata.interfaceDrawMain.str1.1
-                0x0000000008010261       0x25 ./Src/chrono/interface.o
+                0x0000000008010241       0x25 ./Src/chrono/interface.o
                                          0x27 (size before relaxing)
- *fill*         0x0000000008010286        0x2 
+ *fill*         0x0000000008010266        0x2 
  .rodata._global_impure_ptr
-                0x0000000008010288        0x4 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-impure.o)
-                0x0000000008010288                _global_impure_ptr
+                0x0000000008010268        0x4 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-impure.o)
+                0x0000000008010268                _global_impure_ptr
  .rodata.__sf_fake_stderr
-                0x000000000801028c       0x20 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
-                0x000000000801028c                __sf_fake_stderr
+                0x000000000801026c       0x20 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
+                0x000000000801026c                __sf_fake_stderr
  .rodata.__sf_fake_stdin
-                0x00000000080102ac       0x20 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
-                0x00000000080102ac                __sf_fake_stdin
+                0x000000000801028c       0x20 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
+                0x000000000801028c                __sf_fake_stdin
  .rodata.__sf_fake_stdout
-                0x00000000080102cc       0x20 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
-                0x00000000080102cc                __sf_fake_stdout
+                0x00000000080102ac       0x20 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-findfp.o)
+                0x00000000080102ac                __sf_fake_stdout
  .rodata._vfprintf_r.str1.1
-                0x00000000080102ec       0x11 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf.o)
+                0x00000000080102cc       0x11 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf.o)
  .rodata._printf_i.str1.1
-                0x00000000080102fd       0x22 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00000000080102dd       0x22 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-nano-vfprintf_i.o)
  .rodata.log.str1.1
-                0x000000000801031f       0x22 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-w_log.o)
+                0x00000000080102ff       0x22 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-w_log.o)
                                           0x1 (size before relaxing)
- *fill*         0x000000000801031f        0x1 
+ *fill*         0x00000000080102ff        0x1 
  .rodata.CSWTCH.8
-                0x0000000008010320       0x18 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-e_atan2.o)
+                0x0000000008010300       0x18 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-e_atan2.o)
  .rodata.CSWTCH.9
-                0x0000000008010338       0x18 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-e_atan2.o)
+                0x0000000008010318       0x18 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-e_atan2.o)
  .rodata.npio2_hw
-                0x0000000008010350       0x80 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-e_rem_pio2.o)
+                0x0000000008010330       0x80 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-e_rem_pio2.o)
  .rodata.two_over_pi
-                0x00000000080103d0      0x108 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-e_rem_pio2.o)
- .rodata.PIo2   0x00000000080104d8       0x40 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-k_rem_pio2.o)
+                0x00000000080103b0      0x108 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-e_rem_pio2.o)
+ .rodata.PIo2   0x00000000080104b8       0x40 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-k_rem_pio2.o)
  .rodata.init_jk
-                0x0000000008010518       0x10 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-k_rem_pio2.o)
+                0x00000000080104f8       0x10 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-k_rem_pio2.o)
  .rodata.atanhi
-                0x0000000008010528       0x20 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-s_atan.o)
+                0x0000000008010508       0x20 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-s_atan.o)
  .rodata.atanlo
-                0x0000000008010548       0x20 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-s_atan.o)
-                0x0000000008010568                . = ALIGN (0x4)
+                0x0000000008010528       0x20 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a(lib_a-s_atan.o)
+                0x0000000008010548                . = ALIGN (0x4)
 
-.ARM.extab      0x0000000008010568        0x0
-                0x0000000008010568                . = ALIGN (0x4)
+.ARM.extab      0x0000000008010548        0x0
+                0x0000000008010548                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000008010568                . = ALIGN (0x4)
+                0x0000000008010548                . = ALIGN (0x4)
 
-.ARM            0x0000000008010568        0x8
-                0x0000000008010568                . = ALIGN (0x4)
-                0x0000000008010568                __exidx_start = .
+.ARM            0x0000000008010548        0x8
+                0x0000000008010548                . = ALIGN (0x4)
+                0x0000000008010548                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x0000000008010568        0x8 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_divdi3.o)
-                0x0000000008010570                __exidx_end = .
-                0x0000000008010570                . = ALIGN (0x4)
+ .ARM.exidx     0x0000000008010548        0x8 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/libgcc.a(_divdi3.o)
+                0x0000000008010550                __exidx_end = .
+                0x0000000008010550                . = ALIGN (0x4)
 
-.rel.dyn        0x0000000008010570        0x0
- .rel.iplt      0x0000000008010570        0x0 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x0000000008010550        0x0
+ .rel.iplt      0x0000000008010550        0x0 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.preinit_array  0x0000000008010570        0x0
-                0x0000000008010570                . = ALIGN (0x4)
-                0x0000000008010570                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008010550        0x0
+                0x0000000008010550                . = ALIGN (0x4)
+                0x0000000008010550                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0000000008010570                PROVIDE (__preinit_array_end = .)
-                0x0000000008010570                . = ALIGN (0x4)
+                0x0000000008010550                PROVIDE (__preinit_array_end = .)
+                0x0000000008010550                . = ALIGN (0x4)
 
-.init_array     0x0000000008010570        0x4
-                0x0000000008010570                . = ALIGN (0x4)
-                0x0000000008010570                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008010550        0x4
+                0x0000000008010550                . = ALIGN (0x4)
+                0x0000000008010550                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000008010570        0x4 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000008010574                PROVIDE (__init_array_end = .)
-                0x0000000008010574                . = ALIGN (0x4)
+ .init_array    0x0000000008010550        0x4 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000008010554                PROVIDE (__init_array_end = .)
+                0x0000000008010554                . = ALIGN (0x4)
 
-.fini_array     0x0000000008010574        0x4
-                0x0000000008010574                . = ALIGN (0x4)
+.fini_array     0x0000000008010554        0x4
+                0x0000000008010554                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008010574        0x4 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+ .fini_array    0x0000000008010554        0x4 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0000000008010578                . = ALIGN (0x4)
-                0x0000000008010578                _sidata = LOADADDR (.data)
+                0x0000000008010558                . = ALIGN (0x4)
+                0x0000000008010558                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000       0x98 load address 0x0000000008010578
+.data           0x0000000020000000       0x98 load address 0x0000000008010558
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -3174,11 +3174,11 @@ LOAD /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.
                 0x0000000020000098                . = ALIGN (0x4)
                 0x0000000020000098                _edata = .
 
-.igot.plt       0x0000000020000098        0x0 load address 0x0000000008010610
+.igot.plt       0x0000000020000098        0x0 load address 0x00000000080105f0
  .igot.plt      0x0000000020000098        0x0 /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.100.202210260954/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
                 0x0000000020000098                . = ALIGN (0x4)
 
-.bss            0x0000000020000098      0x760 load address 0x0000000008010610
+.bss            0x0000000020000098      0x760 load address 0x00000000080105f0
                 0x0000000020000098                _sbss = .
                 0x0000000020000098                __bss_start__ = _sbss
  *(.bss)
@@ -3248,7 +3248,7 @@ LOAD /home/bartosz/program/STM32CubeIDE_1.11.0/plugins/com.st.stm32cube.ide.mcu.
                 0x00000000200007f8                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x00000000200007f8      0x600 load address 0x0000000008010610
+                0x00000000200007f8      0x600 load address 0x00000000080105f0
                 0x00000000200007f8                . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
                 0x00000000200007f8                PROVIDE (_end = .)

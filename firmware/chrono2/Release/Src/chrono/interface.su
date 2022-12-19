@@ -4,7 +4,7 @@
 ../Src/chrono/interface.c:174:6:interfaceBurn	8	static
 ../Src/chrono/interface.c:193:6:interfaceClear	8	static
 ../Src/chrono/interface.c:197:6:interfaceSettingsClear	8	static
-../Src/chrono/interface.c:727:6:interfaceSettingsDraw	64	static
-../Src/chrono/interface.c:907:6:interfaceDrawIcon	56	static
-../Src/chrono/interface.c:983:6:interfaceDrawDialer	96	dynamic
+../Src/chrono/interface.c:728:6:interfaceSettingsDraw	64	static
+../Src/chrono/interface.c:908:6:interfaceDrawIcon	56	static
+../Src/chrono/interface.c:984:6:interfaceDrawDialer	96	dynamic
 ../Src/chrono/interface.c:201:6:interfaceDrawMain	88	static

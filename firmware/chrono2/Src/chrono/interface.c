@@ -47,13 +47,13 @@ void interfaceInit(interfaceTypeDef *interface) {
 	interface->coordinatesMain[Y] = 100;
 
 	interface->coordinatesChronoMinutes[X] = 100;
-	interface->coordinatesChronoMinutes[Y] = 150;
+	interface->coordinatesChronoMinutes[Y] = 158;
 
 	interface->coordinatesChronoDecimals[X] = 100;
-	interface->coordinatesChronoDecimals[Y] = 50;
+	interface->coordinatesChronoDecimals[Y] = 42;
 
-	interface->coordinatesTemperature[X] = 22;
-	interface->coordinatesTemperature[Y] = 44;
+	interface->coordinatesTemperature[X] = 25;
+	interface->coordinatesTemperature[Y] = 35;
 
 	interface->coordinatesHumidity[X] = 130;
 	interface->coordinatesHumidity[Y] = 75;
@@ -61,7 +61,7 @@ void interfaceInit(interfaceTypeDef *interface) {
 	interface->coordinatesPressure[X] = 100;
 	interface->coordinatesPressure[Y] = 100;
 
-	interface->coordinatesCompass[X] = 55;
+	interface->coordinatesCompass[X] = 45;
 	interface->coordinatesCompass[Y] = 100;
 
 	interface->coordinatesDate[X] = 149;
@@ -203,18 +203,19 @@ void interfaceDrawMain(interfaceTypeDef *interface, RTCChronoTypeDef *chrono,
 		watchTypeDef *watch, forecastTypeDef *forecast) {
 
 	//			LOGO
-	Paint_DrawString_EN(85, 7, "avia", &Font12, interface->colorForeground,
+	uint8_t y = 75;
+	Paint_DrawString_EN(85, y, "avia", &Font12, interface->colorForeground,
 			interface->colorBackground);
 
 
-	Paint_DrawLine(84, 10, 84, 16, interface->colorForeground, DOT_PIXEL_1X1,
+	Paint_DrawLine(84, y+3, 84, y+9, interface->colorForeground, DOT_PIXEL_1X1,
 			LINE_STYLE_SOLID);
-	Paint_DrawLine(116, 10, 116, 16, interface->colorForeground, DOT_PIXEL_1X1,
+	Paint_DrawLine(116, y+3, 116, y+9, interface->colorForeground, DOT_PIXEL_1X1,
 			LINE_STYLE_SOLID);
 
-	Paint_DrawLine(84, 10, 74, 10, interface->colorForeground, DOT_PIXEL_1X1,
+	Paint_DrawLine(84, y+3, 74, y+3, interface->colorForeground, DOT_PIXEL_1X1,
 			LINE_STYLE_SOLID);
-	Paint_DrawLine(116, 10, 126, 10, interface->colorForeground, DOT_PIXEL_1X1,
+	Paint_DrawLine(116, y+3, 126, y+3, interface->colorForeground, DOT_PIXEL_1X1,
 			LINE_STYLE_SOLID);
 
 	//			MOON PHASE BOARD
@@ -572,11 +573,11 @@ void interfaceDrawMain(interfaceTypeDef *interface, RTCChronoTypeDef *chrono,
 				interface->coordinatesPressure[Y] + 11, "hPa", &Font8,
 				interface->colorForeground, interface->colorBackground);
 		Paint_DrawNum(interface->coordinatesPressure[X] + 2,
-				interface->coordinatesPressure[Y] + 85, 1000, &Font8,
+				interface->coordinatesPressure[Y] + 87, 1000, &Font8,
 				interface->colorForeground, interface->colorBackground);
-		Paint_DrawNum(interface->coordinatesPressure[X] - 95,
-				interface->coordinatesPressure[Y] + 2, 1025, &Font8,
-				interface->colorForeground, interface->colorBackground);
+//		Paint_DrawNum(interface->coordinatesPressure[X] - 95,
+//				interface->coordinatesPressure[Y] + 2, 1025, &Font8,
+//				interface->colorForeground, interface->colorBackground);
 
 		//pointer
 		interface->pointerAnglePressure = 2 * 3.14 / 100
