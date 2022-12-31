@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "BartLib_Sensors")(type "KiCad")(uri "${KIPRJMOD}/BartLib/BartLib_Sensors.kicad_sym")(options "")(descr ""))
+)
