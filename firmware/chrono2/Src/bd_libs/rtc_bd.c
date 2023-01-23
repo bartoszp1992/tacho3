@@ -173,8 +173,9 @@ void rtcSetTime(RTCChronoTypeDef *chrono) {
  */
 void rtcStartChrono(RTCChronoTypeDef *chrono) {
 
-	HAL_RTC_GetTime(&hrtc, &Time, RTC_FORMAT_BIN);
-	HAL_RTC_GetDate(&hrtc, &Date, RTC_FORMAT_BIN);
+//	HAL_RTC_GetTime(&hrtc, &Time, RTC_FORMAT_BIN);
+//	HAL_RTC_GetDate(&hrtc, &Date, RTC_FORMAT_BIN);
+	rtcGetTime(chrono);
 
 	chrono->chronoStart.second = Time.Seconds;
 	chrono->chronoStart.minute = Time.Minutes;
