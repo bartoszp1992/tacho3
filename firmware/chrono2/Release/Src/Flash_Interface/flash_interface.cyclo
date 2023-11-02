@@ -1,0 +1,6 @@
+../Src/Flash_Interface/flash_interface.c:51:19:FI_WriteDoubleWord	1
+../Src/Flash_Interface/flash_interface.c:64:11:FI_PageErase	1
+../Src/Flash_Interface/flash_interface.c:95:11:FI_PageErase_IT	1
+../Src/Flash_Interface/flash_interface.c:120:6:FI_CacheFlush	1
+../Src/Flash_Interface/flash_interface.c:172:11:FI_DeleteCorruptedFlashAddress	9
+../Src/Flash_Interface/flash_interface.c:235:11:FI_CheckBankConfig	1

@@ -1,0 +1,10 @@
+../Src/chrono/interface.c:103:6:interfaceSettingsInit	1
+../Src/chrono/interface.c:150:6:interfaceUpdateModeSwitch	3
+../Src/chrono/interface.c:18:6:interfaceInit	2
+../Src/chrono/interface.c:174:6:interfaceBurn	3
+../Src/chrono/interface.c:193:6:interfaceClear	1
+../Src/chrono/interface.c:197:6:interfaceSettingsClear	1
+../Src/chrono/interface.c:728:6:interfaceSettingsDraw	12
+../Src/chrono/interface.c:908:6:interfaceDrawIcon	4
+../Src/chrono/interface.c:984:6:interfaceDrawDialer	5
+../Src/chrono/interface.c:201:6:interfaceDrawMain	22

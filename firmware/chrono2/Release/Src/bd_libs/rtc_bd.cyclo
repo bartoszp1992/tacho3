@@ -1,0 +1,9 @@
+../Src/bd_libs/rtc_bd.c:28:6:rtcInit	1
+../Src/bd_libs/rtc_bd.c:51:6:rtcGetTime	9
+../Src/bd_libs/rtc_bd.c:152:6:rtcSetTime	1
+../Src/bd_libs/rtc_bd.c:174:6:rtcStartChrono	1
+../Src/bd_libs/rtc_bd.c:200:6:rtcStopChrono	1
+../Src/bd_libs/rtc_bd.c:238:6:rtcResumeChrono	1
+../Src/bd_libs/rtc_bd.c:251:6:rtcResetChrono	1
+../Src/bd_libs/rtc_bd.c:286:6:rtcChangeValue	31
+../Src/bd_libs/rtc_bd.c:375:9:rtcBlink	1

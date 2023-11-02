@@ -46,7 +46,7 @@
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi.c:2958:13:SPI_DMATransmitCplt	24	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi.c:3015:13:SPI_DMAReceiveCplt	16	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi.c:3132:13:SPI_DMATransmitReceiveCplt	16	static
-../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi.c:2665:6:HAL_SPI_IRQHandler	40	static
+../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi.c:2665:6:HAL_SPI_IRQHandler	32	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi.c:3309:13:SPI_DMAAbortOnError	8	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi.c:2886:13:HAL_SPI_AbortCpltCallback	0	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi.c:2424:19:HAL_SPI_Abort_IT	32	static

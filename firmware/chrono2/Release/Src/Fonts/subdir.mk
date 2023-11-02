@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (10.3-2021.10)
+# Toolchain: GNU Tools for STM32 (11.3.rel1)
 ################################################################################
 
 # Add inputs and outputs from these tool invocations to the build variables 
@@ -33,13 +33,13 @@ C_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-Src/Fonts/%.o Src/Fonts/%.su: ../Src/Fonts/%.c Src/Fonts/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m0plus -std=gnu11 -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fcommon -fstack-usage -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@"
+Src/Fonts/%.o Src/Fonts/%.su Src/Fonts/%.cyclo: ../Src/Fonts/%.c Src/Fonts/subdir.mk
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m0plus -std=gnu11 -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fcommon -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfloat-abi=soft -mthumb -o "$@"
 
 clean: clean-Src-2f-Fonts
 
 clean-Src-2f-Fonts:
-	-$(RM) ./Src/Fonts/font12.d ./Src/Fonts/font12.o ./Src/Fonts/font12.su ./Src/Fonts/font12CN.d ./Src/Fonts/font12CN.o ./Src/Fonts/font12CN.su ./Src/Fonts/font16.d ./Src/Fonts/font16.o ./Src/Fonts/font16.su ./Src/Fonts/font20.d ./Src/Fonts/font20.o ./Src/Fonts/font20.su ./Src/Fonts/font24.d ./Src/Fonts/font24.o ./Src/Fonts/font24.su ./Src/Fonts/font24CN.d ./Src/Fonts/font24CN.o ./Src/Fonts/font24CN.su ./Src/Fonts/font8.d ./Src/Fonts/font8.o ./Src/Fonts/font8.su
+	-$(RM) ./Src/Fonts/font12.cyclo ./Src/Fonts/font12.d ./Src/Fonts/font12.o ./Src/Fonts/font12.su ./Src/Fonts/font12CN.cyclo ./Src/Fonts/font12CN.d ./Src/Fonts/font12CN.o ./Src/Fonts/font12CN.su ./Src/Fonts/font16.cyclo ./Src/Fonts/font16.d ./Src/Fonts/font16.o ./Src/Fonts/font16.su ./Src/Fonts/font20.cyclo ./Src/Fonts/font20.d ./Src/Fonts/font20.o ./Src/Fonts/font20.su ./Src/Fonts/font24.cyclo ./Src/Fonts/font24.d ./Src/Fonts/font24.o ./Src/Fonts/font24.su ./Src/Fonts/font24CN.cyclo ./Src/Fonts/font24CN.d ./Src/Fonts/font24CN.o ./Src/Fonts/font24CN.su ./Src/Fonts/font8.cyclo ./Src/Fonts/font8.d ./Src/Fonts/font8.o ./Src/Fonts/font8.su
 
 .PHONY: clean-Src-2f-Fonts
 

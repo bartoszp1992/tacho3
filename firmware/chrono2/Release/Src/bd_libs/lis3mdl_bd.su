@@ -2,4 +2,4 @@
 ../Src/bd_libs/lis3mdl_bd.c:127:6:lis3mdlGetCalibrationSample	8	static
 ../Src/bd_libs/lis3mdl_bd.c:140:9:findMax	12	static
 ../Src/bd_libs/lis3mdl_bd.c:151:9:findMin	12	static
-../Src/bd_libs/lis3mdl_bd.c:65:6:lis3mdlRead	88	static
+../Src/bd_libs/lis3mdl_bd.c:65:6:lis3mdlRead	96	static

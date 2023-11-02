@@ -14,7 +14,7 @@
 ../Src/EEPROM_Emul/eeprom_emul.c:793:11:EE_ReadVariable8bits	16	static
 ../Src/EEPROM_Emul/eeprom_emul.c:1682:18:VerifyPagesFullWriteVariable	32	static
 ../Src/EEPROM_Emul/eeprom_emul.c:1421:18:PagesTransfer	56	static
-../Src/EEPROM_Emul/eeprom_emul.c:197:11:EE_Init	56	static
+../Src/EEPROM_Emul/eeprom_emul.c:197:11:EE_Init	48	static
 ../Src/EEPROM_Emul/eeprom_emul.c:1200:18:WriteVariable	16	static
 ../Src/EEPROM_Emul/eeprom_emul.c:849:11:EE_WriteVariable32bits	8	static
 ../Src/EEPROM_Emul/eeprom_emul.c:877:11:EE_WriteVariable16bits	8	static

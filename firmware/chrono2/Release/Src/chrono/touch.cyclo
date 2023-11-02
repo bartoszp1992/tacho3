@@ -1,0 +1,2 @@
+../Src/chrono/touch.c:118:9:touchRead	1
+../Src/chrono/touch.c:20:6:HAL_GPIO_EXTI_Falling_Callback	20

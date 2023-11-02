@@ -2,5 +2,5 @@
 ../Src/bd_libs/bme280_bd.c:217:6:bme280ChangeValue	0	static
 ../Src/bd_libs/bme280_bd.c:243:9:_BME280_compensate_T_int32	8	static
 ../Src/bd_libs/bme280_bd.c:256:10:_BME280_compensate_P_int64	48	static
-../Src/bd_libs/bme280_bd.c:277:10:_BME280_compensate_H_int32	12	static
+../Src/bd_libs/bme280_bd.c:277:10:_BME280_compensate_H_int32	8	static
 ../Src/bd_libs/bme280_bd.c:144:6:bme280Read	64	static

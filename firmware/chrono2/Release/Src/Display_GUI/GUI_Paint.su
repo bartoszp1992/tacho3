@@ -1,4 +1,4 @@
-../Src/Display_GUI/GUI_Paint.c:92:6:Paint_NewImage	12	static
+../Src/Display_GUI/GUI_Paint.c:92:6:Paint_NewImage	20	static
 ../Src/Display_GUI/GUI_Paint.c:124:6:Paint_SelectImage	0	static
 ../Src/Display_GUI/GUI_Paint.c:133:6:Paint_SetRotate	8	static
 ../Src/Display_GUI/GUI_Paint.c:143:6:Paint_SetScale	8	static

@@ -1,0 +1,5 @@
+../Src/bd_libs/adc_bd.c:25:6:adcInit	1
+../Src/bd_libs/adc_bd.c:40:6:adcSetChannel	2
+../Src/bd_libs/adc_bd.c:62:10:adcRead	2
+../Src/bd_libs/adc_bd.c:80:10:adcTemperature	2
+../Src/bd_libs/adc_bd.c:94:10:adcVoltage	1

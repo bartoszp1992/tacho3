@@ -1,0 +1,2 @@
+../Src/bd_libs/forecast_bd.c:12:6:forecastInit	2
+../Src/bd_libs/forecast_bd.c:25:6:forecastAppendActual	3

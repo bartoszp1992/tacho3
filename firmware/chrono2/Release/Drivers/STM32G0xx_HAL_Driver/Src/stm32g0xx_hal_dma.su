@@ -1,6 +1,6 @@
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:1071:13:DMA_SetConfig	20	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:1118:13:DMA_CalcDMAMUXChannelBaseAndMask	8	static
-../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:152:19:HAL_DMA_Init	16	static
+../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:152:19:HAL_DMA_Init	24	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:259:19:HAL_DMA_DeInit	24	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:382:19:HAL_DMA_Start	32	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:433:19:HAL_DMA_Start_IT	32	static

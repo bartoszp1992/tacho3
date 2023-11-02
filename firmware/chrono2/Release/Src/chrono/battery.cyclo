@@ -1,0 +1,2 @@
+../Src/chrono/battery.c:13:6:batteryCheckInit	1
+../Src/chrono/battery.c:18:6:batteryReadState	3

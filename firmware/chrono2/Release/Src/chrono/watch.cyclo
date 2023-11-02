@@ -1,0 +1,3 @@
+../Src/chrono/watch.c:11:6:watchInit	1
+../Src/chrono/watch.c:19:6:watchSwitchMode	1
+../Src/chrono/watch.c:24:6:watchSwitchSettingsItem	2

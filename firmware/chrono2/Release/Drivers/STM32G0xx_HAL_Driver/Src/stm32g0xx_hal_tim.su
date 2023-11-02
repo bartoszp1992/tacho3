@@ -80,7 +80,7 @@
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:661:19:HAL_TIM_OC_Init	16	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:1330:19:HAL_TIM_PWM_Init	16	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:1998:19:HAL_TIM_IC_Init	16	static
-../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:2647:19:HAL_TIM_OnePulse_Init	16	static
+../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:2647:19:HAL_TIM_OnePulse_Init	24	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:3038:19:HAL_TIM_Encoder_Init	32	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:7093:6:TIM_OC2_SetConfig	16	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:4072:19:HAL_TIM_OC_ConfigChannel	16	static
@@ -89,11 +89,11 @@
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:4171:19:HAL_TIM_IC_ConfigChannel	32	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:4420:19:HAL_TIM_OnePulse_ConfigChannel	64	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:7838:6:TIM_ETR_SetConfig	12	static
-../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:5291:19:HAL_TIM_ConfigOCrefClear	32	static
+../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:5291:19:HAL_TIM_ConfigOCrefClear	24	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:5475:19:HAL_TIM_ConfigClockSource	24	static
-../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:7410:26:TIM_SlaveTimer_SetConfig	16	static
-../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:5661:19:HAL_TIM_SlaveConfigSynchro	24	static
+../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:7410:26:TIM_SlaveTimer_SetConfig.constprop	16	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:5701:19:HAL_TIM_SlaveConfigSynchro_IT	24	static
+../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:5661:19:HAL_TIM_SlaveConfigSynchro	24	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:7870:6:TIM_CCxChannelCmd	8	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:802:19:HAL_TIM_OC_Start	8	static
 ../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.c:1471:19:HAL_TIM_PWM_Start	8	static

@@ -1,0 +1,11 @@
+../Src/Display_EPD/EPD_1in54_V2.c:52:13:EPD_1IN54_V2_SendCommand	1
+../Src/Display_EPD/EPD_1in54_V2.c:65:13:EPD_1IN54_V2_SendData	1
+../Src/Display_EPD/EPD_1in54_V2.c:77:13:EPD_1IN54_V2_ReadBusy	2
+../Src/Display_EPD/EPD_1in54_V2.c:97:13:EPD_1IN54_V2_TurnOnDisplay	1
+../Src/Display_EPD/EPD_1in54_V2.c:109:13:EPD_1IN54_V2_TurnOnDisplayPart	1
+../Src/Display_EPD/EPD_1in54_V2.c:121:6:EPD_1IN54_V2_Init	1
+../Src/Display_EPD/EPD_1in54_V2.c:169:6:EPD_1IN54_V2_Clear	3
+../Src/Display_EPD/EPD_1in54_V2.c:188:6:EPD_1IN54_V2_Display	3
+../Src/Display_EPD/EPD_1in54_V2.c:210:6:EPD_1IN54_V2_DisplayPartBaseImage	5
+../Src/Display_EPD/EPD_1in54_V2.c:238:6:EPD_1IN54_V2_DisplayPart	3
+../Src/Display_EPD/EPD_1in54_V2.c:265:6:EPD_1IN54_V2_Sleep	1
